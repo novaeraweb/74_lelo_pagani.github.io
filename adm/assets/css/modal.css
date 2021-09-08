@@ -1,0 +1,54 @@
+.mt-100 {
+    margin-top: 100px
+}
+
+.modal-card {
+    position: fixed;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(17, 17, 17, 1), rgba(86, 80, 88, 0.77));
+    height: 40vh;
+    font-family: 'Calibri', sans-serif !important;
+    border-radius: 3vh;
+    margin: auto;
+    max-width: 380px;
+    padding: 7vh 6vh;
+    align-items: center;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+@media(max-width:767px) {
+    .modal-card {
+        width: 90vw
+    }
+}
+
+.modal-card-img img{
+    padding: 20px 0;
+    width: 50px;
+    height: auto;
+    margin-left: 115px;
+}
+
+.modal-card-img img {
+    opacity: 0.7
+}
+
+.modal-card-title {
+    margin-bottom: unset;
+}
+
+.modal-card-title p {
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 30px;
+    margin-bottom: unset;
+    text-align: center;
+}
+
+.modal-card-text p {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 3vh 0;
+    font-weight: lighter
+}
