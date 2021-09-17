@@ -4,8 +4,7 @@
 function listaBlog ($lelo) {
  	$query = "SELECT b.*
 	 		  FROM blog b
-			  WHERE b.ativo = 'Sim'
-			  ORDER BY b.titulo ASC";
+			  WHERE b.ativo = 'Sim'";
  	$resultado = mysqli_query($lelo, $query);
  	$blogs = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -54,8 +53,7 @@ function listaBlogId ($lelo, $id) {
 function listaNoticia ($lelo) {
  	$query = "SELECT n.*
 	 		  FROM noticia n
-			  WHERE n.ativo = 'Sim'
-			  ORDER BY n.titulo ASC";
+			  WHERE n.ativo = 'Sim'";
  	$resultado = mysqli_query($lelo, $query);
  	$noticias = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -68,6 +66,34 @@ function listaNoticia ($lelo) {
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];
 		$noticia->data = $array['data'];
+		$noticia->data_noticia = $array['data_noticia'];
+		$noticia->video = $array['video'];
+		$noticia->ativo = $array['ativo'];
+
+ 		array_push($noticias, $noticia);
+ 	}
+ 	return $noticias;
+}
+
+function listaNoticiaIndex ($lelo) {
+ 	$query = "SELECT n.*
+						FROM noticia n
+						WHERE n.ativo = 'Sim'
+						ORDER BY n.idnoticia DESC
+						LIMIT 4";
+ 	$resultado = mysqli_query($lelo, $query);
+ 	$noticias = array();
+ 	while ($array = mysqli_fetch_assoc($resultado)) {
+ 		$noticia = new Noticia();
+ 		$noticia->idnoticia = $array['idnoticia'];
+ 		$noticia->titulo = $array['titulo'];
+		$noticia->descricao_breve = $array['descricao_breve'];
+		$noticia->descricao_longa = $array['descricao_longa'];
+		$noticia->arquivo = $array['arquivo'];
+		$noticia->link = $array['link'];
+		$noticia->usuario = $array['usuario'];
+		$noticia->data = $array['data'];
+		$noticia->data_noticia = $array['data_noticia'];
 		$noticia->video = $array['video'];
 		$noticia->ativo = $array['ativo'];
 
@@ -92,6 +118,7 @@ function listaNoticiaId ($lelo, $id) {
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];
 		$noticia->data = $array['data'];
+		$noticia->data_noticia = $array['data_noticia'];
 		$noticia->video = $array['video'];
 		$noticia->ativo = $array['ativo'];
 

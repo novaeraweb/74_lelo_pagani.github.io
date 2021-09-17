@@ -77,6 +77,11 @@ $noticias = listaNoticiaId($lelo, $id);
                         </div>
                         <br>
                         <div class="form-group">
+                          <label for="data_noticia">Data da Notícia:</label><br>
+                          <input type="date" name="data_noticia" id="data_noticia" value="<?=$noticia->data_noticia;?>" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}">
+                        </div>
+                        <br>
+                        <div class="form-group">
                           <label for="video"> <i class="material-icons" style="float: left;">play_circle_filled</i> Vídeo </label>
                           <input type="text" class="form-control" name="video" id="video" value="<?=$noticia->video;?>"> 
                         </div>                        
