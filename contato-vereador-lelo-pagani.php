@@ -1,36 +1,37 @@
 <section id="four">
     <h2>Contato</h2>
-    <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+    <p>Entre em contato e retornarei o mais breve possível</p>
     <div class="row">
         <div class="col-8 col-12-small">
             <form method="post" action="#" onsubmit="return validaCaptcha()">
                 <div class="row gtr-uniform gtr-50">
-                    <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+                    <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Nome" /></div>
                     <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                    <div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                    <div class="col-12"><textarea name="message" id="message" placeholder="Mensagem" rows="4"></textarea></div>
                 </div>
-                <br><br>
+                <li><div class="g-recaptcha" data-sitekey="6Lc-n1McAAAAAOFKk-iyko_g3eI25knVtAkGDH-k"></div></li>
+                <br>
                 <ul class="actions">                    
-                        <li><div class="g-recaptcha" data-sitekey="6Lc-n1McAAAAAOFKk-iyko_g3eI25knVtAkGDH-k"></div></li>
-                        <li><input type="submit" value="Enviar" /></li>
+                    <li><input type="submit" value="Enviar" /></li>
                 </ul>
             </form>
         </div>
         <div class="col-4 col-12-small">
             <ul class="labeled-icons">
                 <li>
-                    <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-                    1234 Somewhere Rd.<br />
-                    Nashville, TN 00000<br />
-                    United States
+                    <h3 class="icon solid fa-home"><span class="label">Endereço</span></h3>
+                    Praça Comendador<br />
+                    Emílio Peduti<br />
+                    112, Centro<br />
+                    Botucatu / SP
                 </li>
                 <li>
-                    <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-                    000-000-0000
+                    <h3 class="icon solid fa-mobile-alt"><span class="label">Telefone</span></h3>
+                    (14) 3882-0636
                 </li>
                 <li>
                     <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                    <a href="#">hello@untitled.tld</a>
+                    <a href="mailto:contato@lelopagani.com.br">contato@lelopagani.com.br</a>
                 </li>
             </ul>
         </div>

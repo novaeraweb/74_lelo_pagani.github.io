@@ -1807,6 +1807,20 @@ input, select, textarea {
 		margin: 0 0 1em 0;
 	}
 
+	.dataTables_length label, .dataTables_filter label{
+		font-size: 14px;
+    line-height: 1.42857;
+    color: #221D51;
+    font-weight: 400;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.dataTables_length select{
+		width: 65px;
+	}
+
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -2510,6 +2524,7 @@ z-index:999;
 
 		table td {
 			padding: 0.75em 0.75em;
+			text-align: center;
 		}
 
 		table th {
@@ -2517,7 +2532,7 @@ z-index:999;
 			font-size: 0.9em;
 			font-weight: 400;
 			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			text-align: center;
 		}
 
 		table thead {
@@ -2557,19 +2572,8 @@ z-index:999;
 input[type="date"]:disabled{
 	border: none;
 	background: #fff;
-	transition: color 1s;
 }
 
-input[type="date"]:disabled:hover{
-	color: navy;
-	animation: coloracao ease 1s;
-}
-
-@keyframes coloracao {
-	0% {color:inherit}
-	50% {color: rgb(66, 66, 253)}
-	100% {color:rgb(0, 0, 110)}
-}
 
 /* Button */
 

@@ -13,8 +13,11 @@ mysqli_select_db($lelo, 'lelopagani');
     $descricao_breve = $_POST["descricao_breve"];
     $descricao_breve = trim($descricao_breve);
 
-    $descricao_longa = $_POST["descricao_longa"];
-    $descricao_longa = trim($descricao_longa);
+    $nro_projeto = $_POST['nro_projeto'];
+    $nro_projeto = trim($nro_projeto);
+
+    $data_projeto = $_POST['data_projeto'];
+    $data_projeto = trim($data_projeto);
 
     $data = $_POST['data'];
     $data = trim($data);
@@ -44,7 +47,7 @@ mysqli_select_db($lelo, 'lelopagani');
 
 
 //Insert inglês
-$insertSQL = "INSERT INTO projeto (titulo, descricao_breve, descricao_longa, link, usuario, data, arquivo, ativo) VALUES ('$titulo', '$descricao_breve', '$descricao_longa', '$link', '$usuario', '$data' , '$novo', '$ativo' )";      
+$insertSQL = "INSERT INTO projeto (titulo, nro_projeto, data_projeto, link, usuario, data, arquivo, ativo) VALUES ('$titulo', '$nro_projeto', '$data_projeto', '$link', '$usuario', '$data' , '$novo', '$ativo' )";      
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 
 

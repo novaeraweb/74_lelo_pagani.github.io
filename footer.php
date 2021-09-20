@@ -3,10 +3,10 @@
 <footer id="footer">
     <div class="inner">
         <ul class="icons">
-            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-            <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-            <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            <li><a href="https://www.facebook.com/lelopagani" class="icon brands fa-facebook" target="_blank" rel="noopener" rel="noreferrer"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/lelopagani/" class="icon brands fa-instagram" target="_blank" rel="noopener" rel="noreferrer"><span class="label">Instagram</span></a></li>
+            <li><a href="mailto:contato@lelopagani.com.br" class="icon solid fa-envelope" target="_blank" rel="noopener" rel="noreferrer"><span class="label">Email</span></a></li>
+            <li><a href="https://www.twitter.com/lelopagani" class="icon brands fa-twitter" target="_blank" rel="noopener" rel="noreferrer"><span class="label">Twitter</span></a></li>
         </ul>
         <ul class="copyright">
             <li>Desenvolvido por: <a href="https://www.novaeraweb.com.br">Nova Era Web</a></li>

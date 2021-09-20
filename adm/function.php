@@ -3,8 +3,8 @@
 // Queries blogs
 function listaBlog ($lelo) {
  	$query = "SELECT b.*
-	 		  FROM blog b
-			  WHERE b.ativo = 'Sim'";
+						FROM blog b
+						WHERE b.ativo = 'Sim'";
  	$resultado = mysqli_query($lelo, $query);
  	$blogs = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -27,8 +27,34 @@ function listaBlog ($lelo) {
 
 function listaBlogId ($lelo, $id) {
  	$query = "SELECT b.*
-	 		  FROM blog b
-			  WHERE b.ativo = 'Sim'AND b.idblog=$id";
+						FROM blog b
+						WHERE b.ativo = 'Sim'AND b.idblog=$id";
+	$resultado = mysqli_query($lelo, $query);
+	$blogs = array();
+	while ($array = mysqli_fetch_assoc($resultado)) {
+		$blog = new Blog();
+		$blog->idblog = $array['idblog'];
+		$blog->titulo = $array['titulo'];
+		$blog->descricao_breve = $array['descricao_breve'];
+		$blog->descricao_longa = $array['descricao_longa'];
+		$blog->arquivo = $array['arquivo'];
+		$blog->link = $array['link'];
+		$blog->usuario = $array['usuario'];
+		$blog->data = $array['data'];
+		$blog->video = $array['video'];
+		$blog->ativo = $array['ativo'];
+
+		array_push($blogs, $blog);
+	}
+ 	return $blogs;
+}
+
+function listaBlogIndex ($lelo) {
+ 	$query = "SELECT b.*
+						FROM blog b
+						WHERE b.ativo = 'Sim'
+						ORDER BY b.idblog DESC
+						LIMIT 4";
 	$resultado = mysqli_query($lelo, $query);
 	$blogs = array();
 	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -52,8 +78,8 @@ function listaBlogId ($lelo, $id) {
 
 function listaNoticia ($lelo) {
  	$query = "SELECT n.*
-	 		  FROM noticia n
-			  WHERE n.ativo = 'Sim'";
+						FROM noticia n
+						WHERE n.ativo = 'Sim'";
  	$resultado = mysqli_query($lelo, $query);
  	$noticias = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -139,7 +165,8 @@ function listaProjeto ($lelo) {
 		$projeto->idprojeto = $array['idprojeto'];
 		$projeto->titulo = $array['titulo'];
 	   $projeto->descricao_breve = $array['descricao_breve'];
-	   $projeto->descricao_longa = $array['descricao_longa'];
+	   $projeto->nro_projeto = $array['nro_projeto'];
+		 $projeto->data_projeto = $array['data_projeto'];
 	   $projeto->arquivo = $array['arquivo'];
 	   $projeto->link = $array['link'];
 	   $projeto->usuario = $array['usuario'];
@@ -162,7 +189,8 @@ function listaProjetoId ($lelo, $id) {
 	   $projeto->idprojeto = $array['idprojeto'];
 	   $projeto->titulo = $array['titulo'];
 	   $projeto->descricao_breve = $array['descricao_breve'];
-	   $projeto->descricao_longa = $array['descricao_longa'];
+	   $projeto->nro_projeto = $array['nro_projeto'];
+	   $projeto->data_projeto = $array['data_projeto'];
 	   $projeto->arquivo = $array['arquivo'];
 	   $projeto->link = $array['link'];
 	   $projeto->usuario = $array['usuario'];

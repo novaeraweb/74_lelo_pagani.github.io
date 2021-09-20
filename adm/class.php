@@ -29,7 +29,8 @@ class Projeto{
 	public $idprojeto;
 	public $titulo;
 	public $descricao_breve;
-	public $descricao_longa;
+	public $nro_projeto;
+	public $data_projeto;
 	public $link;
 	public $arquivo;
 	public $usuario;

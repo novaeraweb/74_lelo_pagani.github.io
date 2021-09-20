@@ -5,12 +5,57 @@ require_once "adm/class.php";
 require_once "adm/function.php";
 
 $noticias = listaNoticiaIndex($lelo);
+$blogs = listaBlogIndex($lelo);
 ?>
 <html>
 	<head>
 		<title>Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
+    <meta name="description" content="Site | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta name="keywords" content="vereador, lelo pagani, noticia, blog, projetos lei, botucatu" />
+    <meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
+    <meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
+    <meta name="robots" content="follow,index">
+    <meta name= "googlebot" content="follow,index">
+    <meta name="DC.publisher" content="Nova Era Web">
+    <meta name="DC.date.created" content="2008-10-01">
+    <meta name="  DC.Identifier" content="https://www.lelopagani.com.br">
+    <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
+    <link rel="author" href="https://www.novaeraweb.com.br"/>
+    <link rel="canonical" href="https://www.lelopagani.com.br/index.php" />
+
+    <!-- Meta FB -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Vereador Lelo Pagani" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.lelopagani.com.br/index.php>"/>
+    <meta property="og:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+    <meta property="og:description" content="Site | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta property="og:site_name" content="Vereador Lelo Pagani"/>
+    <meta property="fb:admins" content=""/>
+    <!-- Fim Meta FB -->
+    <!-- Meta Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="Site | Vereador Lelo Pagani - Botucatu/SP"
+    />
+    <meta name="twitter:title" content="Site | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta name="twitter:site" content="@lelopagani" />
+    <meta
+      name="twitter:image"
+      content="https://www.lelopagani.com.br/assets/images/avatar.jpg"
+    />
+    <meta name="twitter:creator" content="@lelopagani" />
+    <!-- Fim Meta Twitter -->
+
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
@@ -21,13 +66,11 @@ $noticias = listaNoticiaIndex($lelo);
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h1>Opa,<br />
-								Lelo Pagani.
-							</h1>
+							<h1>Vereador Lelo Pagani</h1>
 						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+						<p>Sou vereador do município de Botucatu. Estou no meu 4º mandato na Câmara Municipal de Botucatu. Nesses últimos 4 anos me reciclei e me aprimorei. Busco articulação com a população para construirmos uma cidade cada vez melhor.</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Saiba Mais</a></li>
+							<li><a href="sobre-vereador-lelo-pagani.php" class="button">Saiba Mais</a></li>
 						</ul>
 					</section>
 
@@ -56,26 +99,17 @@ $noticias = listaNoticiaIndex($lelo);
 					<section id="three">
 						<h2>Blog</h2>
 						<div class="row">
+							<?php foreach ($blogs as $blog){?>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="assets/images/fulls/03.jpg" class="image fit thumb"><img src="assets/images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							<a href="blog-vereador-lelo-pagani.php" class="noticias fit"><img src="adm/arquivos/<?=$blog->arquivo;?>" alt="Blog Vereador Lelo Pagani" /></a>
+								<h3><?=$blog->titulo;?></h3>
+								<p><?=$blog->descricao_breve;?></p>
+								<br>
+								<ul class="actions">
+									<li><a href="postagem-vereador-lelo-pagani.php?id=<?=$blog->idblog;?>" class="button">Leia a postagem completa</a></li>
+								</ul>
 							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="/assets/images/fulls/04.jpg" class="image fit thumb"><img src="assets/images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="assets/images/fulls/05.jpg" class="image fit thumb"><img src="assets/images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="assets/images/fulls/06.jpg" class="image fit thumb"><img src="assets/images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
+							<?php }?>
 						</div>
 						<ul class="actions">
 							<li><a href="#" class="button">Saiba Mais</a></li>

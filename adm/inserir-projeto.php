@@ -55,13 +55,13 @@ mysqli_select_db($lelo, "lelopagani");
                       </div>
                       <br>
                       <div class="form-group">
-                        <label for="descricao_breve">Descrição breve:</label><br>
-                        <textarea type="text" name="descricao_breve" id="descricao_breve" class="form-control"></textarea>
+                        <label for="nro_projeto">Número do Projeto:</label><br>
+                        <textarea type="text" name="nro_projeto" id="nro_projeto" class="form-control"></textarea>
                       </div>
                       <br>
                       <div class="form-group">
-                        <label for="descricao_longa">Descrição longa:</label><br>
-                        <textarea type="text" name="descricao_longa" id="descricao_longa" class="form-control"></textarea>
+                        <label for="data_projeto">Data do Projeto:</label><br>
+                        <textarea type="text" name="data_projeto" id="data_projeto" class="form-control"></textarea>
                       </div>
                       <br>
                       <div class="form-group">
@@ -72,7 +72,7 @@ mysqli_select_db($lelo, "lelopagani");
 
                       <div id="dvFile">
                         <label for="arquivo" style="width: 100%; margin-top: 15px;">Foto/Imagem</label>
-                        <input type="file" name="arquivo" id="arquivo" required>
+                        <input type="file" name="arquivo" id="arquivo">
                       </div>
                       <br>
                       <input type="hidden" name="usuario" id="usuario" value="<?php echo $_SESSION['usuario_logado']?>">
@@ -99,27 +99,7 @@ mysqli_select_db($lelo, "lelopagani");
   <!--  Notifications Plugin    -->
   <script src="assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
-
-  <!-- Editor de texto -->
-  <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
-  <script type="text/javascript">
-
-    // Initialize CKEditor
-    CKEDITOR.replace('descricao_breve',{
-      width: "700px",
-      height: "200px"
-    });  
-
-    CKEDITOR.replace('descricao_longa',{
-
-      width: "700px",
-      height: "200px"
-
-    }); 
-
-    
-  </script>   
+  <script src="assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script> 
 
 </body>
 

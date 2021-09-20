@@ -26,9 +26,13 @@ $blogs = listaBlog($lelo);
                 <div class="cntl-state">
                     <div class="cntl-content">
                         <h2><?=$blog->titulo;?></h2>
-                        <p><?=$blog->descricao_longa;?></p>
+                        <p><?=$blog->data;?></p>
+                        <p><?=$blog->descricao_breve;?></p>
+                        <ul class="actions">
+                            <li><a href="postagem-vereador-lelo-pagani.php?id=<?=$blog->idblog;?>" class="button">Leia a postagem completa</a></li>
+                        </ul>
                     </div>
-                    <div class="cntl-image"><img src="adm/arquivos/<?=$blog->arquivo;?>" alt="Imoveis no Ninho Verde 2"></div>
+                    <div class="cntl-image"><img src="adm/arquivos/<?=$blog->arquivo;?>" alt="Vereador Lelo Pagani"></div>
                     <div class="cntl-icon"><?=$blog->idblog;?></div>
                 </div>
                 <?php } ?>
