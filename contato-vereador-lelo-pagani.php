@@ -9,7 +9,7 @@
                     <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
                     <div class="col-12"><textarea name="message" id="message" placeholder="Mensagem" rows="4"></textarea></div>
                 </div>
-                <li><div class="g-recaptcha" data-sitekey="6Lc-n1McAAAAAOFKk-iyko_g3eI25knVtAkGDH-k"></div></li>
+                <div class="g-recaptcha" data-sitekey="6Lc-n1McAAAAAOFKk-iyko_g3eI25knVtAkGDH-k"></div>
                 <br>
                 <ul class="actions">                    
                     <li><input type="submit" value="Enviar" /></li>

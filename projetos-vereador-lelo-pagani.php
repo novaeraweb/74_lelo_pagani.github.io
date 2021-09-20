@@ -7,34 +7,34 @@ $projetos = listaProjeto($lelo);
 
 <html>
 	<head>
-		<title>Sobre Vereador Lelo Pagani - Botucatu/SP</title>
+		<title>Projetos Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
-    <meta name="description" content="Sobre | Vereador Lelo Pagani - Botucatu/SP" />
-    <meta name="keywords" content="vereador, lelo pagani, historico, sobre, botucatu, politica" />
+    <meta name="description" content="Projetos de Lei | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta name="keywords" content="vereador, lelo pagani, historico, projetos, botucatu, politica, lei" />
     <meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
     <meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
     <meta name="robots" content="follow,index">
     <meta name= "googlebot" content="follow,index">
     <meta name="DC.publisher" content="Nova Era Web">
     <meta name="DC.date.created" content="2008-10-01">
-    <meta name="  DC.Identifier" content="https://www.celinamoraes.com.br">
+    <meta name="DC.Identifier" content="https://www.lelopagani.com.br">
     <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
     <link rel="author" href="https://www.novaeraweb.com.br"/>
-    <link rel="canonical" href="https://www.lelopagani.com.br/sobre-vereador-lelo-pagani.php" />
+    <link rel="canonical" href="https://www.lelopagani.com.br/projetos-vereador-lelo-pagani.php" />
 
     <!-- Meta FB -->
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="Vereador Lelo Pagani" />
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.lelopagani.com.br/sobre-vereador-lelo-pagani.php"/>
-    <meta property="og:image" content="https://www.lelopagani.com.br/adm/arquivos/<?=$noticias['arquivo']?>.jpg" />
+    <meta property="og:url" content="https://www.lelopagani.com.br/projetos-vereador-lelo-pagani.php"/>
+    <meta property="og:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
-    <meta property="og:description" content="Sobre | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta property="og:description" content="Projetos de Lei | Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:site_name" content="Vereador Lelo Pagani"/>
     <meta property="fb:admins" content=""/>
     <!-- Fim Meta FB -->
@@ -44,7 +44,7 @@ $projetos = listaProjeto($lelo);
       name="twitter:description"
       content="Sobre | Vereador Lelo Pagani - Botucatu/SP"
     />
-    <meta name="twitter:title" content="Vereador Lelo Pagani - Botucatu/SP" />
+    <meta name="twitter:title" content="Projetos de Lei | Vereador Lelo Pagani - Botucatu/SP" />
     <meta name="twitter:site" content="@lelopagani" />
     <meta
       name="twitter:image"
@@ -68,18 +68,18 @@ $projetos = listaProjeto($lelo);
           <table class="table" id="tabela">
             <thead>
                 <tr>
-                    <th>Título</th>
-                    <th>Número do Projeto</th>
-                    <th>Data do Projeto</th>
-                    <th>Link</th>
+                  <th>Nº do Projeto</th>
+                  <th>Título</th>
+                  <th>Data do Projeto</th>
+                  <th>Link</th>
                 </tr>
             </thead>
           <tbody>
               <?php foreach ($projetos as $projeto){?>
                 <tr class="text-center">
-                    <td style="max-width:100px;"><?=$projeto->titulo;?></td>
-                    <td style="max-width:100px;"><?=$projeto->nro_projeto;?></td>
-                    <td style="max-width:100px;"><?=$projeto->data_projeto;?></td>
+                  <td style="max-width:60px;"><?=$projeto->nro_projeto;?></td>
+                  <td style="max-width:220px;"><?=$projeto->titulo;?></td>
+                    <td style="max-width:60px;"><?=$projeto->data_projeto;?></td>
                     <td><a href="<?=$projeto->link;?>">Leia mais</a></td>
                 </tr>
                 <?php }?>

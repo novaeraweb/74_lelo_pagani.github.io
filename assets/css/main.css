@@ -1819,6 +1819,7 @@ input, select, textarea {
 
 	.dataTables_length select{
 		width: 65px;
+		margin: 0 5;
 	}
 
 	input[type="text"],
