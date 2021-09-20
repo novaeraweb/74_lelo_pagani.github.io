@@ -13,7 +13,13 @@ mysqli_select_db($lelo, 'lelopagani');
    
     $descricao_longa = $_POST["descricao_longa"];
     $descricao_longa = trim($descricao_longa);
+
+    $data = $_POST['data'];
+    $data = trim($data);
     
+    $data_noticia = $_POST['data_noticia'];
+    $data_noticia = trim($data_noticia);
+
     $link = $_POST["link"];
     $link = trim($link);
 
@@ -24,7 +30,7 @@ mysqli_select_db($lelo, 'lelopagani');
     $ativo = trim($ativo);
 
 // Insert EN
-$updateSQL = "UPDATE noticia SET titulo = '$titulo', descricao_breve = '$descricao_breve', descricao_longa = '$descricao_longa', link = '$link', video = '$video' , ativo = '$ativo' WHERE idnoticia ='$id'"; 
+$updateSQL = "UPDATE noticia SET titulo = '$titulo', descricao_breve = '$descricao_breve', descricao_longa = '$descricao_longa', link = '$link', video = '$video' , data_noticia = '$data_noticia', ativo = '$ativo' WHERE idnoticia ='$id'"; 
 
 $Result = mysqli_query($lelo, $updateSQL) or die(mysqli_error($lelo));  
 

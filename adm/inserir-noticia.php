@@ -71,6 +71,12 @@ mysqli_select_db($lelo, "lelopagani");
                       </div>
                       <br>
 
+                      <div class="form-group">
+                        <label for="data_noticia">Data da Notícia:</label><br>
+                        <input type="date" name="data_noticia" id="data_noticia" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}">
+                      </div>
+                      <br>
+
                       <div id="dvFile">
                         <label for="arquivo" style="width: 100%; margin-top: 15px;">Imagem da notícia</label>
                         <input type="file" name="arquivo" id="arquivo" required>

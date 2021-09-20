@@ -30,6 +30,9 @@ mysqli_select_db($lelo, 'lelopagani');
     $video = $_POST['video'];
     $video = trim($video);
 
+    $data_noticia = $_POST['data_noticia'];
+    $data_noticia = trim($data_noticia);
+
 
     $dir = "arquivos/";
     $dir = strtolower($dir);
@@ -50,7 +53,7 @@ mysqli_select_db($lelo, 'lelopagani');
 
 
 //Insert inglês
-$insertSQL = "INSERT INTO noticia (titulo, descricao_breve, descricao_longa, link, usuario, data, arquivo, video, ativo) VALUES ('$titulo', '$descricao_breve', '$descricao_longa', '$link', '$usuario', '$data' , '$novo', '$video', '$ativo' )";      
+$insertSQL = "INSERT INTO noticia (titulo, descricao_breve, descricao_longa, link, usuario, data, data_noticia, arquivo, video, ativo) VALUES ('$titulo', '$descricao_breve', '$descricao_longa', '$link', '$usuario', '$data', '$data_noticia', '$novo', '$video', '$ativo' )";      
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 
 

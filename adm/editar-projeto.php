@@ -62,13 +62,18 @@ $projetos = listaProjetoId($lelo, $id);
                         </div>
                         <br>
                         <div class="form-group">
-                          <label for="descricao_breve">Descrição Breve:</label><br>
-                          <textarea name="descricao_breve" id="descricao_breve" cols="30" rows="10" class="form-control"><?=$projeto->descricao_breve;?></textarea>
+                          <label for="nro_projeto">Número do Projeto:</label><br>
+                          <textarea name="nro_projeto" id="nro_projeto" cols="30" rows="10" class="form-control"><?=$projeto->nro_projeto;?></textarea>
                         </div>
                         <br>
                         <div class="form-group">
-                          <label for="descricao_longa">Descrição Longa:</label><br>
-                          <textarea name="descricao_longa" id="descricao_longa" cols="30" rows="10" class="form-control"><?=$projeto->descricao_longa;?></textarea>
+                          <label for="data_projeto">Data do Projeto:</label><br>
+                          <textarea name="data_projeto" id="data_projeto" cols="30" rows="10" class="form-control"><?=$projeto->data_projeto;?></textarea>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                          <label for="descricao_breve">Descrição Breve:</label><br>
+                          <textarea name="descricao_breve" id="descricao_breve" cols="30" rows="10" class="form-control"><?=$projeto->descricao_breve;?></textarea>
                         </div>
                         <br>
                         <div class="form-group">
@@ -115,25 +120,6 @@ $projetos = listaProjetoId($lelo, $id);
   <script src="assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
-  
-  <!-- CKEditor -->
-  <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
- 
-  <script type="text/javascript">
-
-// Initialize CKEditor
-CKEDITOR.replace('descricao_breve',{
-  width: "700px",
-  height: "200px"
-});  
-
-CKEDITOR.replace('descricao_longa',{
-
-  width: "700px",
-  height: "200px"
-
-}); 
-</script>   
 </body>
 
 </html>

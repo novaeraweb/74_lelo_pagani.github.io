@@ -22,6 +22,9 @@ mysqli_select_db($lelo, 'lelopagani');
     $data = $_POST['data'];
     $data = trim($data);
 
+    $data_postagem = $_POST['data_postagem'];
+    $data_postagem = trim($data_postagem);
+
     $usuario = $_POST["usuario"];
     $usuario = trim($usuario);
 
@@ -30,11 +33,8 @@ mysqli_select_db($lelo, 'lelopagani');
     $video = $_POST['video'];
     $video = trim($video);
 
-
     $dir = "arquivos/";
     $dir = strtolower($dir);
-    
-
 
     $nomevar = 'arquivo';
 
@@ -49,7 +49,7 @@ mysqli_select_db($lelo, 'lelopagani');
     require "adicionar-imagens.php";
 
 
-$insertSQL = "INSERT INTO blog (titulo, descricao_breve, descricao_longa, link, usuario, data, arquivo, video, ativo) VALUES ('$titulo', '$descricao_breve', '$descricao_longa', '$link', '$usuario', '$data' , '$novo', '$video', '$ativo' )";      
+$insertSQL = "INSERT INTO blog (titulo, descricao_breve, descricao_longa, link, usuario, data, data_postagem, arquivo, video, ativo) VALUES ('$titulo', '$descricao_breve', '$descricao_longa', '$link', '$usuario', '$data', '$data_postagem', '$novo', '$video', '$ativo' )";      
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 
 

@@ -64,8 +64,8 @@ $projetos = listaProjeto($lelo);
                                 <tr class="text-center">
                                     <th>Imagem</th>
                                     <th>Título</th>
-                                    <th>Descrição Breve</th>
-                                    <th>Descrição Longa</th>
+                                    <th>Número do Projeto</th>
+                                    <th>Data do Projeto</th>
                                     <th>Ativo</th>
                                     <th>Ações</th>
                                 </tr>
@@ -75,8 +75,8 @@ $projetos = listaProjeto($lelo);
                                 <tr class="text-center">
                                     <td><img src="arquivos/<?=$projeto->arquivo;?>" style="width: 80px;"></td>
                                     <td style="max-width:100px;"><?=$projeto->titulo;?></td>
-                                    <td style="max-width:100px;"><?=$projeto->descricao_breve;?></td>
-                                    <td style="max-width:100px;"><?=substr($projeto->descricao_longa, 0, 50).'...';?></td>
+                                    <td style="max-width:100px;"><?=$projeto->nro_projeto;?></td>
+                                    <td style="max-width:100px;"><?=$projeto->data_projeto;?></td>
                                     <td><?=$projeto->ativo;?></td>
                                     <td class="td-actions text-right">
                                     <a href="editar-imagens-projeto.php?id=<?php echo $projeto->idprojeto;?>" style="margin-top: 10px; margin-right: 10px;">

@@ -76,6 +76,13 @@ $blogs = listaBlogId($lelo, $id);
                           <input type="text" name="link" id="link" class="form-control" value="<?=$blog->link;?>">
                         </div>
                         <br>
+
+                        <div class="form-group">
+                          <label for="data_postagem">Data da Postagem:</label>
+                          <input type="date" name="data_postagem" id="data_postagem" class="form-control" value="<?=$noticia->data_postagem;?>">
+                        </div>
+                        <br>
+
                         <div class="form-group">
                           <label for="video"> <i class="material-icons" style="float: left;">play_circle_filled</i> Vídeo </label>
                           <input type="text" class="form-control" name="video" id="video" value="<?=$blog->video;?>"> 

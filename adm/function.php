@@ -3,9 +3,8 @@
 // Queries blogs
 function listaBlog ($lelo) {
  	$query = "SELECT b.*
-	 		  FROM blog b
-			  WHERE b.ativo = 'Sim'
-			  ORDER BY b.titulo ASC";
+						FROM blog b
+						WHERE b.ativo = 'Sim'";
  	$resultado = mysqli_query($lelo, $query);
  	$blogs = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -28,8 +27,34 @@ function listaBlog ($lelo) {
 
 function listaBlogId ($lelo, $id) {
  	$query = "SELECT b.*
-	 		  FROM blog b
-			  WHERE b.ativo = 'Sim'AND b.idblog=$id";
+						FROM blog b
+						WHERE b.ativo = 'Sim'AND b.idblog=$id";
+	$resultado = mysqli_query($lelo, $query);
+	$blogs = array();
+	while ($array = mysqli_fetch_assoc($resultado)) {
+		$blog = new Blog();
+		$blog->idblog = $array['idblog'];
+		$blog->titulo = $array['titulo'];
+		$blog->descricao_breve = $array['descricao_breve'];
+		$blog->descricao_longa = $array['descricao_longa'];
+		$blog->arquivo = $array['arquivo'];
+		$blog->link = $array['link'];
+		$blog->usuario = $array['usuario'];
+		$blog->data = $array['data'];
+		$blog->video = $array['video'];
+		$blog->ativo = $array['ativo'];
+
+		array_push($blogs, $blog);
+	}
+ 	return $blogs;
+}
+
+function listaBlogIndex ($lelo) {
+ 	$query = "SELECT b.*
+						FROM blog b
+						WHERE b.ativo = 'Sim'
+						ORDER BY b.idblog DESC
+						LIMIT 4";
 	$resultado = mysqli_query($lelo, $query);
 	$blogs = array();
 	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -53,9 +78,8 @@ function listaBlogId ($lelo, $id) {
 
 function listaNoticia ($lelo) {
  	$query = "SELECT n.*
-	 		  FROM noticia n
-			  WHERE n.ativo = 'Sim'
-			  ORDER BY n.titulo ASC";
+						FROM noticia n
+						WHERE n.ativo = 'Sim'";
  	$resultado = mysqli_query($lelo, $query);
  	$noticias = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -68,6 +92,34 @@ function listaNoticia ($lelo) {
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];
 		$noticia->data = $array['data'];
+		$noticia->data_noticia = $array['data_noticia'];
+		$noticia->video = $array['video'];
+		$noticia->ativo = $array['ativo'];
+
+ 		array_push($noticias, $noticia);
+ 	}
+ 	return $noticias;
+}
+
+function listaNoticiaIndex ($lelo) {
+ 	$query = "SELECT n.*
+						FROM noticia n
+						WHERE n.ativo = 'Sim'
+						ORDER BY n.idnoticia DESC
+						LIMIT 4";
+ 	$resultado = mysqli_query($lelo, $query);
+ 	$noticias = array();
+ 	while ($array = mysqli_fetch_assoc($resultado)) {
+ 		$noticia = new Noticia();
+ 		$noticia->idnoticia = $array['idnoticia'];
+ 		$noticia->titulo = $array['titulo'];
+		$noticia->descricao_breve = $array['descricao_breve'];
+		$noticia->descricao_longa = $array['descricao_longa'];
+		$noticia->arquivo = $array['arquivo'];
+		$noticia->link = $array['link'];
+		$noticia->usuario = $array['usuario'];
+		$noticia->data = $array['data'];
+		$noticia->data_noticia = $array['data_noticia'];
 		$noticia->video = $array['video'];
 		$noticia->ativo = $array['ativo'];
 
@@ -92,6 +144,7 @@ function listaNoticiaId ($lelo, $id) {
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];
 		$noticia->data = $array['data'];
+		$noticia->data_noticia = $array['data_noticia'];
 		$noticia->video = $array['video'];
 		$noticia->ativo = $array['ativo'];
 
@@ -112,7 +165,8 @@ function listaProjeto ($lelo) {
 		$projeto->idprojeto = $array['idprojeto'];
 		$projeto->titulo = $array['titulo'];
 	   $projeto->descricao_breve = $array['descricao_breve'];
-	   $projeto->descricao_longa = $array['descricao_longa'];
+	   $projeto->nro_projeto = $array['nro_projeto'];
+		 $projeto->data_projeto = $array['data_projeto'];
 	   $projeto->arquivo = $array['arquivo'];
 	   $projeto->link = $array['link'];
 	   $projeto->usuario = $array['usuario'];
@@ -135,7 +189,8 @@ function listaProjetoId ($lelo, $id) {
 	   $projeto->idprojeto = $array['idprojeto'];
 	   $projeto->titulo = $array['titulo'];
 	   $projeto->descricao_breve = $array['descricao_breve'];
-	   $projeto->descricao_longa = $array['descricao_longa'];
+	   $projeto->nro_projeto = $array['nro_projeto'];
+	   $projeto->data_projeto = $array['data_projeto'];
 	   $projeto->arquivo = $array['arquivo'];
 	   $projeto->link = $array['link'];
 	   $projeto->usuario = $array['usuario'];
