@@ -96,7 +96,7 @@ $projetos = listaProjeto($lelo);
     </main>
 </body>
 <?php require_once "footer.php"?>
-<script type="text/javascript" charset="utf8" src="assets/js/jquery.datatables.js"></script>
+<script type="text/javascript" charset="utf8" src="assets/js/jquery.dataTables.js"></script>
 <script>
   // Tabela
   $(document).ready( function () {
