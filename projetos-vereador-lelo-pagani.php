@@ -54,7 +54,7 @@ $projetos = listaProjeto($lelo);
     <!-- Fim Meta Twitter -->
 
     <link rel="stylesheet" href="assets/css/main.css" />    
-    <link rel="stylesheet" href="assets/css/jquery.datatables.css">  
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.css">  
 	</head>
 
 <?php require_once "header.php"?>
