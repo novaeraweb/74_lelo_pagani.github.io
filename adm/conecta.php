@@ -1,6 +1,6 @@
 <?php $URL_ATUAL= "$_SERVER[SERVER_NAME]";
 
-if (str_contains($URL_ATUAL, 'lelo')) {
+if (strpos($URL_ATUAL, 'nlelo') !== false) {
 	$lelo = mysqli_connect('mysql745.umbler.com', 'lelopagani_user', 'lp*010203', 'lelopagani');
 } else {
 	$lelo = mysqli_connect('localhost', 'root', 'root', 'lelopagani');
