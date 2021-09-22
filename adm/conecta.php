@@ -6,8 +6,6 @@ if ($URL_ATUAL=='www.lelopagani.com.br') {
 	$lelo = mysqli_connect('localhost', 'root', 'root', 'lelopagani');
 
 }
-echo $lelo;
-exit;
 mysqli_query($lelo, "SET NAMES 'utf8'");
 mysqli_query($lelo,'SET character_set_connection=utf8');
 mysqli_query($lelo,'SET character_set_client=utf8');
