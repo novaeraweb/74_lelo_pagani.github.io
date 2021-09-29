@@ -1,5 +1,5 @@
 <section id="four">
-    <h2>FALE COM A VEREADOR</h2>
+    <h2>FALE COM O VEREADOR</h2>
     <p>Entre em contato e retornarei o mais breve possível</p>
     <div class="row">
         <div class="col-8 col-12-small">
