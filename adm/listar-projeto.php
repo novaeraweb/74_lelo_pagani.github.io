@@ -15,7 +15,6 @@ $projetos = listaProjeto($lelo);
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -42,30 +41,29 @@ $projetos = listaProjeto($lelo);
         <div class="container-fluid">
           <!-- your content here -->
           <div class="row"><?php require_once "alerta.php";?>
-            <div class="card card-nav-tabs card-plain">
-                <div class="card-header card-header-info">
-                    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-                    <div class="nav-tabs-navigation">
-                        <div class="nav-tabs-wrapper">
-                            <ul class="nav nav-tabs" data-tabs="tabs">
-                            
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#" data-toggle="tab">Projetos</a>
-                                </li>
-                            </ul>
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-text card-header-info">
+                            <div class="card-text">
+                                <h4 class="card-title" style="width:100%;height:100%;">Listar Projetos</h4>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                          <p>Projetos cadastrados no sistema</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="card-body ">
                     <div class="tab-content text-center">
                         <div class="tab-pane active">
                           <table class="table" id="tabela">
-                            <thead>
+                            <thead style="margin-top: 50px;">
                                 <tr class="text-center">
-                                    <th>Imagem</th>
-                                    <th>Título</th>
-                                    <th>Número do Projeto</th>
+                                    <th>Nro do Projeto</th>
                                     <th>Data do Projeto</th>
+                                    <th>Título</th>
                                     <th>Ativo</th>
                                     <th>Ações</th>
                                 </tr>
@@ -73,25 +71,19 @@ $projetos = listaProjeto($lelo);
                           <tbody>
                               <?php foreach ($projetos as $projeto){?>
                                 <tr class="text-center">
-                                    <td><img src="arquivos/<?=$projeto->arquivo;?>" style="width: 80px;"></td>
-                                    <td style="max-width:100px;"><?=$projeto->titulo;?></td>
-                                    <td style="max-width:100px;"><?=$projeto->nro_projeto;?></td>
-                                    <td style="max-width:100px;"><?=$projeto->data_projeto;?></td>
+                                    <td style="width:16%;"><?=$projeto->nro_projeto;?></td>
+                                    <td style="width:16%;"><?=$projeto->data_projeto;?></td>
+                                    <td style="width:45%;"><?=$projeto->titulo;?></td>
                                     <td><?=$projeto->ativo;?></td>
                                     <td class="td-actions text-right">
-                                    <a href="editar-imagens-projeto.php?id=<?php echo $projeto->idprojeto;?>" style="margin-top: 10px; margin-right: 10px;">
-                                      <button type="button" rel="tooltip" class="btn btn-warning btn-round" data-toggle="tooltip" data-placement="top" title="Editar fotos">
-                                        <i class="material-icons">camera_enhance</i>
-                                      </button>
-                                    </a>
 
                                     <a href="editar-projeto.php?id=<?php echo $projeto->idprojeto;?>" class="info" style="margin-top: 10px; margin-right: 10px;">
-                                      <button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar conteúdo">
                                             <i class="material-icons">edit</i>
                                       </button>
                                     </a>
                                     
-                                    <button type="button" class="btn btn-danger btn-round"  style="margin-top: 10px;" data-toggle="modal" data-target="#modal-delete-projeto<?php echo $projeto->idprojeto;?>">
+                                    <button type="button" class="btn btn-danger btn-round" rel="tooltip" style="margin-top: 10px;" data-toggle="tooltip" data-placement="top" title="Excluir" data-target="#modal-delete-projeto<?php echo $projeto->idprojeto;?>">
                                       <i class="material-icons">close</i>
                                     </button>
                                   <a href="#" class="info"  style="margin-top: 10px; margin-left:10px; margin-right: -75px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por <?=$projeto->usuario;?>, em: <?=$projeto->data;?>">
@@ -125,7 +117,7 @@ $projetos = listaProjeto($lelo);
                         </div>
                     </div>
                 </div>
-            </div>
+ 
           </div>
         </div> 
       </div>

@@ -62,15 +62,15 @@ $projetos = listaProjeto($lelo);
     <main id="main">
         <section id="one">
           <header class="major">
-              <h1>Projetos Vereador Lelo Pagani</h1>
+              <h1>Projetos</h1>
           </header>
 
           <table class="table" id="tabela">
             <thead>
                 <tr>
                   <th>Nº do Projeto</th>
+                  <th>Data</th>
                   <th>Título</th>
-                  <th>Data do Projeto</th>
                   <th>Link</th>
                 </tr>
             </thead>
@@ -78,8 +78,8 @@ $projetos = listaProjeto($lelo);
               <?php foreach ($projetos as $projeto){?>
                 <tr class="text-center">
                   <td style="max-width:60px;"><?=$projeto->nro_projeto;?></td>
-                  <td style="max-width:220px;"><?=$projeto->titulo;?></td>
                     <td style="max-width:60px;"><?=$projeto->data_projeto;?></td>
+                  <td style="max-width:290px;"><?=$projeto->titulo;?></td>
                     <td><a href="<?=$projeto->link;?>">Leia mais</a></td>
                 </tr>
                 <?php }?>

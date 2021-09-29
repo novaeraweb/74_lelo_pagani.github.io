@@ -48,7 +48,7 @@ mysqli_select_db($lelo, "lelopagani");
             </div>
             <div class="row">
                 <div class="card col-md-12" style="padding-top: 20px;">
-                    <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="adicionar-postagem.php">
+                    <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="adicionar-editorial.php">
                       <div class="form-group">
                         <label for="titulo">Título:</label>
                         <input type="text" name="titulo" id="titulo" class="form-control">
@@ -71,7 +71,7 @@ mysqli_select_db($lelo, "lelopagani");
                       <br>
 
                       <div id="dvFile">
-                        <label for="arquivo" style="width: 100%; margin-top: 15px;">Imagem da postagem</label>
+                        <label for="arquivo" style="width: 100%; margin-top: 15px;">Imagem do Editorial</label>
                         <input type="file" name="arquivo" id="arquivo" required>
                       </div>
                       <br>
@@ -82,7 +82,7 @@ mysqli_select_db($lelo, "lelopagani");
                       <br>
                       <input type="hidden" name="usuario" id="usuario" value="<?php echo $_SESSION['usuario_logado']?>">
                       <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y')?>">
-                      <button id="submit" type="submit" class="btn btn-info float-right">Enviar</button>
+                      <button id="submit" type="submit" class="btn btn-info float-right">SALVAR</button>
                     </form> 
                 </div>
             </div>

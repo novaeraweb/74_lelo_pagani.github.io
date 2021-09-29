@@ -37,22 +37,22 @@ $blogs = listaBlogId($lelo, $id);
         <div class="container-fluid">
           <!-- your content here -->
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="card">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
-                                <h4 class="card-title">Editar postagem</h4>
+                                <h4 class="card-title">Editar Editorial</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                                Utilize o formulário abaixo para editar o conteúdo da postagem submetida:
+                                Utilize o formulário abaixo para editar o conteúdo do Editorial:
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="card col-md-12" style="padding-top: 20px;">
-                    <form  class="col-md-12" method="POST" action="alterar-postagem.php">
+                    <form  class="col-md-12" method="POST" action="alterar-editorial.php">
                       <br><br>
                         <?php foreach ($blogs as $blog){?>
                         <input type="hidden" name="id" id="id" value="<?=$blog->idblog;?>">
@@ -88,7 +88,7 @@ $blogs = listaBlogId($lelo, $id);
                           <input type="text" class="form-control" name="video" id="video" value="<?=$blog->video;?>"> 
                         </div>                        
                         <div class="form-group">
-                          <label for="ativo">A postagem está ativa?</label>
+                          <label for="ativo">Ativa?</label>
                           <select class="form-control selectpicker" data-style="btn btn-link" name="ativo" id="ativo">
                           <option value="<?=$blog->ativo;?>"><?=$blog->ativo;?></option>
                           <?php if ($blog->ativo == "Sim") {?>
@@ -104,7 +104,7 @@ $blogs = listaBlogId($lelo, $id);
                         <input type="hidden" name="usuario" id="usuario" value="<?php echo $_SESSION['usuario_logado']?>">
                         <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y')?>">
                         <a href="listar-blog.php"><button type="button" class="btn btn-danger float-left">Cancelar</button></a>
-                        <button type="submit" class="btn btn-primary float-right">Enviar</button>
+                        <button type="submit" class="btn btn-primary float-right">SALVAR</button>
                     </form>
                 </div>    
             </div>

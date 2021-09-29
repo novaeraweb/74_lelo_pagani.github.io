@@ -8,7 +8,6 @@
         <title>Login Administrativo</title>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
-
         <meta name="description" content="Nova Era Web | (14)9.9628.5428 - Criação e desenvolvimento de sites responsivos, Marketing Digital e Hospedagem de Sites profissional." />
         <meta name="keywords" content="criação de sites, desenvolvimento de sites, sites, agencia web, agência digital, marketing online, hospedagem de sites, botucatu, avare, bauru, criação de sites botucatu, desenvolvimento de sites botucatu" />
         <meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
@@ -33,18 +32,11 @@
         <meta property="og:site_name" content="Agência Nova Era Web"/>
         <meta property="fb:admins" content="Facebook ID - toda conta developer possui um ID"/>
        <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
-        <link rel="stylesheet" href="assets/css/style.css">
- 
-        <script src="js/responsive-nav.js"></script>
-        <script src="js/picturefill.js"></script>
-        
+        <link rel="stylesheet" href="assets/css/style.css">        
         <!-- Marcações HTML5 no IE9 anterior  -->
         <!--[if lt IE9]>
         <script src="js/html5shiv.min.js"></script>
         <![endif] -->
-
-
-        
         <!--[if lt IE 9]>
             <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
         <![endif]-->
@@ -56,14 +48,14 @@
         <div id="main" class="container">
             <article class="grid_10 ">
                 <div class="login">
-                    <img class="logo" src="" alt="Logo">
-                    <h3>Administrativo Lelo Pagani</h3>
+                    <img class="logo" src="../assets/images/logo-lelo-pagani-vereador-escuro.png" alt="Logo">
+                    <h3>Gerenciador de Conteúdo do Site</h3>
 
                     <form method="POST" action="login.php">
                     <?php require_once "alerta.php" ?>
-                    <input type="text" name="user" placeholder="Usuário">
-                    <input type="password" name="senha" placeholder="Senha">
-                    <button id="submit" type="submit" class="btn btn-primary float-right">Enviar</button>
+                    <input style="width:100%;height:40px;" type="text" name="user" placeholder="Usuário">
+                    <input style="width:100%;height:40px;" type="password" name="senha" placeholder="Senha">
+                    <button style="width:100%;" id="submit" type="submit" class="btn btn-primary float-right">ENTRAR</button>
                     </form>
                 </div>
             </article>
@@ -72,7 +64,7 @@
         </div>
 
         <footer class="container">
-            <p class="grid_10"><?php echo date('o'); ?> - Desenvolvido por Nova Era Web</p>
+            <p class="grid_10">Sistema NovoAeon 3.0 | Desenvolvido por Nova Era Web | <?php echo date('o'); ?></p>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

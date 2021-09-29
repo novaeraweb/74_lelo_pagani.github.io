@@ -102,7 +102,7 @@ $noticias = listaNoticiaId($lelo, $id);
                         <input type="hidden" name="usuario" id="usuario" value="<?php echo $_SESSION['usuario_logado']?>">
                         <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y')?>">
                         <a href="listar-noticia.php"><button type="button" class="btn btn-danger float-left">Cancelar</button></a>
-                        <button type="submit" class="btn btn-primary float-right">Enviar</button>
+                        <button type="submit" class="btn btn-primary float-right">SALVAR</button>
                     </form>
                 </div>    
             </div>

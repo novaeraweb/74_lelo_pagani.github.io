@@ -1,11 +1,5 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
-
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -98,8 +92,8 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		color: #3c3c3c;
+		font-family: 'Montserrat', sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
 		line-height: 1.75em;
@@ -116,12 +110,12 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color:#161E5F !important;
 			text-decoration: none;
 		}
 
 	strong, b {
-		color: #787878;
+		color:#161E5F;
 		font-weight: 400;
 	}
 
@@ -131,33 +125,44 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+		text-align: justify;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color:#161E5F;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 	}
 
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			color: inherit;
-			text-decoration: none;
-		}
-
-	h1 {
-		font-size: 2em;
-		line-height: 1.5em;
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		color: inherit;
+		text-decoration: none;
 	}
 
+	h1 {
+		font-size:4em;
+		font-weight:900;
+	}
+	h1 span {
+		font-size:1.55em;
+	}
+	.vereador {
+		font-size:2.2em;
+		font-weight:400;
+		color:#3c3c3c;
+		margin-top:-60px;
+		letter-spacing:16px;
+	}
 	h2 {
 		font-size: 1.5em;
 		line-height: 1.5em;
 	}
 
 	h3 {
-		font-size: 1.25em;
-		line-height: 1.5em;
+		font-size:1.1em;
+		color:#3c3c3c;
+		line-height:1.2em;
 	}
 
 	h4 {
@@ -208,7 +213,7 @@ input, select, textarea {
 		background: #f7f7f7;
 		border-radius: 0.35em;
 		border: solid 2px #efefef;
-		font-family: "Courier New", monospace;
+		font-family: 'Montserrat', sans-serif;
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -216,7 +221,7 @@ input, select, textarea {
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
+		font-family: 'Montserrat', sans-serif;
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
 	}
@@ -1800,7 +1805,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #787878;
+		color:#161E5F;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 400;
@@ -1869,7 +1874,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #787878;
+			color:#161E5F;
 			background: #fff;
 		}
 
@@ -1952,8 +1957,8 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #787878;
-			border-color: #787878;
+			background:#161E5F;
+			border-color:#161E5F;
 			color: #fff;
 			content: '\f00c';
 		}
@@ -2120,10 +2125,9 @@ input, select, textarea {
 		.noticias img{
 			border-radius: 0.35em;
 			display: block;
-			width: 100%;
-			max-width: 350px;
-			height: 100%;
-			max-height: 195px;
+			 object-fit: cover;
+			  width:100%;
+			  height:250px;
 		}
 
 		.image.left {
@@ -2185,13 +2189,13 @@ ul.menu ul{ position:absolute; display:none; box-shadow:3px 3px 2px #333;}
 /* Configurações nivel 1*/
 ul.menu{ 
     letter-spacing:1px;
-    font-size: 1em;
+    font-size:0.9em;
 	margin-left: -10px;
-	width: 400px;
+	width: 420px;
 }
 .menu li{ position:relative;z-index: 99;}
 .menu ul li { width: auto;  }
-.menu li a{ display:block; padding:0 6px; line-height:35px; height:35px; float:left; transition:all 0.1s linear; font-size: 14px; border-bottom: none; }
+.menu li a{ display:block; padding:0 6px; line-height:35px; height:35px; float:left; transition:all 0.1s linear; font-size: 12px; border-bottom: none; }
 
 /* Configurações nivel 2*/
 .menu li:hover > ul.submenu-1{ display:block; top:19px; left:0; padding:5px; width:340px; border-radius:0 0 5px 5px; }
@@ -2203,7 +2207,7 @@ ul.menu{
 .menu{ 	transition: 1s;}
 .menu a{ color:#fefefe; }
 .menu li:hover > a, .active{ background:rgba(255,255,255,0.5);  color: #446B31; text-decoration: none;}
-.menu li.active > a{color: #00b3ff!important; background:rgba(255,255,255,0.5);}
+.menu li.active > a{color:#161E5F!important; background:rgba(255,255,255,0.5);}
 
 /*nivel 2*/
 .submenu-1{ background:#FFECCD; font-weight:400; }
@@ -2529,7 +2533,7 @@ z-index:999;
 		}
 
 		table th {
-			color: #787878;
+			color:#161E5F;
 			font-size: 0.9em;
 			font-weight: 400;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2590,10 +2594,10 @@ input[type="date"]:disabled{
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		background-color: transparent;
+		background-color:#161E5F;
 		border-radius: 0.35em;
 		border: solid 3px #efefef;
-		color: #787878 !important;
+		color:#f9f9f9 !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
@@ -2605,14 +2609,16 @@ input[type="date"]:disabled{
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		border-color:#161E5F;
 	}
 
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			background-color:transparent;
+			border-color:#161E5F;
+			color: #161E5F !important;
 		}
 
 		input[type="submit"]:active,
@@ -2710,7 +2716,7 @@ input[type="date"]:disabled{
 
 		.work-item h3 {
 			font-size: 1em;
-			margin: 0 0 0.5em 0;
+			margin: 0.8em 0 0.1em 0;
 		}
 
 		.work-item p {
@@ -2740,14 +2746,14 @@ input[type="date"]:disabled{
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll, scroll;
-		background-image: url("/assets/css/images/overlay.png"), url("../../assets/images/bg.jpg");
+		background-image: url("../images/background.png");
 		background-position: top left, top left;
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 150%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
-		padding: 8em 4em;
+		padding: 6em 3em;
 		position: fixed;
 		text-align: center;
 		top: 0;
@@ -2787,7 +2793,7 @@ input[type="date"]:disabled{
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 8em;
+			width: 14em;
 		}
 
 /* Footer */
@@ -2829,9 +2835,9 @@ input[type="date"]:disabled{
 /* Main */
 
 	#main {
-		margin-left: 35%;
-		max-width: 54em;
-		padding: 8em 4em 4em 4em;
+		margin-left: 30%;
+		max-width:63em;
+		padding: 6em 3em 3em 3em;
 		width: calc(100% - 35%);
 	}
 
@@ -3144,7 +3150,7 @@ input[type="date"]:disabled{
 		/* Header */
 
 			#header {
-				padding: 6em 3em 3em 3em;
+				padding: 3em 3em 3em 1em;
 				width: 30%;
 			}
 
@@ -3175,7 +3181,7 @@ input[type="date"]:disabled{
 			#main {
 				margin-left: 30%;
 				max-width: none;
-				padding: 6em 3em 3em 3em;
+				padding: 3em 3em 3em 3em;
 				width: calc(100% - 30%);
 			}
 

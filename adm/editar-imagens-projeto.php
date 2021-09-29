@@ -103,7 +103,7 @@ $projetos = listaProjetoId($lelo, $id);
                         <br>
                         <div class="form-group">
                         </div>
-                        <button id="submit" type="submit" class="btn btn-info float-right">Salvar</button>
+                        <button id="submit" type="submit" class="btn btn-info float-right">SALVAR</button>
                     </form>
 
                     

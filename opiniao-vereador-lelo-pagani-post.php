@@ -8,7 +8,7 @@ $blogs = listaBlogId($lelo, $id);
 ?>
 <html>
 	<head>
-		<title>Blog Vereador Lelo Pagani - Botucatu/SP</title>
+		<title>Editorial Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />

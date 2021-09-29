@@ -12,7 +12,7 @@ mysqli_select_db($lelo, "lelopagani");
   -->
       <div class="logo">
         <a href="https://www.lelopagani.com/" class="simple-text logo-normal" target="_blank" rel="noopener" rel="noreferrer">
-          <img src="" alt="Logo Lelo Pagani">
+          <img src="../assets/images/logo-lelo-pagani-vereador-claro.png" alt="Logo Lelo Pagani">
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -27,20 +27,20 @@ mysqli_select_db($lelo, "lelopagani");
         </ul>
         
         <ul class="nav">
-          <li class="nav-item active" data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de conteúdos relevantes ao blog">
+          <li class="nav-item active" data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de Editoriais">
             <a class="nav-link" data-toggle="collapse" href="#menu-conteudo" aria-expanded="false" aria-controls="menu-conteudo" >
               <i class="material-icons">view_list</i>
-              <p>Blog <i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
+              <p><strong>Editorial</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
             </a>
           </li>
           <!-- your sidebar here -->
           <div class="collapse" id="menu-conteudo">
           <ul class="nav flex-column">
             <li class="nav-item" style="height:25px;">  
-                <a class="nav-link active" href="inserir-postagem.php"><i class="material-icons">add</i> Inserir</a>
+                <a class="nav-link active" href="inserir-editorial.php"><i class="material-icons">add</i> Inserir</a>
             </li>
             <li class="nav-item" style="height: 25px;">
-                <a class="nav-link active" href="listar-postagem.php"><i class="material-icons">search</i> Visualizar</a>
+                <a class="nav-link active" href="listar-editorial.php"><i class="material-icons">search</i> Visualizar</a>
             </li> 
             <br>           
           </ul>
@@ -48,10 +48,10 @@ mysqli_select_db($lelo, "lelopagani");
         </ul>
 
         <ul class="nav">
-          <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="">
+          <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="eção destinada ao cadastro de Notícias">
             <a class="nav-link" data-toggle="collapse" href="#menu-colecao" aria-expanded="false" aria-controls="menu-colecao">
               <i class="material-icons">view_list</i>
-              <p>Notícias <i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
+              <p><strong>Notícias</strong> <i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
             </a>
           </li>
           <!-- your sidebar here -->
@@ -69,10 +69,10 @@ mysqli_select_db($lelo, "lelopagani");
         </ul>
 
         <ul class="nav">
-          <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="Cadastramento de projetos realizados.">
+          <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="eção destinada ao cadastro de Projetos">
             <a class="nav-link" data-toggle="collapse" href="#menu-linha" aria-expanded="false" aria-controls="menu-colecao">
               <i class="material-icons">view_list</i>
-              <p>Projetos <i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
+              <p><strong>Projetos</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
             </a>
           </li>
           <!-- your sidebar here -->

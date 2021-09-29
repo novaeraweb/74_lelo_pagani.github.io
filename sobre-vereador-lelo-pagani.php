@@ -56,8 +56,8 @@
         <section id="one">
           <header class="major">
               <h1>Vereador Lelo Pagani</h1>
-              <p>Sou vereador do município de Botucatu. Estou no meu 4º mandato na Câmara Municipal de Botucatu. Nesses últimos 4 anos me reciclei e me aprimorei. Busco articulação com a população para construirmos uma cidade cada vez melhor. </p>
           </header>
+          <p>Sou vereador do município de Botucatu. Estou no meu 4º mandato na Câmara Municipal de Botucatu. Nesses últimos 4 anos me reciclei e me aprimorei. Busco articulação com a população para construirmos uma cidade cada vez melhor. </p>
           <!-- <img src="" alt="Sobre Vereador Lelo Pagani" class="image fit"> -->
           <p>Busco uma articulação junto à população para construirmos uma cidade melhor. Minha luta é pela transformação social, da cidade e da região, com transparência, ética e persistência. Acredito que a educação é o caminho eficaz para a consolidação dessa mudança, respeitando a pluralidade e o meio ambiente. Por isso busco alternativas sustentáveis para o lazer de jovens, adultos e idosos, como também, na geração de emprego e renda.</p>
           <p>Gosto de praticar esportes, participei quatro vezes da corrida de "São Silvestre" e vejo o esporte como modo natural de inclusão e socialização, além da manutenção da saúde física, mental e espiritual.

@@ -60,7 +60,7 @@ $noticias = listaNoticia($lelo);
 <?php require_once "header.php"?>
 <body class="is-preload">
     <main id="main">
-        <h1>Notícias Vereador Lelo Pagani</h1>
+        <h1>Notícias</h1>
         <div class="cntl">
             <span class="cntl-bar cntl-center">
                 <span class="cntl-bar-fill"></span>
@@ -82,6 +82,7 @@ $noticias = listaNoticia($lelo);
                 <?php $i += 1; } ?>
             </div>
         </div>
+                <?php require_once "contato-vereador-lelo-pagani.php"?>
     </main>
     
 </body>

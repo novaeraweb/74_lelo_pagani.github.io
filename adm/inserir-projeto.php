@@ -50,34 +50,29 @@ mysqli_select_db($lelo, "lelopagani");
                 <div class="card col-md-12" style="padding-top: 20px;">
                     <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="adicionar-projeto.php">
                       <div class="form-group">
-                        <label for="titulo">Título:</label>
+                        <label for="titulo"><strong>Título:</strong></label><br>
                         <input type="text" name="titulo" id="titulo" class="form-control">
                       </div>
                       <br>
                       <div class="form-group">
-                        <label for="nro_projeto">Número do Projeto:</label><br>
-                        <textarea type="text" name="nro_projeto" id="nro_projeto" class="form-control"></textarea>
+                        <label for="nro_projeto"><strong>Número do Projeto:</strong></label><br>
+                        <input type="text" name="nro_projeto" id="nro_projeto" class="form-control">
                       </div>
                       <br>
                       <div class="form-group">
-                        <label for="data_projeto">Data do Projeto:</label><br>
+                        <label for="data_projeto"><strong>Data do Projeto:</strong></label><br>
                         <textarea type="text" name="data_projeto" id="data_projeto" class="form-control"></textarea>
                       </div>
                       <br>
                       <div class="form-group">
-                        <label for="link" data-toggle="tooltip" data-placement="top" title="Acrescente links para fontes externas, como de jornais ou redes sociais.">Link externo:</label>
+                        <label for="link" data-toggle="tooltip" data-placement="top" title="Acrescente links para fontes externas, como de jornais ou redes sociais."><strong>Link externo:</strong></label><br>
                         <input type="text" name="link" id="link" class="form-control">
                       </div>
                       <br>
-
-                      <div id="dvFile">
-                        <label for="arquivo" style="width: 100%; margin-top: 15px;">Foto/Imagem</label>
-                        <input type="file" name="arquivo" id="arquivo">
-                      </div>
                       <br>
                       <input type="hidden" name="usuario" id="usuario" value="<?php echo $_SESSION['usuario_logado']?>">
                       <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y')?>">
-                      <button id="submit" type="submit" class="btn btn-info float-right">Enviar</button>
+                      <button id="submit" type="submit" class="btn btn-info float-right">SALVAR</button>
                     </form> 
                 </div>
             </div>

@@ -2,12 +2,11 @@
 require "adm/conecta.php";
 require "adm/class.php";
 require "adm/function.php";
-
 $blogs = listaBlog($lelo);
 ?>
 <html>
 	<head>
-		<title>Blog Vereador Lelo Pagani - Botucatu/SP</title>
+		<title>Opinião Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />      
@@ -16,7 +15,7 @@ $blogs = listaBlog($lelo);
 <?php require_once "header.php"?>
 <body>
     <main id="main">
-        <h1>Blog Vereador Lelo Pagani</h1>
+        <h1>Opinião</h1>
         <div class="cntl">
             <span class="cntl-bar cntl-center">
                 <span class="cntl-bar-fill"></span>
@@ -29,7 +28,7 @@ $blogs = listaBlog($lelo);
                         <p><?=$blog->data;?></p>
                         <p><?=$blog->descricao_breve;?></p>
                         <ul class="actions">
-                            <li><a href="postagem-vereador-lelo-pagani.php?id=<?=$blog->idblog;?>" class="button">Leia a postagem completa</a></li>
+                            <li><a href="opiniao-vereador-lelo-pagani-post.php?id=<?=$blog->idblog;?>" class="button">Leia o editorial completo</a></li>
                         </ul>
                     </div>
                     <div class="cntl-image"><img src="adm/arquivos/<?=$blog->arquivo;?>" alt="Vereador Lelo Pagani"></div>

@@ -66,9 +66,12 @@ $blogs = listaBlogIndex($lelo);
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h1>Vereador Lelo Pagani</h1>
+							<h1><span>LELO</span><br>PAGANI<br></h1>
+							<p class="vereador">Vereador</p>
+							
 						</header>
-						<p>Sou vereador do município de Botucatu. Estou no meu 4º mandato na Câmara Municipal de Botucatu. Nesses últimos 4 anos me reciclei e me aprimorei. Busco articulação com a população para construirmos uma cidade cada vez melhor.</p>
+						<p>Sou vereador do município de Botucatu. Estou no meu 4º mandato na Câmara Municipal de Botucatu. Nesses últimos 4 anos me reciclei e me aprimorei. Busco uma articulação junto à população para construirmos uma cidade melhor.</p>
+						<p>Minha luta é pela transformação social, da cidade e da região, com transparência, ética e persistência.</p>
 						<ul class="actions">
 							<li><a href="sobre-vereador-lelo-pagani.php" class="button">Saiba Mais</a></li>
 						</ul>
@@ -76,7 +79,7 @@ $blogs = listaBlogIndex($lelo);
 
 				<!-- Two -->
 					<section id="two">
-						<h2>Notícias</h2>
+						<h2>NOTÍCIAS</h2>
 						<div class="row">
 							<?php foreach ($noticias as $noticia) {?>
 								<article class="col-6 col-12-xsmall work-item">
@@ -97,7 +100,7 @@ $blogs = listaBlogIndex($lelo);
 
 				<!-- Three -->
 					<section id="three">
-						<h2>Blog</h2>
+						<h2>EDITORIAL</h2>
 						<div class="row">
 							<?php foreach ($blogs as $blog){?>
 							<article class="col-6 col-12-xsmall work-item">

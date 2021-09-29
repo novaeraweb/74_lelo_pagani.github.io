@@ -37,7 +37,7 @@ $projetos = listaProjetoId($lelo, $id);
         <div class="container-fluid">
           <!-- your content here -->
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="card">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
@@ -45,7 +45,7 @@ $projetos = listaProjetoId($lelo, $id);
                             </div>
                         </div>
                         <div class="card-body">
-                                Utilize o formulário abaixo para editar o conteúdo do projeto submetida:
+                            <p>Utilize o formulário abaixo para editar o conteúdo do projeto:</p>
                         </div>
                     </div>
                 </div>
@@ -57,32 +57,28 @@ $projetos = listaProjetoId($lelo, $id);
                         <?php foreach ($projetos as $projeto){?>
                         <input type="hidden" name="id" id="id" value="<?=$projeto->idprojeto;?>">
                         <div class="form-group">
-                          <label for="titulo">Título:</label>
+                          <label for="titulo"><strong>Título:</strong></label><br>
                           <input type="text" name="titulo" id="titulo" class="form-control" value="<?=$projeto->titulo;?>">
                         </div>
                         <br>
                         <div class="form-group">
-                          <label for="nro_projeto">Número do Projeto:</label><br>
-                          <textarea name="nro_projeto" id="nro_projeto" cols="30" rows="10" class="form-control"><?=$projeto->nro_projeto;?></textarea>
+                          <label for="nro_projeto"><strong>Número do Projeto:</strong></label><br>
+                          <input type="text" name="nro_projeto" id="nro_projeto" cols="30" rows="10" class="form-control" value="<?=$projeto->nro_projeto;?>">
                         </div>
                         <br>
                         <div class="form-group">
-                          <label for="data_projeto">Data do Projeto:</label><br>
-                          <textarea name="data_projeto" id="data_projeto" cols="30" rows="10" class="form-control"><?=$projeto->data_projeto;?></textarea>
+                          <label for="data_projeto"><strong>Data do Projeto:</strong></label><br>
+                          <input type="text" name="data_projeto" id="data_projeto" cols="30" rows="10" class="form-control" value="<?=$projeto->data_projeto;?>">
                         </div>
                         <br>
-                        <div class="form-group">
-                          <label for="descricao_breve">Descrição Breve:</label><br>
-                          <textarea name="descricao_breve" id="descricao_breve" cols="30" rows="10" class="form-control"><?=$projeto->descricao_breve;?></textarea>
-                        </div>
                         <br>
                         <div class="form-group">
-                          <label for="link" data-toggle="tooltip" data-placement="top" title="Acresce links para fontes externas, como de jornais ou redes sociais.">Link externo:</label>
+                          <label for="link" data-toggle="tooltip" data-placement="top" title="Acresce links para fontes externas, como de jornais ou redes sociais."><strong>Link externo:</strong></label><br>
                           <input type="text" name="link" id="link" class="form-control" value="<?=$projeto->link;?>">
                         </div>
                         <br>                      
                         <div class="form-group">
-                          <label for="ativo">A postagem está ativa?</label>
+                          <label for="ativo"><strong>Ativa?</strong></label>
                           <select class="form-control selectpicker" data-style="btn btn-link" name="ativo" id="ativo">
                           <option value="<?=$projeto->ativo;?>"><?=$projeto->ativo;?></option>
                           <?php if ($projeto->ativo == "Sim") {?>
@@ -98,7 +94,7 @@ $projetos = listaProjetoId($lelo, $id);
                         <input type="hidden" name="usuario" id="usuario" value="<?php echo $_SESSION['usuario_logado']?>">
                         <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y')?>">
                         <a href="listar-projeto.php"><button type="button" class="btn btn-danger float-left">Cancelar</button></a>
-                        <button type="submit" class="btn btn-primary float-right">Enviar</button>
+                        <button type="submit" class="btn btn-primary float-right">SALVAR</button>
                     </form>
                 </div>    
             </div>

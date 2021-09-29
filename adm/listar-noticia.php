@@ -42,17 +42,15 @@ $noticias = listaNoticia($lelo);
         <div class="container-fluid">
           <!-- your content here -->
           <div class="row"><?php require_once "alerta.php";?>
-            <div class="card card-nav-tabs card-plain">
-                <div class="card-header card-header-info">
-                    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-                    <div class="nav-tabs-navigation">
-                        <div class="nav-tabs-wrapper">
-                            <ul class="nav nav-tabs" data-tabs="tabs">
-                            
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#" data-toggle="tab">Notícias</a>
-                                </li>
-                            </ul>
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-text card-header-info">
+                            <div class="card-text">
+                                <h4 class="card-title" style="width:100%;height:100%;">Listar Notícias</h4>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                          <p>Notícias cadastradas no sistema</p>
                         </div>
                     </div>
                 </div>
@@ -64,8 +62,6 @@ $noticias = listaNoticia($lelo);
                                 <tr class="text-center">
                                     <th>Imagem</th>
                                     <th>Título</th>
-                                    <th>Descrição Breve</th>
-                                    <th>Descrição Longa</th>
                                     <th>Ativo</th>
                                     <th>Ações</th>
                                 </tr>
@@ -75,8 +71,6 @@ $noticias = listaNoticia($lelo);
                                 <tr class="text-center">
                                     <td><img src="arquivos/<?=$noticia->arquivo;?>" style="width: 80px;"></td>
                                     <td style="max-width:100px;"><?=$noticia->titulo;?></td>
-                                    <td style="max-width:100px;"><?=$noticia->descricao_breve;?></td>
-                                    <td style="max-width:100px;"><?=substr($noticia->descricao_longa, 0, 50).'...';?></td>
                                     <td><?=$noticia->ativo;?></td>
                                     <td class="td-actions text-right">
                                     <a href="editar-imagens-noticia.php?id=<?php echo $noticia->idnoticia;?>" style="margin-top: 10px; margin-right: 10px;">
@@ -86,12 +80,12 @@ $noticias = listaNoticia($lelo);
                                     </a>
 
                                     <a href="editar-noticia.php?id=<?php echo $noticia->idnoticia;?>" class="info" style="margin-top: 10px; margin-right: 10px;">
-                                      <button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar">
+                                      <button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar conteúdo">
                                             <i class="material-icons">edit</i>
                                       </button>
                                     </a>
                                     
-                                    <button type="button" class="btn btn-danger btn-round"  style="margin-top: 10px;" data-toggle="modal" data-target="#modal-delete-noticia<?php echo $noticia->idnoticia;?>">
+                                    <button type="button" class="btn btn-danger btn-round"  style="margin-top: 10px;" data-toggle="modal" data-target="#modal-delete-noticia<?php echo $noticia->idnoticia;?>" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Excluir">
                                       <i class="material-icons">close</i>
                                     </button>
                                   <a href="#" class="info"  style="margin-top: 10px; margin-left:10px; margin-right: -75px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por <?=$noticia->usuario;?>, em: <?=$noticia->data;?>">
@@ -125,7 +119,7 @@ $noticias = listaNoticia($lelo);
                         </div>
                     </div>
                 </div>
-            </div>
+    
           </div>
         </div> 
       </div>

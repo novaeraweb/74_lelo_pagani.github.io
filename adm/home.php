@@ -8,11 +8,18 @@ require_once "function.php";
 
 //Popula foreach com o total de conteúdo em cada categoria
 
-
 // Query para números de categorias (totais)
-// $query_total = "SELECT a.* FROM categoria a WHERE ativo = 'Sim' OR ativo ='Não'";
-// $resultado_total = mysqli_query($soller, $query_total);
-// $categoria_total = mysqli_num_rows($resultado_total);
+$query_total = "SELECT a.* FROM projeto a WHERE ativo = 'Sim'";
+$resultado_total = mysqli_query($lelo, $query_total);
+$projeto_total = mysqli_num_rows($resultado_total);
+
+$query_total = "SELECT a.* FROM noticia a WHERE ativo = 'Sim'";
+$resultado_total = mysqli_query($lelo, $query_total);
+$noticia_total = mysqli_num_rows($resultado_total);
+
+$query_total = "SELECT a.* FROM blog a WHERE ativo = 'Sim'";
+$resultado_total = mysqli_query($lelo, $query_total);
+$editorial_total = mysqli_num_rows($resultado_total);
 
 ?>
 <head>
@@ -48,39 +55,39 @@ require_once "function.php";
         <div class="container-fluid">
           <!-- your content here -->
           <div class="row">
-           <div class="col-md-2">
+           <div class="col-md-3">
               <div class="card">
                   <div class="card-header card-header-text card-header-info">
                     <div class="card-text">
-                      <h4 class="card-title">Conteúdos Ativos</h4>
+                      <h4 class="card-title">Editoriais<br>Ativos</h4>
                     </div>
                   </div>
                   <div class="card-body" style="text-align: center; font-size: 26px;">
-                        <strong></strong>
+                        <strong><?=$editorial_total; ?></strong>
                   </div>
               </div>
            </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="card">
                   <div class="card-header card-header-text card-header-primary">
                     <div class="card-text">
-                      <h4 class="card-title">Categorias Totais</h4>
+                      <h4 class="card-title">Notícias<br>Ativas</h4>
                     </div>
                   </div>
                   <div class="card-body" style="text-align: center; font-size: 26px;">
-                        <strong></strong>
+                        <strong><?=$noticia_total; ?></strong>
                   </div>
               </div>
            </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="card">
                   <div class="card-header card-header-text card-header-success">
                     <div class="card-text">
-                      <h4 class="card-title"></h4>
+                      <h4 class="card-title">Projetos<br>Ativos</h4>
                     </div>
                   </div>
                   <div class="card-body" style="text-align: center; font-size: 26px;">
-                        <strong></strong>
+                        <strong><?=$projeto_total; ?></strong>
                   </div>
               </div>
            </div>
