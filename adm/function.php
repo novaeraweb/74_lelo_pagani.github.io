@@ -1,78 +1,78 @@
 <?php 
 
-// Queries blogs
-function listaBlog ($lelo) {
- 	$query = "SELECT b.*
-						FROM blog b
-						WHERE b.ativo = 'Sim'";
+// Queries opinioes
+function listaOpiniao ($lelo) {
+ 	$query = "SELECT o.*
+						FROM opiniao o
+						WHERE o.ativo = 'Sim'";
  	$resultado = mysqli_query($lelo, $query);
- 	$blogs = array();
+ 	$opinioes = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
- 		$blog = new Blog();
- 		$blog->idblog = $array['idblog'];
- 		$blog->titulo = $array['titulo'];
-		$blog->descricao_breve = $array['descricao_breve'];
-		$blog->descricao_longa = $array['descricao_longa'];
-		$blog->arquivo = $array['arquivo'];
-		$blog->link = $array['link'];
-		$blog->usuario = $array['usuario'];
-		$blog->data = $array['data'];
-		$blog->video = $array['video'];
-		$blog->ativo = $array['ativo'];
+ 		$opiniao = new Opiniao();
+ 		$opiniao->idopiniao = $array['idopiniao'];
+ 		$opiniao->titulo = $array['titulo'];
+		$opiniao->descricao_breve = $array['descricao_breve'];
+		$opiniao->descricao_longa = $array['descricao_longa'];
+		$opiniao->arquivo = $array['arquivo'];
+		$opiniao->link = $array['link'];
+		$opiniao->usuario = $array['usuario'];
+		$opiniao->data = $array['data'];
+		$opiniao->video = $array['video'];
+		$opiniao->ativo = $array['ativo'];
 
- 		array_push($blogs, $blog);
+ 		array_push($opinioes, $opiniao);
  	}
- 	return $blogs;
+ 	return $opinioes;
 }
 
-function listaBlogId ($lelo, $id) {
- 	$query = "SELECT b.*
-						FROM blog b
-						WHERE b.ativo = 'Sim'AND b.idblog=$id";
+function listaOpiniaoId ($lelo, $id) {
+ 	$query = "SELECT o.*
+						FROM opiniao o
+						WHERE o.ativo = 'Sim'AND o.idopiniao=$id";
 	$resultado = mysqli_query($lelo, $query);
-	$blogs = array();
+	$opinioes = array();
 	while ($array = mysqli_fetch_assoc($resultado)) {
-		$blog = new Blog();
-		$blog->idblog = $array['idblog'];
-		$blog->titulo = $array['titulo'];
-		$blog->descricao_breve = $array['descricao_breve'];
-		$blog->descricao_longa = $array['descricao_longa'];
-		$blog->arquivo = $array['arquivo'];
-		$blog->link = $array['link'];
-		$blog->usuario = $array['usuario'];
-		$blog->data = $array['data'];
-		$blog->video = $array['video'];
-		$blog->ativo = $array['ativo'];
+		$opiniao = new Opiniao();
+		$opiniao->idopiniao = $array['idopiniao'];
+		$opiniao->titulo = $array['titulo'];
+		$opiniao->descricao_breve = $array['descricao_breve'];
+		$opiniao->descricao_longa = $array['descricao_longa'];
+		$opiniao->arquivo = $array['arquivo'];
+		$opiniao->link = $array['link'];
+		$opiniao->usuario = $array['usuario'];
+		$opiniao->data = $array['data'];
+		$opiniao->video = $array['video'];
+		$opiniao->ativo = $array['ativo'];
 
-		array_push($blogs, $blog);
+		array_push($opinioes, $opiniao);
 	}
- 	return $blogs;
+ 	return $opinioes;
 }
 
 function listaBlogIndex ($lelo) {
- 	$query = "SELECT b.*
-						FROM blog b
-						WHERE b.ativo = 'Sim'
-						ORDER BY b.idblog DESC
+ 	$query = "SELECT o.*
+						FROM opiniao o
+						WHERE o.ativo = 'Sim'
+						ORDER BY o.idopiniao DESC
 						LIMIT 4";
 	$resultado = mysqli_query($lelo, $query);
-	$blogs = array();
+	$opinioes = array();
 	while ($array = mysqli_fetch_assoc($resultado)) {
-		$blog = new Blog();
-		$blog->idblog = $array['idblog'];
-		$blog->titulo = $array['titulo'];
-		$blog->descricao_breve = $array['descricao_breve'];
-		$blog->descricao_longa = $array['descricao_longa'];
-		$blog->arquivo = $array['arquivo'];
-		$blog->link = $array['link'];
-		$blog->usuario = $array['usuario'];
-		$blog->data = $array['data'];
-		$blog->video = $array['video'];
-		$blog->ativo = $array['ativo'];
+		$opiniao = new Opiniao();
+		$opiniao->idopiniao = $array['idopiniao'];
+		$opiniao->titulo = $array['titulo'];
+		$opiniao->descricao_breve = $array['descricao_breve'];
+		$opiniao->descricao_longa = $array['descricao_longa'];
+		$opiniao->arquivo = $array['arquivo'];
+		$opiniao->link = $array['link'];
+		$opiniao->usuario = $array['usuario'];
+		$opiniao->data = $array['data'];
+		$opiniao->video = $array['video'];
+		$opiniao->ativo = $array['ativo'];
 
-		array_push($blogs, $blog);
+		array_push($opinioes, $opiniao);
 	}
- 	return $blogs;
+ 	return $opinioes;
 }
 
 

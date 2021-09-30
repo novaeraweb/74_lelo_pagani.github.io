@@ -17,7 +17,7 @@ $query_total = "SELECT a.* FROM noticia a WHERE ativo = 'Sim'";
 $resultado_total = mysqli_query($lelo, $query_total);
 $noticia_total = mysqli_num_rows($resultado_total);
 
-$query_total = "SELECT a.* FROM blog a WHERE ativo = 'Sim'";
+$query_total = "SELECT a.* FROM opiniao a WHERE ativo = 'Sim'";
 $resultado_total = mysqli_query($lelo, $query_total);
 $editorial_total = mysqli_num_rows($resultado_total);
 

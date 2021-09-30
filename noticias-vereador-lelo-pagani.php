@@ -73,7 +73,7 @@ $noticias = listaNoticia($lelo);
                         <p><input type="date" disabled value="<?=$noticia->data_noticia;?>"></p>
                         <p><?=substr($noticia->descricao_longa, 0, 200).'...'?></p>
                         <ul class="actions">
-							<li><a href="noticia-vereador-lelo-pagani.php?id=<?=$noticia->idnoticia;?>" class="button">Leia a notícia completa</a></li>
+							<li><a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="button">Leia a notícia completa</a></li>
 						</ul>
                     </div>
                     <div class="cntl-image"><img src="adm/arquivos/<?=$noticia->arquivo;?>" alt="Vereador Lelo Pagani"></div>

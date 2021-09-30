@@ -6,7 +6,7 @@ require_once "conecta.php";
 require_once "class.php";
 require_once "function.php"; 
 mysqli_select_db($lelo,$database_lelo);
-$blogs = listaBlog($lelo);
+$opinioes = listaOpiniao($lelo);
 
 ?>
 <head>
@@ -46,11 +46,11 @@ $blogs = listaBlog($lelo);
                     <div class="card">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
-                                <h4 class="card-title" style="width:100%;height:100%;">Listar Editoriais</h4>
+                                <h4 class="card-title" style="width:100%;height:100%;">Listar Opiniões</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                          <p>Editoriais cadastrados no sistema</p>
+                          <p>Opiniões cadastradas no sistema</p>
                         </div>
                     </div>
                 </div>
@@ -68,33 +68,33 @@ $blogs = listaBlog($lelo);
                                 </tr>
                             </thead>
                           <tbody>
-                              <?php foreach ($blogs as $blog){?>
+                              <?php foreach ($opinioes as $opiniao){?>
                                 <tr class="text-center">
-                                    <td><img src="arquivos/<?=$blog->arquivo;?>" style="width: 80px;"></td>
-                                    <td style="max-width:100px;"><?=$blog->titulo;?></td>
-                                    <td><?=$blog->ativo;?></td>
+                                    <td><img src="arquivos/<?=$opiniao->arquivo;?>" style="width: 80px;"></td>
+                                    <td style="max-width:100px;"><?=$opiniao->titulo;?></td>
+                                    <td><?=$opiniao->ativo;?></td>
                                     <td class="td-actions text-right">
-                                    <a href="editar-imagens-postagem.php?id=<?php echo $blog->idblog;?>" style="margin-top: 10px; margin-right: 10px;">
+                                    <a href="editar-imagens-opiniao.php?id=<?php echo $opiniao->idopiniao;?>" style="margin-top: 10px; margin-right: 10px;">
                                       <button type="button" rel="tooltip" class="btn btn-warning btn-round" data-toggle="tooltip" data-placement="top" title="Editar fotos">
                                         <i class="material-icons">camera_enhance</i>
                                       </button>
                                     </a>
 
-                                    <a href="editar-postagem.php?id=<?php echo $blog->idblog;?>" class="info" style="margin-top: 10px; margin-right: 10px;">
+                                    <a href="editar-opiniao.php?id=<?php echo $opiniao->idopiniao;?>" class="info" style="margin-top: 10px; margin-right: 10px;">
                                       <button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar conteúdo">
                                             <i class="material-icons">edit</i>
                                       </button>
                                     </a>
                                     
-                                    <button type="button" class="btn btn-danger btn-round"  style="margin-top: 10px;" data-toggle="modal" data-target="#modal-delete-blog<?php echo $blog->idblog;?>" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Excluir">
+                                    <button type="button" class="btn btn-danger btn-round"  style="margin-top: 10px;" data-toggle="modal" data-target="#modal-delete-opiniao<?php echo $opiniao->idopiniao;?>" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Excluir">
                                       <i class="material-icons">close</i>
                                     </button>
-                                  <a href="#" class="info"  style="margin-top: 10px; margin-left:10px; margin-right: -75px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por <?=$blog->usuario;?>, em: <?=$blog->data;?>">
+                                  <a href="#" class="info"  style="margin-top: 10px; margin-left:10px; margin-right: -75px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por <?=$opiniao->usuario;?>, em: <?=$opiniao->data;?>">
                                       <i class="material-icons">help</i>
                                   </button></a>
                                     </td>
                                 </tr>
-                                <div class="modal fade" id="modal-delete-blog<?php echo $blog->idblog;?>" tabindex="-1" role="dialog" aria-labelledby="modal-delete"  aria-hidden="true">
+                                <div class="modal fade" id="modal-delete-opiniao<?php echo $opiniao->idopiniao;?>" tabindex="-1" role="dialog" aria-labelledby="modal-delete"  aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                           <div class="modal-header">
@@ -104,12 +104,12 @@ $blogs = listaBlog($lelo);
                                               </button>
                                           </div>
                                           <div class="modal-body">
-                                              <p>Você tem certeza que deseja apagar este Editorial?<br>
+                                              <p>Você tem certeza que deseja apagar esta Opinião?<br>
                                               <b class="text-center">Esta ação é irreversível</b>.</p>
                                           </div>
                                           <div class="modal-footer">
                                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                              <a href="delete-postagem.php?id=<?=$blog->idblog;?>" class="info"><button type="button" class="btn btn-danger">APAGAR</button></a>
+                                              <a href="delete-opiniao.php?id=<?=$opiniao->idopiniao;?>" class="info"><button type="button" class="btn btn-danger">APAGAR</button></a>
                                           </div>
                                         </div>
                                     </div>

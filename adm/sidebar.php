@@ -30,17 +30,17 @@ mysqli_select_db($lelo, "lelopagani");
           <li class="nav-item active" data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de Editoriais">
             <a class="nav-link" data-toggle="collapse" href="#menu-conteudo" aria-expanded="false" aria-controls="menu-conteudo" >
               <i class="material-icons">view_list</i>
-              <p><strong>Editorial</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
+              <p><strong>Opinião</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
             </a>
           </li>
           <!-- your sidebar here -->
           <div class="collapse" id="menu-conteudo">
           <ul class="nav flex-column">
             <li class="nav-item" style="height:25px;">  
-                <a class="nav-link active" href="inserir-editorial.php"><i class="material-icons">add</i> Inserir</a>
+                <a class="nav-link active" href="inserir-opiniao.php"><i class="material-icons">add</i> Inserir</a>
             </li>
             <li class="nav-item" style="height: 25px;">
-                <a class="nav-link active" href="listar-editorial.php"><i class="material-icons">search</i> Visualizar</a>
+                <a class="nav-link active" href="listar-opiniao.php"><i class="material-icons">search</i> Visualizar</a>
             </li> 
             <br>           
           </ul>

@@ -4,7 +4,7 @@ require "adm/class.php";
 require "adm/function.php";
 
 $id = $_GET['id'];
-$blogs = listaBlogId($lelo, $id);
+$opinioes = listaOpiniaoId($lelo, $id);
 ?>
 <html>
 	<head>
@@ -19,13 +19,25 @@ $blogs = listaBlogId($lelo, $id);
 <body>
     <main id="main">
     <section id="one">
-          <?php foreach ($blogs as $blog){?>
+          <?php foreach ($opinioes as $opiniao){?>
           <header class="major">
-              <h1><?=$blog->titulo;?></h1>
-              <p><?=$blog->data;?></p>
+              <h1><?=$opiniao->titulo;?></h1>
+              <p><?=$opiniao->data;?></p>
           </header>
-          <img src="adm/arquivos/<?=$blog->arquivo;?>" alt="Blog Vereador Lelo Pagani" class="image fit">
+          <?php if ($opiniao->video){ ?>
+            <?php
+              $url = $opiniao->video;  
+              preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $url, $matches);
+            ?>
+            <!-- RegEx para definir o link do iframe -->
+            <iframe src="https://www.youtube.com/embed/<?=$matches[1]?>" width="100%" height="500px" frameborder="0"></iframe>
+          <?php } else {?>
+            <img src="adm/arquivos/<?=$opiniao->arquivo;?>" alt="Opinião Vereador Lelo Pagani" class="image fit">
+          <?php }?>
           <p><?=$blog->descricao_longa;?></p>
+          <?php if ($opiniao->video){ ?>
+            <img src="adm/arquivos/<?=$opiniao->arquivo;?>" alt="Opinião Vereador Lelo Pagani" class="image fit">
+          <?php }?>
         </section>
         <?php }?>
         <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->

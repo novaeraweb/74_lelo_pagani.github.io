@@ -1,6 +1,6 @@
 <?php 
-class Blog{
-	public $idblog;
+class Opiniao{
+	public $idopiniao;
 	public $titulo;
 	public $descricao_breve;
 	public $descricao_longa;

@@ -7,7 +7,7 @@ require_once "class.php";
 require_once "function.php";
 mysqli_select_db($lelo,$database_lelo);
 $id = $_GET['id'];
-$blogs = listaBlogId($lelo, $id);
+$opinioes = listaOpiniaoId($lelo, $id);
 ?>
 
 <head>
@@ -50,11 +50,11 @@ $blogs = listaBlogId($lelo, $id);
                                 <h4 class="card-title">Editar imagens</h4>
                             </div>
                         </div>
-                        <?php foreach($blogs as $blog) {  ?>
+                        <?php foreach($opinioes as $opiniao) {  ?>
                         <div class="card-body">
-                                Utilize o formulário abaixo para editar as imagens do conteúdo:
+                                Utilize o formulário abaixo para editar as imagens do conteúdo de Opinião:
                                 <hr>
-                                <label for="nome">Título da postagem: </label><strong> <?=$blog->titulo;?></strong><br>
+                                <label for="nome">Título da postagem: </label><strong> <?=$opiniao->titulo;?></strong><br>
                         </div>
                         <?php } ?>
                     </div>
@@ -62,10 +62,10 @@ $blogs = listaBlogId($lelo, $id);
             </div>
             <div class="row">
                 <div class="card col-md-12" style="padding-top: 20px;">
-                    <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="alterar-imagens-postagem.php" style="padding-bottom: 15px;">
+                    <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="alterar-imagens-opiniao.php" style="padding-bottom: 15px;">
                         <div class="form-group">
-                        <?php foreach($blogs as $blog) {  ?>
-                        <input type="hidden" name="id" id="id" value="<?=$blog->idblog;?>">
+                        <?php foreach($opinioes as $opiniao) {  ?>
+                        <input type="hidden" name="id" id="id" value="<?=$opiniao->idopiniao;?>">
                         <table class="table">
                             <thead>
                                 <tr class="text-center">
@@ -74,10 +74,10 @@ $blogs = listaBlogId($lelo, $id);
                             </thead>
                             <tbody>
                                 <tr class="text-center">
-                                    <td><?php if ($blog->arquivo == Null) {  ?>
+                                    <td><?php if ($opiniao->arquivo == Null) {  ?>
                                     <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
                                     <?php } else { ?>
-                                    <img src="arquivos/<?=$blog->arquivo;?>" alt="" width="120" height="120"/> 
+                                    <img src="arquivos/<?=$opiniao->arquivo;?>" alt="" width="120" height="120"/> 
                                     <?php } ?>
                                     <br>
                                     <label for="arquivo1">Selecione a nova imagem</label>

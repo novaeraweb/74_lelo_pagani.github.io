@@ -49,7 +49,7 @@ mysqli_select_db($lelo, 'lelopagani');
     require "adicionar-imagens.php";
 
 
-$insertSQL = "INSERT INTO blog (titulo, descricao_breve, descricao_longa, link, usuario, data, data_postagem, arquivo, video, ativo) VALUES ('$titulo', '$descricao_breve', '$descricao_longa', '$link', '$usuario', '$data', '$data_postagem', '$novo', '$video', '$ativo' )";      
+$insertSQL = "INSERT INTO opiniao (titulo, descricao_breve, descricao_longa, link, usuario, data, data_postagem, arquivo, video, ativo) VALUES ('$titulo', '$descricao_breve', '$descricao_longa', '$link', '$usuario', '$data', '$data_postagem', '$novo', '$video', '$ativo' )";      
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 
 

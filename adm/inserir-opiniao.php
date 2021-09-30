@@ -37,11 +37,11 @@ mysqli_select_db($lelo, "lelopagani");
                     <div class="card">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
-                                <h4 class="card-title" style="width:100%;height:100%;">Cadastrar Postagem</h4>
+                                <h4 class="card-title" style="width:100%;height:100%;">Cadastrar Opinião</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                                Utilize o formulário abaixo para cadastrar novas postagens para o Blog:
+                                Utilize o formulário abaixo para cadastrar novas postagens para a seção de opiniões:
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ mysqli_select_db($lelo, "lelopagani");
                       <br>
 
                       <div id="dvFile">
-                        <label for="arquivo" style="width: 100%; margin-top: 15px;">Imagem do Editorial</label>
+                        <label for="arquivo" style="width: 100%; margin-top: 15px;">Imagem Opinião</label>
                         <input type="file" name="arquivo" id="arquivo" required>
                       </div>
                       <br>

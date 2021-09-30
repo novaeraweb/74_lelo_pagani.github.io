@@ -28,7 +28,7 @@ $hora = time();
 	if($$nomevar != Null){
 	   
 		mysqli_select_db($lelo, $database_lelo);
-		$query = "SELECT * FROM blog WHERE idblog = $id";
+		$query = "SELECT * FROM opiniao WHERE idopiniao = $id";
 		$rs_projeto = mysqli_query($lelo, $query) or die(mysqli_error());
 		$row_rs_projeto = mysqli_fetch_assoc($rs_projeto);
 		$rs_arquivo = $row_rs_projeto["arquivo"];
@@ -53,8 +53,8 @@ $hora = time();
         rename($var, $var_novo);
     }
 
-    $sql = "UPDATE blog SET arquivo = '$novo' WHERE idblog=$id";
+    $sql = "UPDATE opiniao SET arquivo = '$novo' WHERE idopiniao=$id";
     $Result = mysqli_query($lelo, $sql) or die(mysqli_error($lelo));
 
 
-header("Location: editar-imagens-postagem.php?id=$id");
+header("Location: editar-imagens-opiniao.php?id=$id");
