@@ -201,3 +201,45 @@ function listaProjetoId ($lelo, $id) {
    }
 	return $projetos;
 }
+
+function listaPerfil ($lelo) {
+	$query = "SELECT p.*
+						FROM perfil p
+						WHERE p.ativo = 'Sim'
+						ORDER BY p.idperfil ASC";
+	$resultado = mysqli_query($lelo, $query);
+	$perfils = array();
+	while ($array = mysqli_fetch_assoc($resultado)) {
+		$perfil = new Perfil();
+		$perfil->idperfil = $array['idperfil'];
+		$perfil->arquivo = $array['arquivo'];
+		$perfil->data = $array['data'];
+		$perfil->hora = $array['hora'];
+		$perfil->usuario = $array['usuario'];
+		$perfil->ativo = $array['ativo'];
+
+		array_push($perfis, $perfil);
+	}
+	return $perfis;
+}
+
+function listaPerfilId ($lelo, $id) {
+	$query = "SELECT p.*
+						FROM perfil p
+						WHERE p.ativo = 'Sim'AND p.idperfil=$id";
+   $resultado = mysqli_query($lelo, $query);
+   $perfis = array();
+   while ($array = mysqli_fetch_assoc($resultado)) {
+	   $perfil = new Perfil();
+		 $perfil->idperfil = $array['idperfil'];
+		 $perfil->arquivo = $array['arquivo'];
+		 $perfil->data = $array['data'];
+		 $perfil->hora = $array['hora'];
+		 $perfil->usuario = $array['usuario'];
+		 $perfil->ativo = $array['ativo'];
+
+	   array_push($perfis, $perfil);
+   }
+	return $perfis;
+}
+

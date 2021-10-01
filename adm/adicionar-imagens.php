@@ -95,6 +95,6 @@
         $var = $dir.$$nomevar;
         $var_novo = $dir.$novo;
 
-        ${'arquivo_novo'} = $novo;
+        // ${'arquivo_novo'} = $novo;
         rename($var, $var_novo);
   }

@@ -47,3 +47,12 @@ class User{
 	public $ativo;
 	public $arquivo;
 }
+
+class Perfil{
+	public $idperfil;
+	public $arquivo;
+	public $data;
+	public $hora;
+	public $ativo;
+	public $usuario;
+}
