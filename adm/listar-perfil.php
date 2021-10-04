@@ -46,11 +46,11 @@ $perfis = listaPerfil($lelo);
                     <div class="card">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
-                                <h4 class="card-title" style="width:100%;height:100%;">Listar perfis</h4>
+                                <h4 class="card-title" style="width:100%;height:100%;">Listar Perfis</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                          <p>perfis cadastrados no sistema</p>
+                          <p>Perfis cadastrados no sistema</p>
                         </div>
                     </div>
                 </div>
@@ -71,18 +71,18 @@ $perfis = listaPerfil($lelo);
                                 <tr class="text-center">
                                     <td style="width: 16%;"><img src="arquivos/<?=$perfil->arquivo;?>" style="width: 100%;"></td>
                                     <td><?=$perfil->ativo;?></td>
-                                    <td class="td-actions text-right">
+                                    <td class="td-actions" style="justify-content: center;">
 
-                                    <a href="editar-perfil.php?id=<?php echo $perfil->idperfil;?>" class="info" style="margin-top: 10px; margin-right: 10px;">
-                                      <button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar conteúdo">
-                                            <i class="material-icons">edit</i>
+                                    <a href="editar-imagens-perfil.php?id=<?php echo $perfil->idperfil;?>" class="info" style="margin-right: 10px;">
+                                      <button type="button" rel="tooltip" class="btn btn-warning btn-round" data-toggle="tooltip" data-placement="top" title="Editar perfil">
+                                            <i class="material-icons">camera_enhance</i>
                                       </button>
                                     </a>
                                     
-                                    <button type="button" class="btn btn-danger btn-round" rel="tooltip" style="margin-top: 10px;" data-toggle="tooltip" data-placement="top" title="Excluir" data-target="#modal-delete-perfil<?php echo $perfil->idperfil;?>">
+                                    <button type="button" style="margin-right: 10px;" class="btn btn-danger btn-round" rel="tooltip"  data-toggle="tooltip" data-placement="top" title="Excluir" data-target="#modal-delete-perfil<?php echo $perfil->idperfil;?>">
                                       <i class="material-icons">close</i>
                                     </button>
-                                  <a href="#" class="info"  style="margin-top: 10px; margin-left:10px; margin-right: -75px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por <?=$perfil->usuario;?>, em: <?=$perfil->data;?>">
+                                  <a href="#" class="info" style="margin-right: 10px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por <?=$perfil->usuario;?>, em: <?=$perfil->data;?>">
                                       <i class="material-icons">help</i>
                                   </button></a>
                                     </td>

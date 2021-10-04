@@ -208,7 +208,7 @@ function listaPerfil ($lelo) {
 						WHERE p.ativo = 'Sim'
 						ORDER BY p.idperfil ASC";
 	$resultado = mysqli_query($lelo, $query);
-	$perfils = array();
+	$perfis = array();
 	while ($array = mysqli_fetch_assoc($resultado)) {
 		$perfil = new Perfil();
 		$perfil->idperfil = $array['idperfil'];

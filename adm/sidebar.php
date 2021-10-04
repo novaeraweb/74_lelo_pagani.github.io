@@ -28,13 +28,13 @@ mysqli_select_db($lelo, "lelopagani");
         
         <ul class="nav">
           <li class="nav-item active" data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de Editoriais">
-            <a class="nav-link" data-toggle="collapse" href="#menu-conteudo" aria-expanded="false" aria-controls="menu-conteudo" >
+            <a class="nav-link" data-toggle="collapse" href="#menu-opiniao" aria-expanded="false" aria-controls="menu-opiniao" >
               <i class="material-icons">view_list</i>
               <p><strong>Opinião</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
             </a>
           </li>
           <!-- your sidebar here -->
-          <div class="collapse" id="menu-conteudo">
+          <div class="collapse" id="menu-opiniao">
           <ul class="nav flex-column">
             <li class="nav-item" style="height:25px;">  
                 <a class="nav-link active" href="inserir-opiniao.php"><i class="material-icons">add</i> Inserir</a>
@@ -49,13 +49,13 @@ mysqli_select_db($lelo, "lelopagani");
 
         <ul class="nav">
           <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="eção destinada ao cadastro de Notícias">
-            <a class="nav-link" data-toggle="collapse" href="#menu-colecao" aria-expanded="false" aria-controls="menu-colecao">
+            <a class="nav-link" data-toggle="collapse" href="#menu-noticia" aria-expanded="false" aria-controls="menu-noticia">
               <i class="material-icons">view_list</i>
               <p><strong>Notícias</strong> <i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
             </a>
           </li>
           <!-- your sidebar here -->
-          <div class="collapse" id="menu-colecao">
+          <div class="collapse" id="menu-noticia">
           <ul class="nav flex-column">
             <li class="nav-item" style="height:25px;">  
                 <a class="nav-link active" href="inserir-noticia.php"><i class="material-icons">add</i> Inserir</a>
@@ -70,13 +70,13 @@ mysqli_select_db($lelo, "lelopagani");
 
         <ul class="nav">
           <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="eção destinada ao cadastro de Projetos">
-            <a class="nav-link" data-toggle="collapse" href="#menu-linha" aria-expanded="false" aria-controls="menu-colecao">
+            <a class="nav-link" data-toggle="collapse" href="#menu-projeto" aria-expanded="false" aria-controls="menu-colecao">
               <i class="material-icons">view_list</i>
               <p><strong>Projetos</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
             </a>
           </li>
           <!-- your sidebar here -->
-          <div class="collapse" id="menu-linha">
+          <div class="collapse" id="menu-projeto">
           <ul class="nav flex-column">
             <li class="nav-item" style="height:25px;">  
                 <a class="nav-link active" href="inserir-projeto.php"><i class="material-icons">add</i> Inserir</a>
@@ -91,13 +91,13 @@ mysqli_select_db($lelo, "lelopagani");
 
         <ul class="nav">
           <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de imagens de perfil">
-            <a class="nav-link" data-toggle="collapse" href="#menu-linha" aria-expanded="false" aria-controls="menu-colecao">
+            <a class="nav-link" data-toggle="collapse" href="#menu-perfil" aria-expanded="false" aria-controls="menu-perfil">
               <i class="material-icons">view_list</i>
               <p><strong>Perfil</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
             </a>
           </li>
           <!-- your sidebar here -->
-          <div class="collapse" id="menu-linha">
+          <div class="collapse" id="menu-perfil">
           <ul class="nav flex-column">
             <li class="nav-item" style="height:25px;">  
                 <a class="nav-link active" href="inserir-perfil.php"><i class="material-icons">add</i> Inserir</a>

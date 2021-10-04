@@ -2,7 +2,7 @@
 require "adm/conecta.php";
 require "adm/class.php";
 require "adm/function.php";
-$blogs = listaBlog($lelo);
+$opinioes = listaOpiniao($lelo);
 ?>
 <html>
 	<head>
@@ -21,18 +21,18 @@ $blogs = listaBlog($lelo);
                 <span class="cntl-bar-fill"></span>
             </span>
             <div class="cntl-states">
-                <?php foreach ($blogs as $blog) {?>
+                <?php foreach ($opinioes as $opiniao) {?>
                 <div class="cntl-state">
                     <div class="cntl-content">
-                        <h2><?=$blog->titulo;?></h2>
-                        <p><?=$blog->data;?></p>
-                        <p><?=$blog->descricao_breve;?></p>
+                        <h2><?=$opiniao->titulo;?></h2>
+                        <p><?=$opiniao->data;?></p>
+                        <p><?=$opiniao->descricao_breve;?></p>
                         <ul class="actions">
-                            <li><a href="opiniao-vereador-lelo-pagani-post.php?id=<?=$blog->idblog;?>" class="button">Leia o editorial completo</a></li>
+                            <li><a href="opiniao-vereador-lelo-pagani-post.php?id=<?=$opiniao->idopiniao;?>" class="button">Leia o editorial completo</a></li>
                         </ul>
                     </div>
-                    <div class="cntl-image"><img src="adm/arquivos/<?=$blog->arquivo;?>" alt="Vereador Lelo Pagani"></div>
-                    <div class="cntl-icon"><?=$blog->idblog;?></div>
+                    <div class="cntl-image"><img src="adm/arquivos/<?=$opiniao->arquivo;?>" alt="Vereador Lelo Pagani"></div>
+                    <div class="cntl-icon"><?=$opiniao->idopiniao;?></div>
                 </div>
                 <?php } ?>
             </div>

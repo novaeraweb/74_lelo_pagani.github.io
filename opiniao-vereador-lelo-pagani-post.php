@@ -34,7 +34,7 @@ $opinioes = listaOpiniaoId($lelo, $id);
           <?php } else {?>
             <img src="adm/arquivos/<?=$opiniao->arquivo;?>" alt="Opinião Vereador Lelo Pagani" class="image fit">
           <?php }?>
-          <p><?=$blog->descricao_longa;?></p>
+          <p><?=$opiniao->descricao_longa;?></p>
           <?php if ($opiniao->video){ ?>
             <img src="adm/arquivos/<?=$opiniao->arquivo;?>" alt="Opinião Vereador Lelo Pagani" class="image fit">
           <?php }?>
