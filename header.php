@@ -3,7 +3,11 @@
 <header id="header">
     <nav class="nav" id="MeuMenu">
         <div id="container"> 
-            <div class="topo"><i><b></b></i> 
+            <div class="topo">
+                <div style="background-color: black;width: 100%;">
+                <i><b></b></i>
+                </div>
+            
             <ul class="menu">
                 <li class="<?php if($paginaCorrente == 'index.php') {echo 'active';} ?>" ><a href="index.php">HOME</a></li>
                 <li class="<?php if($paginaCorrente == 'sobre-vereador-lelo-pagani.php') {echo 'active';} ?>" ><a href="sobre-vereador-lelo-pagani.php">SOBRE</a></li>
