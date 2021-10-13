@@ -110,12 +110,12 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color:#161E5F !important;
+			color:#3c6c83 !important;
 			text-decoration: none;
 		}
 
 	strong, b {
-		color:#161E5F;
+		color:#3c6c83;
 		font-weight: 400;
 	}
 
@@ -129,7 +129,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color:#161E5F;
+		color:#3c6c83;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -1805,7 +1805,7 @@ input, select, textarea {
 	}
 
 	label {
-		color:#161E5F;
+		color:#3c6c83;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 400;
@@ -1874,7 +1874,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color:#161E5F;
+			color:#3c6c83;
 			background: #fff;
 		}
 
@@ -1957,8 +1957,8 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background:#161E5F;
-			border-color:#161E5F;
+			background:#3c6c83;
+			border-color:#3c6c83;
 			color: #fff;
 			content: '\f00c';
 		}
@@ -2190,12 +2190,12 @@ ul.menu ul{ position:absolute; display:none; box-shadow:3px 3px 2px #333;}
 ul.menu{ 
     letter-spacing:1px;
     font-size:0.9em;
-	margin-left: -15px;
-	width: 420px;
+/*	margin-left: -15px;*/
+	width:150%;
 }
 .menu li{ position:relative;z-index: 99;}
-.menu ul li { width: auto;  }
-.menu li a{ display:block; padding:0 6px; line-height:35px; height:35px; float:left; transition:all 0.1s linear; font-size: 12px; border-bottom: none; }
+.menu ul li { width: 100%;  }
+.menu li a{ display:block; padding:0 3%; line-height:35px; height:35px; float:left; transition:all 0.1s linear; font-size: 12px; border-bottom: none; }
 
 /* Configurações nivel 2*/
 .menu li:hover > ul.submenu-1{ display:block; top:19px; left:0; padding:5px; width:340px; border-radius:0 0 5px 5px; }
@@ -2208,8 +2208,8 @@ ul.menu{
 /*nivel 1*/
 .menu{ 	transition: 1s;}
 .menu a{ color:#fefefe; }
-.menu li:hover > a, .active{ background:rgba(255,255,255,0.5);  color: #446B31; text-decoration: none;}
-.menu li.active > a{color:#161E5F!important; background:rgba(255,255,255,0.5);}
+.menu li:hover > a, .active{ background:rgba(255,255,255,0.9);  color:#446B31; text-decoration: none;}
+.menu li.active > a{color:#3c6c83!important; background:rgba(255,255,255,0.9);}
 
 /*nivel 2*/
 .submenu-1{ background:#FFECCD; font-weight:400; }
@@ -2542,7 +2542,7 @@ z-index:999;
 		}
 
 		table th {
-			color:#161E5F;
+			color:#3c6c83;
 			font-size: 0.9em;
 			font-weight: 400;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2603,7 +2603,7 @@ input[type="date"]:disabled{
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		background-color:#161E5F;
+		background-color:#3c6c83;
 		border-radius: 0.35em;
 		border: solid 3px #efefef;
 		color:#f9f9f9 !important;
@@ -2618,7 +2618,7 @@ input[type="date"]:disabled{
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
-		border-color:#161E5F;
+		border-color:#3c6c83;
 	}
 
 		input[type="submit"]:hover,
@@ -2626,8 +2626,8 @@ input[type="date"]:disabled{
 		input[type="button"]:hover,
 		.button:hover {
 			background-color:transparent;
-			border-color:#161E5F;
-			color: #161E5F !important;
+			border-color:#3c6c83;
+			color: #3c6c83 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2755,7 +2755,7 @@ input[type="date"]:disabled{
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll, scroll;
-		background-image: url("../images/background.png");
+		background-image: url("../images/background-azul-escuro.png");
 		background-position: top left, top left;
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 150%;

@@ -79,7 +79,7 @@ $blogs = listaBlogIndex($lelo);
 
 				<!-- Two -->
 					<section id="two">
-						<h2>NOTÍCIAS</h2>
+						<h2><strong>NOTÍCIAS</strong></h2>
 						<div class="row">
 							<?php foreach ($noticias as $noticia) {?>
 								<article class="col-6 col-12-xsmall work-item">
@@ -88,7 +88,7 @@ $blogs = listaBlogIndex($lelo);
 									<p><input type="date" disabled value="<?=$noticia->data_noticia;?>"></p>
 									<br>
 									<ul class="actions">
-										<li><a href="noticia-vereador-lelo-pagani.php?id=<?=$noticia->idnoticia;?>" class="button">Ler notícia completa</a></li>
+										<li><a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="button">Ler notícia completa</a></li>
 									</ul>
 								</article>
 								<?php } ?>
@@ -96,27 +96,6 @@ $blogs = listaBlogIndex($lelo);
 							<ul class="actions">
 								<li><a href="noticias-vereador-lelo-pagani.php" class="button">Ver todas as notícias</a></li>
 							</ul>
-					</section>
-
-				<!-- Three -->
-					<section id="three">
-						<h2>EDITORIAL</h2>
-						<div class="row">
-							<?php foreach ($blogs as $blog){?>
-							<article class="col-6 col-12-xsmall work-item">
-							<a href="blog-vereador-lelo-pagani.php" class="noticias fit"><img src="adm/arquivos/<?=$blog->arquivo;?>" alt="Blog Vereador Lelo Pagani" /></a>
-								<h3><?=$blog->titulo;?></h3>
-								<p><?=$blog->descricao_breve;?></p>
-								<br>
-								<ul class="actions">
-									<li><a href="postagem-vereador-lelo-pagani.php?id=<?=$blog->idblog;?>" class="button">Leia a postagem completa</a></li>
-								</ul>
-							</article>
-							<?php }?>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Saiba Mais</a></li>
-						</ul>
 					</section>
 					<?php require_once "contato-vereador-lelo-pagani.php"?>
 			</main>

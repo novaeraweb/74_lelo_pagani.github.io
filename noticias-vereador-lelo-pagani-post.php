@@ -64,7 +64,7 @@ $noticias = listaNoticiaId($lelo, $id);
         <section id="one">
           <?php foreach ($noticias as $noticia){?>
           <header class="major">
-              <h1><?=$noticia->titulo;?></h1>
+              <h1 style="font-size:1.6em;line-height:30px;"><?=$noticia->titulo;?></h1>
               <p><input type="date" disabled value="<?=$noticia->data_noticia;?>"></p>
           </header>
           <?php if ($noticia->video){ ?>
@@ -77,14 +77,17 @@ $noticias = listaNoticiaId($lelo, $id);
           <?php } else {?>
           <img src="adm/arquivos/<?=$noticia->arquivo;?>" alt="Notícia Vereador Lelo Pagani" class="image fit">
           <?php }?>
-          <p><?=$noticia->descricao_longa;?></p>
-          <?php if ($noticia->video){ ?>
-            <img src="adm/arquivos/<?=$noticia->arquivo;?>" alt="Notícia Vereador Lelo Pagani" class="image fit">
-          <?php }?>
+          <p style="margin-top:80px;"><?=$noticia->descricao_longa;?></p>
+          <p><a href="<?=$noticia->link;?>" target="_blank" > <?=$noticia->link;?></a></p>
+
 
         </section>
+        
         <?php }?>
+        <section id="one" style="text-align: center;">
+          <h3 style="padding-bottom:30px;">Gostou do Conteúdo? Compartilhe!</h3>
         <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+         </section>
         <?php require_once "contato-vereador-lelo-pagani.php"?>
     </main>
 </body>

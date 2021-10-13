@@ -79,7 +79,8 @@ function listaBlogIndex ($lelo) {
 function listaNoticia ($lelo) {
  	$query = "SELECT n.*
 						FROM noticia n
-						WHERE n.ativo = 'Sim'";
+						WHERE n.ativo = 'Sim'
+						ORDER BY n.id ASC";
  	$resultado = mysqli_query($lelo, $query);
  	$noticias = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -106,7 +107,7 @@ function listaNoticiaIndex ($lelo) {
 						FROM noticia n
 						WHERE n.ativo = 'Sim'
 						ORDER BY n.idnoticia DESC
-						LIMIT 4";
+						LIMIT 6";
  	$resultado = mysqli_query($lelo, $query);
  	$noticias = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {

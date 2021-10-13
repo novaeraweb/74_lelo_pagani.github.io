@@ -12,7 +12,6 @@
                 <div class="g-recaptcha" data-sitekey="6Lc-n1McAAAAAOFKk-iyko_g3eI25knVtAkGDH-k" style="float:right;"></div>
                 <div class="row col-12-small">
                    <input type="submit" value="Enviar"/></li>
-                   
                 </div>
             </form>
         </div>
