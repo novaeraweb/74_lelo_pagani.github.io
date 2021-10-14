@@ -4,7 +4,7 @@ ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 
 //Defino a Chave do meu site
-$secret_key = '6LeWtyAaAAAAALO8DmW1wzxDTsRmLWp8PztuzKIC';
+$secret_key = '6Lc-n1McAAAAAO8-QbD-Z2UAWrj51gf-0eYfbLX6';
 
 //Pego a validação do Captcha feita pelo usuário
 $recaptcha_response = $_POST['g-recaptcha-response'];
@@ -64,9 +64,8 @@ if(isset($recaptcha_response)){
              
             // Define os destinatário(s)
             // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-            $mail->AddAddress('contato@lelopagani.com.br'); // Cópia Oculta
-            $mail->AddBCC('contato@novaeraweb.com.br'); // Cópia Oculta
-
+            $mail->AddAddress('contato@lelopagani.com.br');
+            $mail->AddBCC('contato@novaeraweb.com.br');
 
             // Define a mensagem (Texto e Assunto)
             // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
