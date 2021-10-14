@@ -5,9 +5,9 @@
         <div class="col-8 col-12-small">
             <form method="post" action="phpmailer/envia.php" onsubmit="return validaCaptcha()">
                 <div class="row gtr-uniform gtr-50" style="margin-bottom:30px;">
-                    <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Nome" /></div>
+                    <div class="col-6 col-12-xsmall"><input type="text" name="nome" id="name" placeholder="Nome" /></div>
                     <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                    <div class="col-12"><textarea name="message" id="message" placeholder="Mensagem" rows="4"></textarea></div>
+                    <div class="col-12"><textarea name="mensagem" id="message" placeholder="Mensagem" rows="4"></textarea></div>
                 </div>
                 <div style="width:100%;text-align: right;">
 
