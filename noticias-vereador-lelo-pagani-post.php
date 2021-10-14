@@ -57,7 +57,6 @@ $noticias = listaNoticiaId($lelo, $id);
     <link rel="stylesheet" href="assets/css/main.css" />      
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=61487b13b1633800191bae1f&product=inline-share-buttons" async="async"></script>
 	</head>
-
 <?php require_once "header.php"?>
 <body class="is-preload">
     <main id="main">

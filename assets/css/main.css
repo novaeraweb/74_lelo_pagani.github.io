@@ -2401,7 +2401,7 @@ z-index:999;
 		margin-left: -1em;
 		padding-left: 0;
 		align-content: center;
-		justify-content: center;
+		justify-content:right;
 	}
 
 		ul.actions li {
@@ -2755,7 +2755,7 @@ input[type="date"]:disabled{
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll, scroll;
-		background-image: url("../images/background-azul-escuro.png");
+		background-image: url("../images/background.png");
 		background-position: top left, top left;
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 150%;

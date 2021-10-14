@@ -4,7 +4,6 @@ require_once "adm/class.php";
 require_once "adm/function.php"; 
 $projetos = listaProjeto($lelo);
 ?>
-
 <html>
 	<head>
 		<title>Projetos Vereador Lelo Pagani - Botucatu/SP</title>

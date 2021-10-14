@@ -3,18 +3,24 @@
     <p>Entre em contato e retornarei o mais breve possível</p>
     <div class="row">
         <div class="col-8 col-12-small">
-            <form method="post" action="#" onsubmit="return validaCaptcha()">
+            <form method="post" action="phpmailer/envia.php" onsubmit="return validaCaptcha()">
                 <div class="row gtr-uniform gtr-50" style="margin-bottom:30px;">
                     <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Nome" /></div>
                     <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
                     <div class="col-12"><textarea name="message" id="message" placeholder="Mensagem" rows="4"></textarea></div>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6Lc-n1McAAAAAOFKk-iyko_g3eI25knVtAkGDH-k" style="float:right;"></div>
-                <div class="row col-12-small">
-                   <input type="submit" value="Enviar"/></li>
+                <div style="width:100%;text-align: right;">
+
+                <div class="col-6 col-12" style="width:100%;">
+                <div class="g-recaptcha" data-sitekey="6Lc-n1McAAAAAOFKk-iyko_g3eI25knVtAkGDH-k" style="float: right;"></div>
+                </div>
+                <div class="col-12" style="float:right; width: 100%;margin-top: 30px;">
+                   <input type="submit" value="Enviar"/>
+                </div>
                 </div>
             </form>
         </div>
+
         <div class="col-4 col-12-small">
             <ul class="labeled-icons">
                 <li>
@@ -26,7 +32,7 @@
                 </li>
                 <li>
                     <h3 class="icon solid fa-mobile-alt"><span class="label">Telefone</span></h3>
-                    (14) 3882-0636
+                    <a href="tel:1438820636" target="_blank">(14) 3882-0636</a>
                 </li>
                 <li>
                     <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>

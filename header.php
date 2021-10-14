@@ -1,5 +1,8 @@
-<!-- Header -->
-<?php $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);?>
+<?php $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);
+$query_rs_perfil = "SELECT * FROM perfil";
+$rs_perfil = mysqli_query($lelo,$query_rs_perfil) or die(mysqli_error());
+$row_rs_perfil = mysqli_fetch_assoc($rs_perfil);?>
+
 <header id="header">
     <nav class="nav" id="MeuMenu">
         <div id="container"> 
@@ -18,7 +21,7 @@
         </div>
     </nav>
     <div class="inner">
-        <a href="#" class="image avatar"><img src="assets/images/lelo-pagani-vereador.png" alt="" /></a>
+        <a href="#" class="image avatar"><img src="assets/images/<?=$row_rs_perfil["arquivo"] ?>" alt="Imagem Perfil Lelo Pagani" /></a>
         <h2><strong>Lelo Pagani</strong>, vereador.</h2>
         <h3>Botucatu/SP</h3>
         <img src="assets/images/botucatu.jpg">
