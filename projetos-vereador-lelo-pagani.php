@@ -79,17 +79,12 @@ $projetos = listaProjeto($lelo);
                   <td style="max-width:60px;"><?=$projeto->nro_projeto;?></td>
                     <td style="max-width:60px;"><?=$projeto->data_projeto;?></td>
                   <td style="max-width:290px;"><?=$projeto->titulo;?></td>
-                    <td><a href="<?=$projeto->link;?>">Leia mais</a></td>
+                    <td><a href="<?=$projeto->link;?>" rel="noopener" rel="noreferrer" target="_blank">Veja</a></td>
                 </tr>
                 <?php }?>
             </tbody>
           </table> 
 
-
-
-
-
-          
         </section>
         <?php require_once "contato-vereador-lelo-pagani.php"?>
     </main>

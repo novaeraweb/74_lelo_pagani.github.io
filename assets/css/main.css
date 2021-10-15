@@ -2222,7 +2222,7 @@ ul.menu{
 	/*Configuração do nivel responsivo*/
 	.topo strong{ display:block; background:#FFECCD; float:left;color: #3c3c3c; padding:15px 15px 14px; font-family: 'asenineregular'; font-size:16px; margin:5px 0 0 15px; }
 
-	ul.menu{ width:340px; border-radius:0; padding:0; position:absolute; top:0; left:-350px;margin-top: 70px;z-index: 999; background-color: #18145c;
+	ul.menu{ width:340px; border-radius:0; padding:0; position:absolute; top:0; left:-372px;margin-top: 70px;z-index: 999; background-color: #18145c;
 	}	
 
 	.menu li{ width:90%; border-bottom: none;}	
@@ -3244,8 +3244,7 @@ input[type="date"]:disabled{
 
 			#footer {
 				background-attachment: scroll;
-				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+background-image: url(../images/background.png);
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;
 				background-size: auto,							cover;

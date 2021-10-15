@@ -2,7 +2,6 @@
 $query_rs_perfil = "SELECT * FROM perfil";
 $rs_perfil = mysqli_query($lelo,$query_rs_perfil) or die(mysqli_error());
 $row_rs_perfil = mysqli_fetch_assoc($rs_perfil);?>
-
 <header id="header">
     <nav class="nav" id="MeuMenu">
         <div id="container"> 
@@ -10,7 +9,6 @@ $row_rs_perfil = mysqli_fetch_assoc($rs_perfil);?>
                 <div style="background-color: black;width: 100%;">
                 <i><b></b></i>
                 </div>
-            
             <ul class="menu">
                 <li class="<?php if($paginaCorrente == 'index.php') {echo 'active';} ?>" ><a href="index.php">HOME</a></li>
                 <li class="<?php if($paginaCorrente == 'sobre-vereador-lelo-pagani.php') {echo 'active';} ?>" ><a href="sobre-vereador-lelo-pagani.php">SOBRE</a></li>

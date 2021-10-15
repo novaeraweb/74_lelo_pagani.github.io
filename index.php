@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <?php
 require_once "adm/conecta.php";
 require_once "adm/class.php";
@@ -6,6 +5,7 @@ require_once "adm/function.php";
 $noticias = listaNoticiaIndex($lelo);
 $blogs = listaBlogIndex($lelo);
 ?>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Vereador Lelo Pagani - Botucatu/SP</title>

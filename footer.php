@@ -23,7 +23,6 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-
 <script type="text/javascript">
 	function validaCaptcha() {
   if(document.querySelector('#g-recaptcha-response').value == '') {
@@ -33,4 +32,3 @@
 </script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
-

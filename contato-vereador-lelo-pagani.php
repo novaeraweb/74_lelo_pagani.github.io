@@ -2,7 +2,7 @@
     <h2>FALE COM O VEREADOR</h2>
     <p>Entre em contato e retornarei o mais breve possível</p>
     <div class="row">
-        <div class="col-8 col-12-small">
+        <div class="col-8 col-12-small" style="margin-bottom:60px;">
             <form method="post" action="phpmailer/envia.php" onsubmit="return validaCaptcha()">
                 <div class="row gtr-uniform gtr-50" style="margin-bottom:30px;">
                     <div class="col-6 col-12-xsmall"><input type="text" name="nome" id="name" placeholder="Nome" /></div>

@@ -69,16 +69,16 @@ if(isset($recaptcha_response)){
 
             // Define a mensagem (Texto e Assunto)
             // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-            $mail->Subject  = "Lead do Site / Lelo Pagani"; // Assunto da mensagem 
+            $mail->Subject  = "Contato do Site / Lelo Pagani"; // Assunto da mensagem 
             $mail->Body = '
-            Lead captado através do site:<br><br>
+            Contato captado através do site:<br><br>
             Nome: '.$nome.'<br>
-            Email: '.$email.'<br>
-            Mensagem: '.$mensagem.'<br>
+            Email: '.$email.'<br><br>
+            Mensagem:<br>'.$mensagem.'<br>
             ';
 
             $mail->AltBody = '
-            Lead captado através do site:<br><br>
+            Contato captado através do site:<br><br>
             Nome: '.$nome.'<br>
             Email: '.$email.'<br>
             Mensagem: '.$mensagem.'<br>

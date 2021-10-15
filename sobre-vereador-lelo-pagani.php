@@ -1,5 +1,12 @@
+<?php
+require_once "adm/conecta.php";
+require_once "adm/class.php";
+require_once "adm/function.php";
+$noticias = listaNoticiaIndex($lelo);
+$blogs = listaBlogIndex($lelo);
+?><!DOCTYPE HTML>
 <html>
-	<head>
+  <head>
 		<title>Sobre Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
