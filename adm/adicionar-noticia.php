@@ -25,6 +25,11 @@ mysqli_select_db($lelo, 'lelopagani');
     $usuario = $_POST["usuario"];
     $usuario = trim($usuario);
 
+    $tempo = $_POST["tempo"];
+    $tempo = trim($tempo);
+
+
+
     $ativo = "Sim";
 
     $video = $_POST['video'];
@@ -53,7 +58,7 @@ mysqli_select_db($lelo, 'lelopagani');
 
 
 //Insert inglês
-$insertSQL = "INSERT INTO noticia (titulo, descricao_breve, descricao_longa, link, usuario, data, data_noticia, arquivo, video, ativo) VALUES ('$titulo', '$descricao_breve', '$descricao_longa', '$link', '$usuario', '$data', '$data_noticia', '$novo', '$video', '$ativo' )";      
+$insertSQL = "INSERT INTO noticia (titulo, descricao_breve, descricao_longa, link, usuario, tempo, data, data_noticia, arquivo, video, ativo) VALUES ('$titulo', '$descricao_breve', '$descricao_longa', '$link', '$usuario', '$tempo', '$data', '$data_noticia', '$novo', '$video', '$ativo' )";      
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 
 

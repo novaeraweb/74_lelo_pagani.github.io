@@ -76,9 +76,14 @@ $noticias = listaNoticiaId($lelo, $id);
                           <input type="text" name="link" id="link" class="form-control" value="<?=$noticia->link;?>">
                         </div>
                         <br>
-                        <div class="form-group">
+                        <div class="form-group col-3" style="padding-left: 0;">
                           <label for="data_noticia">Data da Notícia:</label><br>
-                          <input type="date" name="data_noticia" id="data_noticia" value="<?=$noticia->data_noticia;?>" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}">
+                          <input type="date" name="data_noticia" id="data_noticia" class="form-control" value="<?=$noticia->data_noticia;?>" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                          <label for="tempo">Tempo de leitura:</label><br>
+                          <input type="text" name="tempo" id="tempo" class="form-control" value="<?=$noticia->tempo;?>">
                         </div>
                         <br>
                         <div class="form-group">
