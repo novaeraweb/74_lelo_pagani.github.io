@@ -2,12 +2,15 @@
 require "adm/conecta.php";
 require "adm/class.php";
 require "adm/function.php";
-
 $id = $_GET['id'];
 $noticias = listaNoticiaId($lelo, $id);
 ?>
-<html>
-	<head>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="pt" class="no-js"> <!--<![endif]-->
+<head>
 		<title>Notícia Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -21,7 +24,7 @@ $noticias = listaNoticiaId($lelo, $id);
     <meta name= "googlebot" content="follow,index">
     <meta name="DC.publisher" content="Nova Era Web">
     <meta name="DC.date.created" content="2008-10-01">
-    <meta name="  DC.Identifier" content="https://www.celinamoraes.com.br">
+    <meta name="  DC.Identifier" content="https://www.lelopagani.com.br">
     <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
     <link rel="author" href="https://www.novaeraweb.com.br"/>
     <link rel="canonical" href="https://www.lelopagani.com.br/noticias-vereador-lelo-pagani-post.php?id=<?=$noticias['idnoticia']?>" />
@@ -64,7 +67,13 @@ $noticias = listaNoticiaId($lelo, $id);
           <?php foreach ($noticias as $noticia){?>
           <header class="major">
               <h1 style="font-size:1.6em;line-height:30px;"><?=$noticia->titulo;?></h1>
-              <p style="color:#3c3c3c;vertical-align: middle;"><img src="assets/images/icon-calendar.svg" width="3%" style="padding-right: 5px;"><input type="date" disabled value="<?=$noticia->data_noticia;?>"><img src="assets/images/icon-tempo.svg" width="3%" style="padding-right: 5px;"> <?= $noticia->tempo?> min de leitura</p>
+                        <div style="display:inline-block;">
+                            <img src="assets/images/icon-calendar.svg" width="24" height="18" style="padding-right: 5px;"><?=$noticia->data_noticia;?>
+                        </div>
+
+                        <div style="display:inline-block;margin-left: 20px;">
+                            <img src="assets/images/icon-tempo.svg" width="22" height="" style="padding-right: 5px;"><?=$noticia->tempo;?> min de leitura
+                        </div>
           </header>
           <?php if ($noticia->video){ ?>
             <?php
@@ -72,7 +81,7 @@ $noticias = listaNoticiaId($lelo, $id);
               preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $url, $matches);
             ?>
             <!-- RegEx para definir o link do iframe -->
-            <iframe src="https://www.youtube.com/embed/<?=$matches[1]?>" width="100%" height="500px" frameborder="0"></iframe>
+            <iframe src="https://www.youtube.com/embed/<?=$matches[1]?>" width="100%" height="500px" frameborder="0" style="margin-top: 50px;"></iframe>
           <?php } else {?>
           <img src="adm/arquivos/<?=$noticia->arquivo;?>" alt="Notícia Vereador Lelo Pagani" class="image fit">
           <?php }?>

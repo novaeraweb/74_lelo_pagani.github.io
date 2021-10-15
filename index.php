@@ -5,13 +5,15 @@ require_once "adm/function.php";
 $noticias = listaNoticiaIndex($lelo);
 $blogs = listaBlogIndex($lelo);
 ?>
-<!DOCTYPE HTML>
-<html>
-	<head>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="pt" class="no-js"> <!--<![endif]-->
+<head>
 		<title>Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
     <meta name="description" content="Site | Vereador Lelo Pagani - Botucatu/SP" />

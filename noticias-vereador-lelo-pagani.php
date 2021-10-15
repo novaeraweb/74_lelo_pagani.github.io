@@ -2,11 +2,14 @@
 require "adm/conecta.php";
 require "adm/class.php";
 require "adm/function.php";
-
 $noticias = listaNoticia($lelo);
 ?>
-<html>
-	<head>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="pt" class="no-js"> <!--<![endif]-->
+<head>
 		<title>Notícias Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -70,10 +73,22 @@ $noticias = listaNoticia($lelo);
                 <div class="cntl-state">
                     <div class="cntl-content">
                         <h2><strong><?=$noticia->titulo;?></strong></h2>
-                        <p><img src="assets/images/icon-calendar.svg" width="7%"> <input type="date" disabled value="<?=$noticia->data_noticia;?>" style="margin-top: -20px;"></p><hr>
+
+
+                        <div>
+                            <img src="assets/images/icon-calendar.svg" width="24" height="18" style="padding-right: 5px;"><?=$noticia->data_noticia;?>
+                        </div>
+
+                        <div>
+                            <img src="assets/images/icon-tempo.svg" width="22" height="" style="padding-right: 5px;"><?=$noticia->tempo;?> min de leitura
+                        </div><hr>
+
+
                         <div style="line-height:24px;">
                             <p><?=substr($noticia->descricao_longa, 0, 200).'...'?></p>
                         </div>
+
+
                         <ul class="actions">
 							<li><a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="button">Leia a notícia completa</a></li>
 						</ul>

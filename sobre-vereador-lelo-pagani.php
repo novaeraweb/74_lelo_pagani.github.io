@@ -4,9 +4,13 @@ require_once "adm/class.php";
 require_once "adm/function.php";
 $noticias = listaNoticiaIndex($lelo);
 $blogs = listaBlogIndex($lelo);
-?><!DOCTYPE HTML>
-<html>
-  <head>
+?>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="pt" class="no-js"> <!--<![endif]-->
+<head>
 		<title>Sobre Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -20,7 +24,7 @@ $blogs = listaBlogIndex($lelo);
     <meta name= "googlebot" content="follow,index">
     <meta name="DC.publisher" content="Nova Era Web">
     <meta name="DC.date.created" content="2008-10-01">
-    <meta name="  DC.Identifier" content="https://www.celinamoraes.com.br">
+    <meta name="  DC.Identifier" content="https://www.lelopagani.com.br">
     <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
     <link rel="author" href="https://www.novaeraweb.com.br"/>
     <link rel="canonical" href="https://www.lelopagani.com.br/sobre-vereador-lelo-pagani.php" />
