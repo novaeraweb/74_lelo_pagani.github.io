@@ -129,10 +129,6 @@ mysqli_select_db($lelo, "lelopagani");
       height: "200px"
 
     }); 
-
-    
   </script>   
-
 </body>
-
 </html>

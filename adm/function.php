@@ -80,7 +80,7 @@ function listaNoticia ($lelo) {
  	$query = "SELECT n.*
 						FROM noticia n
 						WHERE n.ativo = 'Sim'
-						ORDER BY n.id ASC";
+						ORDER BY n.idnoticia DESC";
  	$resultado = mysqli_query($lelo, $query);
  	$noticias = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
