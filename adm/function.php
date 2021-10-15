@@ -89,6 +89,7 @@ function listaNoticia ($lelo) {
  		$noticia->titulo = $array['titulo'];
 		$noticia->descricao_breve = $array['descricao_breve'];
 		$noticia->descricao_longa = $array['descricao_longa'];
+		$noticia->tempo = $array['tempo'];
 		$noticia->arquivo = $array['arquivo'];
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];
@@ -116,6 +117,7 @@ function listaNoticiaIndex ($lelo) {
  		$noticia->titulo = $array['titulo'];
 		$noticia->descricao_breve = $array['descricao_breve'];
 		$noticia->descricao_longa = $array['descricao_longa'];
+		$noticia->tempo = $array['tempo'];
 		$noticia->arquivo = $array['arquivo'];
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];
@@ -141,6 +143,7 @@ function listaNoticiaId ($lelo, $id) {
 		$noticia->titulo = $array['titulo'];
 		$noticia->descricao_breve = $array['descricao_breve'];
 		$noticia->descricao_longa = $array['descricao_longa'];
+		$noticia->tempo = $array['tempo'];
 		$noticia->arquivo = $array['arquivo'];
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];

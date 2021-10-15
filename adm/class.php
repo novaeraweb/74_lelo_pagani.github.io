@@ -17,6 +17,7 @@ class Noticia{
 	public $titulo;
 	public $descricao_breve;
 	public $descricao_longa;
+	public $tempo;
 	public $link;
 	public $arquivo;
 	public $usuario;

@@ -69,9 +69,11 @@ $noticias = listaNoticia($lelo);
                 <?php $i = 1; foreach ($noticias as $noticia) {?>  
                 <div class="cntl-state">
                     <div class="cntl-content">
-                        <h2><?=$noticia->titulo;?></h2>
-                        <p><input type="date" disabled value="<?=$noticia->data_noticia;?>"></p>
-                        <p><?=substr($noticia->descricao_longa, 0, 200).'...'?></p>
+                        <h2><strong><?=$noticia->titulo;?></strong></h2>
+                        <p><img src="assets/images/icon-calendar.svg" width="7%"> <input type="date" disabled value="<?=$noticia->data_noticia;?>" style="margin-top: -20px;"></p><hr>
+                        <div style="line-height:24px;">
+                            <p><?=substr($noticia->descricao_longa, 0, 200).'...'?></p>
+                        </div>
                         <ul class="actions">
 							<li><a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="button">Leia a notícia completa</a></li>
 						</ul>
@@ -87,7 +89,6 @@ $noticias = listaNoticia($lelo);
     
 </body>
 <?php require_once "footer.php"?>
-
 <script type="text/javascript" src="assets\js\jquery.cntl.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(e){

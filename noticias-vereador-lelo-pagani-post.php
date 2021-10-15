@@ -64,7 +64,7 @@ $noticias = listaNoticiaId($lelo, $id);
           <?php foreach ($noticias as $noticia){?>
           <header class="major">
               <h1 style="font-size:1.6em;line-height:30px;"><?=$noticia->titulo;?></h1>
-              <p><input type="date" disabled value="<?=$noticia->data_noticia;?>"></p>
+              <p style="color:#3c3c3c;vertical-align: middle;"><img src="assets/images/icon-calendar.svg" width="3%" style="padding-right: 5px;"><input type="date" disabled value="<?=$noticia->data_noticia;?>"><img src="assets/images/icon-tempo.svg" width="3%" style="padding-right: 5px;"> <?= $noticia->tempo?> min de leitura</p>
           </header>
           <?php if ($noticia->video){ ?>
             <?php

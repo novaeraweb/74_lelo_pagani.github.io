@@ -1,5 +1,5 @@
 @import url("fontawesome-all.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -116,7 +116,7 @@ input, select, textarea {
 
 	strong, b {
 		color:#3c6c83;
-		font-weight: 400;
+		font-weight:600;
 	}
 
 	em, i {
