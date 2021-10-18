@@ -246,3 +246,28 @@ function listaPerfilId ($lelo, $id) {
    }
 	return $perfis;
 }
+
+
+function listaHomeProjeto ($lelo) {
+	$query = "SELECT p.*
+			  FROM projeto p
+				ORDER BY p.data";
+   $resultado = mysqli_query($lelo, $query);
+   $projetos = array();
+   while ($array = mysqli_fetch_assoc($resultado)) {
+	   $projeto = new Projeto();
+	   $projeto->idprojeto = $array['idprojeto'];
+	   $projeto->titulo = $array['titulo'];
+	   $projeto->descricao_breve = $array['descricao_breve'];
+	   $projeto->nro_projeto = $array['nro_projeto'];
+	   $projeto->data_projeto = $array['data_projeto'];
+	   $projeto->arquivo = $array['arquivo'];
+	   $projeto->link = $array['link'];
+	   $projeto->usuario = $array['usuario'];
+	   $projeto->data = $array['data'];
+	   $projeto->ativo = $array['ativo'];
+
+	   array_push($projetos, $projeto);
+   }
+	return $projetos;
+}

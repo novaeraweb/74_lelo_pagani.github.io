@@ -27,7 +27,7 @@ mysqli_select_db($lelo, "lelopagani");
         </ul>
         
         <ul class="nav">
-          <li class="nav-item active" data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de Editoriais">
+          <li class="nav-item active" data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de Opiniões">
             <a class="nav-link" data-toggle="collapse" href="#menu-opiniao" aria-expanded="false" aria-controls="menu-opiniao" >
               <i class="material-icons">view_list</i>
               <p><strong>Opinião</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
@@ -48,7 +48,7 @@ mysqli_select_db($lelo, "lelopagani");
         </ul>
 
         <ul class="nav">
-          <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="eção destinada ao cadastro de Notícias">
+          <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de Notícias">
             <a class="nav-link" data-toggle="collapse" href="#menu-noticia" aria-expanded="false" aria-controls="menu-noticia">
               <i class="material-icons">view_list</i>
               <p><strong>Notícias</strong> <i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>

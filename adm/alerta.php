@@ -27,6 +27,20 @@
     </div>
 <?php } ?>
 
+<?php if (array_key_exists('alterado', $_GET) && $_GET['alterado']=='true') { ?>
+    <div class="modal-dialog" id="autofade">
+        <div class="modal-card">
+            <div class="modal-card-img"> <img src="assets/img/icon-check.svg" alt=""></div>
+            <div class="modal-card-title">
+                <p>Successo!</p>
+            </div>
+            <div class="modal-card-text">
+                <p>Senha alterada com sucesso.</p>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
 <script>
   setTimeout(function() {
 $('#autofade').fadeOut('slow');}, 5000);

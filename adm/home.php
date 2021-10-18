@@ -21,6 +21,14 @@ $query_total = "SELECT a.* FROM opiniao a WHERE ativo = 'Sim'";
 $resultado_total = mysqli_query($lelo, $query_total);
 $editorial_total = mysqli_num_rows($resultado_total);
 
+
+$projetos = listaHomeProjeto($lelo);
+$noticias = listaNoticiaIndex($lelo);
+
+
+$total = array_merge($projetos, $noticias);
+$contar = count($total);
+
 ?>
 <head>
   <title>Administração Lelo Pagani</title>
@@ -99,31 +107,34 @@ $editorial_total = mysqli_num_rows($resultado_total);
                 <tr class="text-center">
                     <th>Capa</th>
                     <th>Título</th>
-                    <th>Categoria</th>
-                    <th>Sub-Categorias</th>
                     <th>Data</th>
                     <th>Ativo</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
+              <?php $i = 0; while($i < $contar) { ?>
                   <tr class="text-center">
-                      <td><img src="" style="width: 80px;"></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <?php if (pathinfo($total[$i]->arquivo, PATHINFO_EXTENSION) != ''){ ?>
+                        <td><img src="arquivos/<?=$total[$i]->arquivo;?>" style="width: 80px;"></td>
+                      <?php } else {?>
+                        <td></td>
+                      <?php } ?>
+                      <td><?=$total[$i]->titulo;?></td>
+                      <td><?=$total[$i]->data;?></td>
+                      <td><?=$total[$i]->ativo;?></td>
                       <td class="td-actions text-center">
-                      <a href="editar-conteudo.php?id=" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar">
+                      <!-- <a href="editar-conteudo.php?id=" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar">
                               <i class="material-icons">edit</i>
-                          </button></a>
+                          </button></a> -->
                           
-                          <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por">
+                          <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$total[$i]->usuario;?>, em <?=$total[$i]->data?>">
                               <i class="material-icons">help</i>
                           </button></a>
                       </td>
                   </tr>
+                <?php $i++;?>
+                <?php  }  ?>
             </tbody>
         </table> 
       </div>
