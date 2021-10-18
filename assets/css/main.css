@@ -2208,7 +2208,7 @@ ul.menu{
 /*nivel 1*/
 .menu{ 	transition: 1s;}
 .menu a{ color:#fefefe; }
-.menu li:hover > a, .active{ background:rgba(255,255,255,0.9);  color:#446B31; text-decoration: none;}
+.menu li:hover > a, .active{/* background:rgba(255,255,255,0.9);  color:#446B31;*/ text-decoration: none;}
 .menu li.active > a{color:#3c6c83!important; background:rgba(255,255,255,0.9);}
 
 /*nivel 2*/
@@ -2225,7 +2225,7 @@ ul.menu{
 	ul.menu{ width:340px; border-radius:0; padding:0; position:absolute; top:0; left:-372px;margin-top: 70px;z-index: 999; background-color: #18145c;
 	}	
 
-	.menu li{ width:90%; border-bottom: none;}	
+	.menu li{ width:90%; border-bottom: none; height: 50px;}	
 	.menu li a{ width:107%; box-sizing:border-box; -webkit-box-sizing:border-box; border-radius:0; margin-left: 15px;}
 	.menu li.active{
 		width: 89%;
