@@ -230,7 +230,7 @@ function listaPerfil ($lelo) {
 function listaPerfilId ($lelo, $id) {
 	$query = "SELECT p.*
 						FROM perfil p
-						WHERE p.ativo = 'Sim'AND p.idperfil=$id";
+						WHERE p.ativo = 'Sim' AND p.idperfil=$id";
    $resultado = mysqli_query($lelo, $query);
    $perfis = array();
    while ($array = mysqli_fetch_assoc($resultado)) {

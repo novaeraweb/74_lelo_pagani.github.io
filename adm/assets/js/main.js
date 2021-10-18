@@ -12,6 +12,10 @@ $(function(){
     $('#tabela').DataTable();
     } );
 
+    $(document).ready( function () {
+    $('#tabela_noticias').DataTable();
+    } );
+
    
     
 // Chart

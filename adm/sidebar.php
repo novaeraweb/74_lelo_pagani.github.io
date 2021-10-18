@@ -25,28 +25,7 @@ mysqli_select_db($lelo, "lelopagani");
           </li>
           
         </ul>
-        
-        <ul class="nav">
-          <li class="nav-item active" data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de Opiniões">
-            <a class="nav-link" data-toggle="collapse" href="#menu-opiniao" aria-expanded="false" aria-controls="menu-opiniao" >
-              <i class="material-icons">view_list</i>
-              <p><strong>Opinião</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
-            </a>
-          </li>
-          <!-- your sidebar here -->
-          <div class="collapse" id="menu-opiniao">
-          <ul class="nav flex-column">
-            <li class="nav-item" style="height:25px;">  
-                <a class="nav-link active" href="inserir-opiniao.php"><i class="material-icons">add</i> Inserir</a>
-            </li>
-            <li class="nav-item" style="height: 25px;">
-                <a class="nav-link active" href="listar-opiniao.php"><i class="material-icons">search</i> Visualizar</a>
-            </li> 
-            <br>           
-          </ul>
-          </div>
-        </ul>
-
+      
         <ul class="nav">
           <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de Notícias">
             <a class="nav-link" data-toggle="collapse" href="#menu-noticia" aria-expanded="false" aria-controls="menu-noticia">
@@ -100,7 +79,7 @@ mysqli_select_db($lelo, "lelopagani");
           <div class="collapse" id="menu-perfil">
           <ul class="nav flex-column">
             <li class="nav-item" style="height:25px;">  
-                <a class="nav-link active" href="inserir-perfil.php"><i class="material-icons">add</i> Inserir</a>
+                <a class="nav-link active" href="editar-imagens-perfil.php?id=1"><i class="material-icons">refresh</i> Alterar</a>
             </li>
             <li class="nav-item" style="height: 25px;">
                 <a class="nav-link active" href="listar-perfil.php"><i class="material-icons">search</i> Visualizar</a>

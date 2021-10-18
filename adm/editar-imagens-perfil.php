@@ -50,13 +50,11 @@ $perfis = listaPerfilId($lelo, $id);
                                 <h4 class="card-title">Editar imagens</h4>
                             </div>
                         </div>
-                        <?php foreach($perfis as $perfil) {  ?>
                         <div class="card-body">
                                 Utilize o formulário abaixo para editar as imagens do Perfil
                                 <!-- <hr>
                                 <label for="nome">Título da postagem: </label><strong> <?=$perfil->titulo;?></strong><br> -->
                         </div>
-                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -64,40 +62,32 @@ $perfis = listaPerfilId($lelo, $id);
                 <div class="card col-md-12" style="padding-top: 20px;">
                     <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="alterar-imagens-perfil.php" style="padding-bottom: 15px;">
                         <div class="form-group">
-                        <?php foreach($perfis as $perfil) {  ?>
-                        <input type="hidden" name="id" id="id" value="<?=$perfil->idperfil;?>">
-                        <table class="table">
-                            <thead>
-                                <tr class="text-center">
-                                    <th>Foto 1</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-center">
-                                    <td><?php if ($perfil->arquivo == Null) {  ?>
-                                    <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
-                                    <?php } else { ?>
-                                    <img src="arquivos/<?=$perfil->arquivo;?>" alt="" width="120" height="120"/> 
-                                    <?php } ?>
-                                    <br>
-                                    <label for="arquivo1">Selecione a nova imagem</label>
-                                    <br>
-                                    <button type="button" class="btn btn-warning"><input type="file" name="arquivo" id="arquivo"/>Foto 1</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <?php }?>
+                          <?php foreach($perfis as $perfil) {  ?>
+                          <input type="hidden" name="id" id="id" value="<?=$perfil->idperfil;?>">
+                          <table class="table">
+                              <thead>
+                                  <tr class="text-center">
+                                      <th>Foto 1</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="text-center">
+                                      <td><?php if ($perfil->arquivo == Null) {  ?>
+                                      <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
+                                      <?php } else { ?>
+                                      <img src="arquivos/<?=$perfil->arquivo;?>" alt="" width="120" height="120"/> 
+                                      <?php } ?>
+                                      <br>
+                                      <label for="arquivo1">Selecione a nova imagem</label>
+                                      <br>
+                                      <button type="button" class="btn btn-warning"><input type="file" name="arquivo" id="arquivo"/>Foto 1</button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                          <?php }?>
                         </div>
-                        <br>
-                        <div class="form-group">  
-                        </div>
-                        <br>
-                        <div class="form-group">
-                        </div>
-                       <br>
-                        <div id="dvFile">
-                        </div>
+                       
                         <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y'); ?>">
                         <input type="hidden" name="hora" id="hora" value="<?php echo date('G:i:s'); ?>">
                         <input type="hidden" name="usuario" id="usuario" value=<?php echo $_SESSION["usuario_logado"];?>>
