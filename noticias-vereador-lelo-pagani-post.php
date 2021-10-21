@@ -68,11 +68,11 @@ $noticias = listaNoticiaId($lelo, $id);
           <header class="major">
               <h1 style="font-size:1.6em;line-height:30px;"><?=$noticia->titulo;?></h1>
                         <div style="display:inline-block;">
-                            <img src="assets/images/icon-calendar.svg" width="24" height="18" style="padding-right: 5px;"><?=$noticia->data_noticia;?>
+                            <img src="assets/images/icon-calendar.svg" width="24" height="18" style="padding-right: 5px;"><input type="date" disabled value="<?=$noticia->data_noticia;?>">
                         </div>
 
                         <div style="display:inline-block;margin-left: 20px;">
-                            <img src="assets/images/icon-tempo.svg" width="22" height="" style="padding-right: 5px;"><?=$noticia->tempo;?> min de leitura
+                            <img src="assets/images/icon-tempo.svg" width="22" height="" style="padding-right: 5px;"><?=$noticia->tempo;?> min. de leitura
                         </div>
           </header>
           <?php if ($noticia->video){ ?>

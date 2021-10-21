@@ -3,7 +3,6 @@ require_once "adm/conecta.php";
 require_once "adm/class.php";
 require_once "adm/function.php";
 $noticias = listaNoticiaIndex($lelo);
-$blogs = listaBlogIndex($lelo);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -84,7 +83,7 @@ $blogs = listaBlogIndex($lelo);
 						<div class="row">
 							<?php foreach ($noticias as $noticia) {?>
 								<article class="col-6 col-12-xsmall work-item">
-									<a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="noticias fit"><img src="adm/arquivos/<?=$noticia->arquivo;?>" alt="Notícias Vereador Lelo Pagani" />
+									<a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="noticias fit"><img src="adm/arquivos/<?=$noticia->arquivo_capa;?>" alt="Notícias Vereador Lelo Pagani" />
 									<p style="color:red;"><strong><input type="date" disabled value="<?=$noticia->data_noticia;?>"></strong></p>
 									<h3><?=$noticia->titulo;?></h3></a>
 									<br>

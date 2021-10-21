@@ -56,8 +56,8 @@ mysqli_select_db($lelo, "lelopagani");
                       </div>
                       <br>
                       <div class="form-group">
-                        <label for="descricao_breve">Descrição breve:</label><br>
-                        <textarea type="text" name="descricao_breve" id="descricao_breve" class="form-control"></textarea>
+                        <label for="linha_fina">Linha Fina: <strong>(Limitada a 230 caracteres)</strong></label><br>
+                        <textarea type="text" name="linha_fina" id="linha_fina" class="form-control"></textarea>
                       </div>
                       <br>
                       <div class="form-group">
@@ -79,15 +79,19 @@ mysqli_select_db($lelo, "lelopagani");
 
                       <div class="form-group">
                         <label for="tempo">Tempo de Leitura:</label><br>
-                        <input type="text" name="tempo" id="tempo" class="form-control" >
+                        <input type="text" name="tempo" id="tempo" style="width: 10%;display:inline-block;" class="form-control" maxlength="2" ><div style="display:inline-block"> minutos</div>
                       </div>
                       <br>
 
                       <div id="dvFile">
-                        <label for="arquivo" style="width: 100%; margin-top: 15px;">Imagem da notícia</label>
-                        <input type="file" name="arquivo" id="arquivo" required>
+                        <label for="arquivo" style="width: 100%; margin-top: 15px;">Imagem de capa</label>
+                        <input type="file" name="arquivo" id="arquivo" required style="margin-bottom:30px">
                       </div>
-                      <br>
+                      
+                      <div class="form-group">
+                        <label for="tempo">Descrição da Imagem de capa:</label><br>
+                        <input type="text" name="tempo" id="tempo" style="" class="form-control" maxlength="2" >
+                      </div><br>
                       <div class="form-group">
                         <label for="video">Vídeo</label>
                         <input type="text" class="form-control" name="video" id="video" data-toggle="tooltip" data-placement="top" title="Links para vídeos do YouTube/Vimeo/etc">
@@ -124,7 +128,7 @@ mysqli_select_db($lelo, "lelopagani");
   <script type="text/javascript">
 
     // Initialize CKEditor
-    CKEDITOR.replace('descricao_breve',{
+    CKEDITOR.replace('linha_fina',{
       width: "700px",
       height: "200px"
     });  
@@ -134,7 +138,13 @@ mysqli_select_db($lelo, "lelopagani");
       width: "700px",
       height: "200px"
 
-    }); 
+    });
+
+CKEDITOR.replace( 'linha_fina', {
+  extraPlugins: 'wordcount'
+} );
+
+
   </script>   
 </body>
 </html>

@@ -1,6 +1,4 @@
 <?php 
-
-// Queries opinioes
 function listaOpiniao ($lelo) {
  	$query = "SELECT o.*
 						FROM opiniao o
@@ -75,7 +73,6 @@ function listaBlogIndex ($lelo) {
  	return $opinioes;
 }
 
-
 function listaNoticia ($lelo) {
  	$query = "SELECT n.*
 						FROM noticia n
@@ -87,10 +84,11 @@ function listaNoticia ($lelo) {
  		$noticia = new Noticia();
  		$noticia->idnoticia = $array['idnoticia'];
  		$noticia->titulo = $array['titulo'];
-		$noticia->descricao_breve = $array['descricao_breve'];
+		$noticia->linha_fina = $array['linha_fina'];
 		$noticia->descricao_longa = $array['descricao_longa'];
 		$noticia->tempo = $array['tempo'];
-		$noticia->arquivo = $array['arquivo'];
+		$noticia->arquivo_capa = $array['arquivo_capa'];
+		$noticia->descricao_capa = $array['descricao_capa'];
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];
 		$noticia->data = $array['data'];
@@ -115,10 +113,11 @@ function listaNoticiaIndex ($lelo) {
  		$noticia = new Noticia();
  		$noticia->idnoticia = $array['idnoticia'];
  		$noticia->titulo = $array['titulo'];
-		$noticia->descricao_breve = $array['descricao_breve'];
+		$noticia->linha_fina = $array['linha_fina'];
 		$noticia->descricao_longa = $array['descricao_longa'];
 		$noticia->tempo = $array['tempo'];
-		$noticia->arquivo = $array['arquivo'];
+		$noticia->arquivo_capa = $array['arquivo_capa'];
+		$noticia->descricao_capa = $array['descricao_capa'];
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];
 		$noticia->data = $array['data'];
@@ -141,10 +140,11 @@ function listaNoticiaId ($lelo, $id) {
 		$noticia = new Noticia();
 		$noticia->idnoticia = $array['idnoticia'];
 		$noticia->titulo = $array['titulo'];
-		$noticia->descricao_breve = $array['descricao_breve'];
+		$noticia->linha_fina = $array['linha_fina'];
 		$noticia->descricao_longa = $array['descricao_longa'];
 		$noticia->tempo = $array['tempo'];
-		$noticia->arquivo = $array['arquivo'];
+		$noticia->arquivo_capa = $array['arquivo_capa'];
+		$noticia->descricao_capa = $array['descricao_capa'];
 		$noticia->link = $array['link'];
 		$noticia->usuario = $array['usuario'];
 		$noticia->data = $array['data'];
@@ -246,7 +246,6 @@ function listaPerfilId ($lelo, $id) {
    }
 	return $perfis;
 }
-
 
 function listaHomeProjeto ($lelo) {
 	$query = "SELECT p.*

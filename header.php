@@ -20,8 +20,8 @@ $row_rs_perfil = mysqli_fetch_assoc($rs_perfil);?>
     </nav>
     <div class="inner">
         <a href="#" class="image avatar"><img src="assets/images/<?=$row_rs_perfil["arquivo"] ?>" alt="Imagem Perfil Lelo Pagani" /></a>
-        <h2><strong>Lelo Pagani</strong>, vereador.</h2>
-        <h3>Botucatu/SP</h3>
-        <img src="assets/images/botucatu.jpg">
+        <h2 class="nophone"><strong>Lelo Pagani</strong>, vereador.</h2>
+        <h3 class="nophone">Botucatu/SP</h3>
+        <img src="assets/images/botucatu.jpg" class="nophone">
     </div>
 </header>

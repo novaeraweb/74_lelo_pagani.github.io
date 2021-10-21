@@ -63,7 +63,10 @@ $noticias = listaNoticia($lelo);
 <?php require_once "header.php"?>
 <body class="is-preload">
     <main id="main">
-        <h1>Notícias</h1>
+        <section id="one">
+          <header class="major">
+              <h1>Notícias</h1>
+          </header>
         <div class="cntl">
             <span class="cntl-bar cntl-center">
                 <span class="cntl-bar-fill"></span>
@@ -73,32 +76,24 @@ $noticias = listaNoticia($lelo);
                 <div class="cntl-state">
                     <div class="cntl-content">
                         <h2><strong><?=$noticia->titulo;?></strong></h2>
-
-
                         <div>
-                            <img src="assets/images/icon-calendar.svg" width="24" height="18" style="padding-right: 5px;"><?=$noticia->data_noticia;?>
+                            <img src="assets/images/icon-calendar.svg" width="24" height="18" style="padding-right: 5px;"><input type="date" disabled value="<?=$noticia->data_noticia;?>">
                         </div>
-
                         <div>
-                            <img src="assets/images/icon-tempo.svg" width="22" height="" style="padding-right: 5px;"><?=$noticia->tempo;?> min de leitura
+                            <img src="assets/images/icon-tempo.svg" width="22" height="" style="padding-right: 5px;"><?=$noticia->tempo;?> min. de leitura
                         </div><hr>
-
-
                         <div style="line-height:24px;">
-                            <p><?=substr($noticia->descricao_longa, 0, 200).'...'?></p>
+                            <p><?=substr($noticia->linha_fina, 0, 231).'...'?></p>
                         </div>
-
-
-                        <ul class="actions">
-							<li><a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="button">Leia a notícia completa</a></li>
-						</ul>
+                        <a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="button" style="width:100%;">Leia a notícia completa</a>
                     </div>
-                    <div class="cntl-image"><img src="adm/arquivos/<?=$noticia->arquivo;?>" alt="Vereador Lelo Pagani"></div>
+                    <div class="cntl-image"><a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>"><img src="adm/arquivos/<?=$noticia->arquivo_capa;?>" alt="Vereador Lelo Pagani"></a></div>
                     <div class="cntl-icon"><?=$i;?></div>
                 </div>
                 <?php $i += 1; } ?>
             </div>
         </div>
+        </section>
                 <?php require_once "contato-vereador-lelo-pagani.php"?>
     </main>
     

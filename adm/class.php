@@ -15,7 +15,7 @@ class Opiniao{
 class Noticia{
 	public $idnoticia;
 	public $titulo;
-	public $descricao_breve;
+	public $linha_fina;
 	public $descricao_longa;
 	public $tempo;
 	public $link;
