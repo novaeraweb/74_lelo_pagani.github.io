@@ -15,10 +15,10 @@
         $_SESSION["usuario_logado"] = $user;
 
         mysqli_select_db($lelo, $database_lelo);
-        $query = "SELECT * FROM usuario WHERE user = '$user' AND ativo = 'sim'";
+        $query = "SELECT * FROM usuario WHERE user = '$user' AND ativo = 'Sim'";
         $rs_id = mysqli_query($lelo, $query) or die(mysqli_error($lelo));
         $row_rs = mysqli_fetch_assoc($rs_id);
-        $_SESSION["user_id"] = $row_rs['id'];
+        $_SESSION["user_id"] = $row_rs['idusuario'];
         $_SESSION["user_senha"] = $row_rs['senha'];
         
         header('location:home.php');

@@ -1827,6 +1827,13 @@ input, select, textarea {
 		margin: 0 5;
 	}
 
+	.linha-fina{
+		font-size: 13px;
+		display: block;
+		text-align: center;
+	}
+
+
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],

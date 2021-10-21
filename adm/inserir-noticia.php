@@ -124,25 +124,40 @@ mysqli_select_db($lelo, "lelopagani");
   <script src="assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
 
   <!-- Editor de texto -->
-  <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+  <!-- <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script> -->
+  <script src="assets/ckeditor/ckeditor.js"></script>
   <script type="text/javascript">
 
     // Initialize CKEditor
     CKEDITOR.replace('linha_fina',{
       width: "700px",
-      height: "200px"
+      height: "200px",
+      wordcount: {
+        showParagraphs: true,
+        showWordCount: true,
+        showCharCount: true,
+        countSpacesAsChars:true,
+        countHTML:false,
+        maxWordCount: -1,
+        maxCharCount: 230
+      }
     });  
 
     CKEDITOR.replace('descricao_longa',{
 
       width: "700px",
-      height: "200px"
+      height: "200px",
+      wordcount: {
+        showParagraphs: true,
+        showWordCount: true,
+        showCharCount: true,
+        countSpacesAsChars:true,
+        countHTML:false,
+        maxWordCount: -1,
+        maxCharCount: -1
+      }
 
     });
-
-CKEDITOR.replace( 'linha_fina', {
-  extraPlugins: 'wordcount'
-} );
 
 
   </script>   

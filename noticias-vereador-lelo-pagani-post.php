@@ -84,6 +84,7 @@ $noticias = listaNoticiaId($lelo, $id);
             <iframe src="https://www.youtube.com/embed/<?=$matches[1]?>" width="100%" height="500px" frameborder="0" style="margin-top: 50px;"></iframe>
           <?php } else {?>
           <img src="adm/arquivos/<?=$noticia->arquivo;?>" alt="Notícia Vereador Lelo Pagani" class="image fit" style="margin-top: 50px;">
+          <span class="linha-fina"><?=$noticia->descricao_capa;?></span>
           <?php }?>
           <p style="margin-top:80px;"><?=$noticia->descricao_longa;?></p>
           <p><a href="<?=$noticia->link;?>" target="_blank" > <?=$noticia->link;?></a></p>
