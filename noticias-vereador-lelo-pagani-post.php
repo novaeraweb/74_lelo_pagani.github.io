@@ -70,7 +70,6 @@ $noticias = listaNoticiaId($lelo, $id);
                         <div style="display:inline-block;">
                             <img src="assets/images/icon-calendar.svg" width="24" height="18" style="padding-right: 5px;"><input type="date" disabled value="<?=$noticia->data_noticia;?>">
                         </div>
-
                         <div style="display:inline-block;margin-left: 20px;">
                             <img src="assets/images/icon-tempo.svg" width="22" height="" style="padding-right: 5px;"><?=$noticia->tempo;?> min. de leitura
                         </div>
@@ -83,7 +82,7 @@ $noticias = listaNoticiaId($lelo, $id);
             <!-- RegEx para definir o link do iframe -->
             <iframe src="https://www.youtube.com/embed/<?=$matches[1]?>" width="100%" height="500px" frameborder="0" style="margin-top: 50px;"></iframe>
           <?php } else {?>
-          <img src="adm/arquivos/<?=$noticia->arquivo;?>" alt="Notícia Vereador Lelo Pagani" class="image fit" style="margin-top: 50px;">
+          <img src="adm/arquivos/<?=$noticia->arquivo_capa;?>" alt="Notícia Vereador Lelo Pagani" class="image fit" style="margin-top: 50px;">
           <span class="linha-fina"><?=$noticia->descricao_capa;?></span>
           <?php }?>
           <p style="margin-top:80px;"><?=$noticia->descricao_longa;?></p>
