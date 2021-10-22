@@ -62,8 +62,8 @@ $noticias = listaNoticiaId($lelo, $id);
                         </div>
                         <br>
                         <div class="form-group">
-                          <label for="descricao_breve">Descrição Breve:</label><br>
-                          <textarea name="descricao_breve" id="descricao_breve" cols="30" rows="10" class="form-control"><?=$noticia->descricao_breve;?></textarea>
+                          <label for="linha_fina">Linha Fina:</label><br>
+                          <textarea name="linha_fina" id="descricao_breve" cols="30" rows="10" class="form-control"><?=$noticia->linha_fina;?></textarea>
                         </div>
                         <br>
                         <div class="form-group">

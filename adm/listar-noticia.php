@@ -69,7 +69,7 @@ $noticias = listaNoticia($lelo);
                           <tbody>
                               <?php foreach ($noticias as $noticia){?>
                                 <tr class="text-center">
-                                    <td><img src="arquivos/<?=$noticia->arquivo;?>" style="width: 80px;"></td>
+                                    <td><img src="arquivos/<?=$noticia->arquivo_capa;?>" style="width: 80px;"></td>
                                     <td style="max-width:100px;"><?=$noticia->titulo;?></td>
                                     <td><?=$noticia->ativo;?></td>
                                     <td class="td-actions text-right">
