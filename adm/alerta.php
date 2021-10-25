@@ -4,10 +4,10 @@
         <div class="modal-card">
             <div class="modal-card-img"> <img src="assets/img/icon-check.svg" alt=""></div>
             <div class="modal-card-title">
-                <p>Successo!</p>
+                <p>Sucesso!</p>
             </div>
             <div class="modal-card-text">
-                <p>Conteúdo inserido com sucesso.</p>
+                <p>Conteúdo inserido.</p>
             </div>
         </div>
     </div>
@@ -18,10 +18,10 @@
         <div class="modal-card">
             <div class="modal-card-img"> <img src="assets/img/icon-check.svg" alt=""></div>
             <div class="modal-card-title">
-                <p>Successo!</p>
+                <p>Sucesso!</p>
             </div>
             <div class="modal-card-text">
-                <p>Conteúdo editado com sucesso.</p>
+                <p>Conteúdo editado.</p>
             </div>
         </div>
     </div>
@@ -32,10 +32,10 @@
         <div class="modal-card">
             <div class="modal-card-img"> <img src="assets/img/icon-check.svg" alt=""></div>
             <div class="modal-card-title">
-                <p>Successo!</p>
+                <p>Sucesso!</p>
             </div>
             <div class="modal-card-text">
-                <p>Senha alterada com sucesso.</p>
+                <p>Senha alterada.</p>
             </div>
         </div>
     </div>

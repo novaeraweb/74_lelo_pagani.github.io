@@ -4,6 +4,9 @@ require "adm/class.php";
 require "adm/function.php";
 $id = $_GET['id'];
 $noticias = listaNoticiaId($lelo, $id);
+$query_rs_noticia = "SELECT * FROM noticia WHERE idnoticia='$id' ";
+$rs_noticia = mysqli_query($lelo, $query_rs_noticia) or die(mysqli_error());
+$row_rs_noticia = mysqli_fetch_assoc($rs_noticia);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -31,10 +34,10 @@ $noticias = listaNoticiaId($lelo, $id);
 
     <!-- Meta FB -->
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="Vereador Lelo Pagani" />
+    <meta property="og:title" content="<?=$row_rs_noticia['titulo']?>" />
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.lelopagani.com.br/noticias-vereador-lelo-pagani-post.php?id=<?=$noticias['idnoticia']?>"/>
-    <meta property="og:image" content="https://www.lelopagani.com.br/adm/arquivos/<?=$noticias['arquivo']?>.jpg" />
+    <meta property="og:url" content="https://www.lelopagani.com.br/noticias-vereador-lelo-pagani-post.php?id=<?=$row_rs_noticia['idnoticia']?>"/>
+    <meta property="og:image" content="https://www.lelopagani.com.br/adm/arquivos/<?=$row_rs_noticia['arquivo']?>" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
@@ -45,14 +48,13 @@ $noticias = listaNoticiaId($lelo, $id);
     <!-- Meta Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
-      name="twitter:description"
-      content="Notícia Vereador Lelo Pagani - Botucatu/SP"
+      name="twitter:description" content="Notícia Vereador Lelo Pagani - Botucatu/SP"
     />
-    <meta name="twitter:title" content="<?=$noticias['titulo']?>" />
+    <meta name="twitter:title" content="<?=$row_rs_noticia['titulo']?>" />
     <meta name="twitter:site" content="@lelopagani" />
     <meta
       name="twitter:image"
-      content="https://www.lelopagani.com.br/adm/arquivos/<?=$noticias['arquivo']?>.jpg"
+      content="https://www.lelopagani.com.br/adm/arquivos/<?=$row_rs_noticia['arquivo']?>"
     />
     <meta name="twitter:creator" content="@lelopagani" />
     <!-- Fim Meta Twitter -->
