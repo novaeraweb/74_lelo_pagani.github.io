@@ -27,17 +27,15 @@ $noticias = listaNoticiaIndex($lelo);
     <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
     <link rel="author" href="https://www.novaeraweb.com.br"/>
     <link rel="canonical" href="https://www.lelopagani.com.br/index.php" />
-
-    <!-- Meta FB -->
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="Vereador Lelo Pagani" />
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.lelopagani.com.br/index.php>"/>
+    <meta property="og:url" content="https://www.lelopagani.com.br/index.php"/>
     <meta property="og:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
-    <meta property="og:description" content="Site | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta property="og:description" content="Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:site_name" content="Vereador Lelo Pagani"/>
     <meta property="fb:admins" content=""/>
     <!-- Fim Meta FB -->
@@ -57,18 +55,21 @@ $noticias = listaNoticiaIndex($lelo);
     <!-- Fim Meta Twitter -->
 
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 	</head>
-	<body class="is-preload">
+	<body class="is-preload"><?php require_once "alerta.php" ?>
+
 		<?php require_once "header.php"?>
 		<!-- Main -->
 			<main id="main">
-
-				<!-- One -->
+								<!-- One -->
 					<section id="one">
 						<header class="major">
 							<h1><span>LELO</span><br>PAGANI<br></h1>
-							<p class="vereador">Vereador</p>
-							
+							<p class="vereador">Vereador</p>	
 						</header>
 						<p>Sou vereador do município de Botucatu. Estou no meu 4º mandato na Câmara Municipal de Botucatu. Nesses últimos 4 anos me reciclei e me aprimorei. Busco uma articulação junto à população para construirmos uma cidade melhor.</p>
 						<p>Minha luta é pela transformação social, da cidade e da região, com transparência, ética e persistência.</p>
