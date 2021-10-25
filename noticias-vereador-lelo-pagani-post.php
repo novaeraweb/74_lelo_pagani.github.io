@@ -37,7 +37,7 @@ $row_rs_noticia = mysqli_fetch_assoc($rs_noticia);
     <meta property="og:title" content="<?=$row_rs_noticia['titulo']?>" />
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://www.lelopagani.com.br/noticias-vereador-lelo-pagani-post.php?id=<?=$row_rs_noticia['idnoticia']?>"/>
-    <meta property="og:image" content="https://www.lelopagani.com.br/adm/arquivos/<?=$row_rs_noticia['arquivo']?>" />
+    <meta property="og:image" content="https://www.lelopagani.com.br/adm/arquivos/<?=$row_rs_noticia['arquivo_capa']?>" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
