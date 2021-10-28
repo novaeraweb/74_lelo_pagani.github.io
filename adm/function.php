@@ -157,6 +157,24 @@ function listaNoticiaId ($lelo, $id) {
  	return $noticias;
 }
 
+function listaImagensIdNoticia ($lelo, $id) {
+ 	$query = "SELECT i.*
+	 		  FROM imagem i
+			  WHERE i.idnoticia=$id";
+	$resultado = mysqli_query($lelo, $query);
+	$imagens = array();
+	while ($array = mysqli_fetch_assoc($resultado)) {
+		$imagem = new Noticia();
+		$imagem->idimagem = $array['idimagem'];
+		$imagem->idnoticia = $array['idnoticia'];
+		$imagem->arquivo = $array['arquivo'];
+		$imagem->descricao = $array['descricao'];
+
+		array_push($imagens, $imagem);
+	}
+ 	return $imagens;
+}
+
 function listaProjeto ($lelo) {
 	$query = "SELECT p.*
 			  FROM projeto p

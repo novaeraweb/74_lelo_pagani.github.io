@@ -8,6 +8,7 @@ require_once "function.php";
 mysqli_select_db($lelo,$database_lelo);
 $id = $_GET['id'];
 $noticias = listaNoticiaId($lelo, $id);
+$imagens = listaImagensIdNoticia($lelo, $id);
 ?>
 
 <head>
@@ -64,45 +65,42 @@ $noticias = listaNoticiaId($lelo, $id);
                 <div class="card col-md-12" style="padding-top: 20px;">
                     <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="alterar-imagens-noticia.php" style="padding-bottom: 15px;">
                         <div class="form-group">
-                        <?php foreach($noticias as $noticia) {  ?>
-                        <input type="hidden" name="id" id="id" value="<?=$noticia->idnoticia;?>">
-                        <table class="table">
-                            <thead>
-                                <tr class="text-center">
-                                    <th>Foto 1</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-center">
-                                    <td><?php if ($noticia->arquivo == Null) {  ?>
-                                    <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
-                                    <?php } else { ?>
-                                    <img src="arquivos/<?=$noticia->arquivo;?>" alt="" width="120" height="120"/> 
-                                    <?php } ?>
-                                    <br>
-                                    <label for="arquivo1">Selecione a nova imagem</label>
-                                    <br>
-                                    <button type="button" class="btn btn-warning"><input type="file" name="arquivo" id="arquivo"/>Foto 1</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <?php }?>
-                        </div>
-                        <br>
-                        <div class="form-group">  
-                        </div>
-                        <br>
-                        <div class="form-group">
-                        </div>
-                       <br>
-                        <div id="dvFile">
+                        <?php $i = 1; foreach($noticias as $noticia) {  ?>
+                          <?php foreach($imagens as $imagem) {  ?>
+                          <input type="hidden" name="id" id="id" value="<?=$noticia->idnoticia;?>">
+                          <input type="hidden" name="idimagem<?=$i?>" id="idimagem<?=$i?>" value="<?=$imagem->idimagem;?>">
+                          <table class="table">
+                              <thead>
+                                  <tr class="text-center">
+                                      <th>Foto <?=$i;?></th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="text-center">
+                                      <td><?php if ($imagem->arquivo == Null) {  ?>
+                                      <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
+                                      <?php } else { ?>
+                                      <img src="arquivos/<?=$imagem->arquivo;?>" alt="" width="120" height="120"/>
+                                      <br><br>
+                                      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                      <label for="descricao">Legenda de Capa</label>
+                                      <input type="text" class="form-control col-md-6" name="descricao<?=$i?>" id="descricao<?=$i?>" value="<?=$imagem->descricao?>">
+                                      </div>
+                                      
+                                      <?php } ?>
+                                      <br>
+                                      <label for="arquivo<?=$i?>">Selecione a nova imagem</label>
+                                      <br>
+                                      <button type="button" class="btn btn-warning"><input type="file" name="arquivo<?=$i?>" id="arquivo<?=$i?>"/>Foto <?=$i; $i++?></button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                          <?php }?>
+                        <?php } ?>
                         </div>
                         <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y'); ?>">
                         <input type="hidden" name="enviado" id="enviado" value=<?php echo $_SESSION["usuario_logado"];?>>
-                        <br>
-                        <div class="form-group">
-                        </div>
                         <button id="submit" type="submit" class="btn btn-info float-right">SALVAR</button>
                     </form>
 

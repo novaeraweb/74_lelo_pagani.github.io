@@ -74,7 +74,7 @@ $noticias = listaNoticia($lelo);
                                     <td><?=$noticia->ativo;?></td>
                                     <td class="td-actions text-right">
                                     <a href="editar-imagens-noticia.php?id=<?php echo $noticia->idnoticia;?>" style="margin-top: 10px; margin-right: 10px;">
-                                      <button type="button" rel="tooltip" class="btn btn-warning btn-round" data-toggle="tooltip" data-placement="top" title="Editar fotos">
+                                      <button type="button" rel="tooltip" class="btn btn-warning btn-round" data-toggle="tooltip" data-placement="top" title="Editar fotos/legenda de capa">
                                         <i class="material-icons">camera_enhance</i>
                                       </button>
                                     </a>
