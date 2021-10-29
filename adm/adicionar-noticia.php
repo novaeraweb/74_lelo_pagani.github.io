@@ -51,7 +51,7 @@ mysqli_select_db($lelo, 'lelopagani');
         $$nomevar = $arquivo_teste;
     }
 
-    require "adicionar-imagens.php";
+    // require "adicionar-imagens.php";
 
 //Insert inglês
 $insertSQL = "INSERT INTO noticia (titulo, linha_fina, descricao_longa, descricao_capa, link, usuario, tempo, data, data_noticia, arquivo, video, ativo) VALUES ('$titulo', '$linha_fina', '$descricao_longa', '$descricao_capa', '$link', '$usuario', '$tempo', '$data', '$data_noticia', '$novo', '$video', '$ativo' )";      
