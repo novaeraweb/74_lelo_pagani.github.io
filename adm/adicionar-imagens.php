@@ -15,8 +15,8 @@
 
                 $ratio_orig = $largura_original/$altura_original;
 
-                $largura = 2000;
-                $altura = 2000;
+                $largura = 1000;
+                $altura = 1000;
 
                 if ($largura/$altura > $ratio_orig) {
                   $largura = $altura*$ratio_orig;
@@ -51,8 +51,8 @@
 
                 $ratio_orig = $largura_original/$altura_original;
 
-                $largura = 2000;
-                $altura = 2000;
+                $largura = 1000;
+                $altura = 1000;
 
                 if ($largura/$altura > $ratio_orig) {
                   $largura = $altura*$ratio_orig;

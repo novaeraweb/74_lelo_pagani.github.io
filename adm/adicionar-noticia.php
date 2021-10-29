@@ -42,7 +42,7 @@ mysqli_select_db($lelo, 'lelopagani');
     $dir = "arquivos/";
     $dir = strtolower($dir);
     
-    $nomevar = 'arquivo';
+    $nomevar = 'arquivo_capa';
 
 
     if (isset($_FILES[$nomevar])) {
@@ -51,10 +51,10 @@ mysqli_select_db($lelo, 'lelopagani');
         $$nomevar = $arquivo_teste;
     }
 
-    // require "adicionar-imagens.php";
+    require "adicionar-imagens.php";
 
 //Insert inglês
-$insertSQL = "INSERT INTO noticia (titulo, linha_fina, descricao_longa, descricao_capa, link, usuario, tempo, data, data_noticia, arquivo, video, ativo) VALUES ('$titulo', '$linha_fina', '$descricao_longa', '$descricao_capa', '$link', '$usuario', '$tempo', '$data', '$data_noticia', '$novo', '$video', '$ativo' )";      
+$insertSQL = "INSERT INTO noticia (titulo, linha_fina, descricao_longa, descricao_capa, link, usuario, tempo, data, data_noticia, arquivo_capa, video, ativo) VALUES ('$titulo', '$linha_fina', '$descricao_longa', '$descricao_capa', '$link', '$usuario', '$tempo', '$data', '$data_noticia', '$novo', '$video', '$ativo' )";      
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 
 header("Location: home.php?inserido=true");
