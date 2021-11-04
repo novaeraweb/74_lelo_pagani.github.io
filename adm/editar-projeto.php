@@ -52,7 +52,7 @@ $projetos = listaProjetoId($lelo, $id);
             </div>
             <div class="row">
                 <div class="card col-md-12" style="padding-top: 20px;">
-                    <form  class="col-md-12" method="POST" action="alterar-postagem.php">
+                    <form  class="col-md-12" method="POST" action="alterar-projeto.php">
                       <br><br>
                         <?php foreach ($projetos as $projeto){?>
                         <input type="hidden" name="id" id="id" value="<?=$projeto->idprojeto;?>">

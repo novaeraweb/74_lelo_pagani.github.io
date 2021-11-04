@@ -8,9 +8,6 @@ mysqli_select_db($lelo, 'lelopagani');
     $titulo = $_POST["titulo"];
     $titulo = trim($titulo);
 
-    $descricao_breve = $_POST["descricao_breve"];
-    $descricao_breve = trim($descricao_breve);
-   
     $nro_projeto = $_POST["nro_projeto"];
     $nro_projeto = trim($nro_projeto);
 
@@ -24,7 +21,7 @@ mysqli_select_db($lelo, 'lelopagani');
     $ativo = trim($ativo);
 
 // Insert EN
-$updateSQL = "UPDATE projeto SET titulo = '$titulo', descricao_breve = '$descricao_breve', nro_projeto = '$nro_projeto', data_projeto = '$data_projeto', link = '$link' , ativo = '$ativo' WHERE idprojeto ='$id'"; 
+$updateSQL = "UPDATE projeto SET titulo = '$titulo', nro_projeto = '$nro_projeto', data_projeto = '$data_projeto', link = '$link' , ativo = '$ativo' WHERE idprojeto ='$id'"; 
 
 $Result = mysqli_query($lelo, $updateSQL) or die(mysqli_error($lelo));  
 

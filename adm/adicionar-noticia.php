@@ -58,34 +58,34 @@ $insertSQL = "INSERT INTO noticia (titulo, linha_fina, descricao_longa, descrica
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 $id_noticia = $lelo->insert_id;
 
-$descricao = array();
-for($n = 1; $n <= $j; $n++){
-    $des = $_POST['descricao'.$n];
-    if ($des != NULL){
-        $descricao[$n] = null;
-    } else {
-        $descricao[$n] = $des;
-        $descricao[$n] = trim($descricao[$n]);
+// $descricao = array();
+// for($n = 1; $n <= $j; $n++){
+//     $des = $_POST['descricao'.$n];
+//     if ($des != NULL){
+//         $descricao[$n] = null;
+//     } else {
+//         $descricao[$n] = $des;
+//         $descricao[$n] = trim($descricao[$n]);
 
       
-    }
+//     }
 
-}
-
-
-require "adicionar-imagens-album.php";
+// }
 
 
+// require "adicionar-imagens-album.php";
 
 
-if ($img1_novo){
-	for ($k = 1; $k <= $j; $k++){
-	$dsc = $descricao[$k];
-	$img = ${'img'.$i.'_novo'};
-	$insertImg = "INSERT INTO imagem (descricao, arquivo, idnoticia) VALUES ('$dsc', '$img', '$id_noticia')"; 
-	$result = mysqli_query($lelo, $insertImg) or die(mysqli_error($lelo));
-	}   
-}
+
+
+// if ($img1_novo){
+// 	for ($k = 1; $k <= $j; $k++){
+// 	$dsc = $descricao[$k];
+// 	$img = ${'img'.$i.'_novo'};
+// 	$insertImg = "INSERT INTO imagem (descricao, arquivo, idnoticia) VALUES ('$dsc', '$img', '$id_noticia')"; 
+// 	$result = mysqli_query($lelo, $insertImg) or die(mysqli_error($lelo));
+// 	}   
+// }
 
 
 

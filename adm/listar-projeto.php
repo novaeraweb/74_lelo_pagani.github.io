@@ -83,9 +83,12 @@ $projetos = listaProjeto($lelo);
                                       </button>
                                     </a>
                                     
-                                    <button type="button" class="btn btn-danger btn-round" rel="tooltip" style="margin-top: 10px;" data-toggle="tooltip" data-placement="top" title="Excluir" data-target="#modal-delete-projeto<?php echo $projeto->idprojeto;?>">
+
+                                    
+                                    <button type="button" class="btn btn-danger btn-round" rel="tooltip" style="margin-top: 10px;" data-toggle="modal" data-placement="top" title="Excluir" data-target="#modal-delete-projeto<?php echo $projeto->idprojeto;?>">
                                       <i class="material-icons">close</i>
                                     </button>
+
                                   <a href="#" class="info"  style="margin-top: 10px; margin-left:10px; margin-right: -75px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por <?=$projeto->usuario;?>, em: <?=$projeto->data;?>">
                                       <i class="material-icons">help</i>
                                   </button></a>

@@ -236,7 +236,6 @@ function listaPerfil ($lelo) {
 		$perfil->idperfil = $array['idperfil'];
 		$perfil->arquivo = $array['arquivo'];
 		$perfil->data = $array['data'];
-		$perfil->hora = $array['hora'];
 		$perfil->usuario = $array['usuario'];
 		$perfil->ativo = $array['ativo'];
 
@@ -256,7 +255,6 @@ function listaPerfilId ($lelo, $id) {
 		 $perfil->idperfil = $array['idperfil'];
 		 $perfil->arquivo = $array['arquivo'];
 		 $perfil->data = $array['data'];
-		 $perfil->hora = $array['hora'];
 		 $perfil->usuario = $array['usuario'];
 		 $perfil->ativo = $array['ativo'];
 

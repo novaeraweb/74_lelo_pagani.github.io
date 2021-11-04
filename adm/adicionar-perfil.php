@@ -13,9 +13,6 @@ mysqli_select_db($lelo, 'lelopagani');
     $data = $_POST['data'];
     $data = trim($data);
 
-    $hora = $_POST['hora'];
-    $hora = trim($hora);
-
     $ativo = "Sim";
 
     $dir = "arquivos/";
@@ -35,7 +32,7 @@ mysqli_select_db($lelo, 'lelopagani');
 
 
 //Insert inglês
-$insertSQL = "INSERT INTO perfil (usuario, data, hora, arquivo, ativo) VALUES ('$usuario', '$data', '$hora', '$novo', '$ativo' )";      
+$insertSQL = "INSERT INTO perfil (usuario, data, arquivo, ativo) VALUES ('$usuario', '$data', '$novo', '$ativo' )";      
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 
 

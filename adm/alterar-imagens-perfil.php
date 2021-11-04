@@ -9,8 +9,7 @@ require_once "function.php";
 mysqli_select_db($lelo, $database_lelo);  
 
 
-    $id = $_POST['id'];
-    $hora = $_POST['hora'];
+    $id = $_POST['id'];    
     $data = $_POST['data'];
     $usuario = $_POST['usuario'];
 	
@@ -55,7 +54,7 @@ mysqli_select_db($lelo, $database_lelo);
         rename($var, $var_novo);
     }
 
-    $sql = "UPDATE perfil SET arquivo = '$novo', data = '$data', hora = '$hora', usuario = '$usuario' WHERE idperfil=$id";
+    $sql = "UPDATE perfil SET arquivo = '$novo', data = '$data', usuario = '$usuario' WHERE idperfil=$id";
     $Result = mysqli_query($lelo, $sql) or die(mysqli_error($lelo));
 
 
