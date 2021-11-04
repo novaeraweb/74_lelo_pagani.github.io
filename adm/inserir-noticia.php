@@ -85,12 +85,12 @@ mysqli_select_db($lelo, "lelopagani");
 
                       <div id="dvFile">
                         <label for="arquivo" style="width: 100%; margin-top: 15px;">Imagem de capa</label>
-                        <input type="file" name="arquivo" id="arquivo" required style="margin-bottom:30px">
+                        <input type="file" name="arquivo_capa" id="arquivo_capa" required style="margin-bottom:30px">
                       </div>
                       
                       <div class="form-group">
-                        <label for="tempo">Descrição da Imagem de capa:</label><br>
-                        <input type="text" name="tempo" id="tempo" style="" class="form-control" maxlength="2" >
+                        <label for="descricao_capa">Descrição da Imagem de capa:</label><br>
+                        <input type="text" name="descricao_capa" id="descricao_capa" style="" class="form-control" maxlength="2" >
                       </div><br>
                       <div class="form-group">
                         <label for="video">Vídeo</label>
