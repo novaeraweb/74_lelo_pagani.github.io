@@ -11,7 +11,7 @@ mysqli_select_db($lelo, "lelopagani");
       Tip 2: you can also add an image using data-image tag
   -->
       <div class="logo">
-        <a href="https://www.lelopagani.com/" class="simple-text logo-normal" target="_blank" rel="noopener" rel="noreferrer">
+        <a href="https://www.lelopagani.com.br/" class="simple-text logo-normal" target="_blank" rel="noopener" rel="noreferrer">
           <img src="../assets/images/logo-lelo-pagani-vereador-claro.png" alt="Logo Lelo Pagani">
         </a>
       </div>

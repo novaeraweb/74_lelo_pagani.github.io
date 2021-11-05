@@ -52,17 +52,17 @@ mysqli_select_db($lelo, "lelopagani");
                     <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="adicionar-noticia.php">
                       <div class="form-group">
                         <label for="titulo">Título:</label>
-                        <input type="text" name="titulo" id="titulo" class="form-control">
+                        <input type="text" name="titulo" id="titulo" class="form-control" required>
                       </div>
                       <br>
                       <div class="form-group">
                         <label for="linha_fina">Linha Fina: <strong>(Limitada a 230 caracteres)</strong></label><br>
-                        <textarea type="text" name="linha_fina" id="linha_fina" class="form-control"></textarea>
+                        <textarea type="text" name="linha_fina" id="linha_fina" class="form-control"></textarea required>
                       </div>
                       <br>
                       <div class="form-group">
                         <label for="descricao_longa">Descrição longa:</label><br>
-                        <textarea type="text" name="descricao_longa" id="descricao_longa" class="form-control"></textarea>
+                        <textarea type="text" name="descricao_longa" id="descricao_longa" class="form-control" required></textarea>
                       </div>
                       <br>
                       <div class="form-group">
@@ -73,13 +73,13 @@ mysqli_select_db($lelo, "lelopagani");
 
                       <div class="form-group col-3" style="padding-left: 0;">
                         <label for="data_noticia">Data da Notícia:</label><br>
-                        <input type="date" name="data_noticia" id="data_noticia" class="form-control"  pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}">
+                        <input type="date" name="data_noticia" id="data_noticia" class="form-control"  pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required>
                       </div>
                       <br>
 
                       <div class="form-group">
                         <label for="tempo">Tempo de Leitura:</label><br>
-                        <input type="text" name="tempo" id="tempo" style="width: 10%;display:inline-block;" class="form-control" maxlength="2" ><div style="display:inline-block"> minutos</div>
+                        <input type="text" name="tempo" id="tempo" style="width: 10%;display:inline-block;" class="form-control" maxlength="2" required ><div style="display:inline-block"> minutos</div>
                       </div>
                       <br>
 
@@ -90,11 +90,15 @@ mysqli_select_db($lelo, "lelopagani");
                       
                       <div class="form-group">
                         <label for="descricao_capa">Descrição da Imagem de capa:</label><br>
-                        <input type="text" name="descricao_capa" id="descricao_capa" style="" class="form-control" maxlength="2" >
+                        <input type="text" name="descricao_capa" id="descricao_capa" style="" class="form-control" required>
                       </div><br>
                       <div class="form-group">
-                        <label for="video">Vídeo</label>
+                        <label for="video">Vídeo (opcional):</label>
                         <input type="text" class="form-control" name="video" id="video" data-toggle="tooltip" data-placement="top" title="Links para vídeos do YouTube/Vimeo/etc">
+                      </div><br>
+                      <div class="form-group">
+                        <label for="descricao_video">Descrição do Vídeo (opcional):</label><br>
+                        <textarea name="descricao_video" id="descricao_video" style="" class="form-control" ></textarea>
                       </div>
                       <br>
                       <input type="hidden" name="usuario" id="usuario" value="<?php echo $_SESSION['usuario_logado']?>">
@@ -144,6 +148,22 @@ mysqli_select_db($lelo, "lelopagani");
     });  
 
     CKEDITOR.replace('descricao_longa',{
+
+      width: "700px",
+      height: "200px",
+      wordcount: {
+        showParagraphs: true,
+        showWordCount: true,
+        showCharCount: true,
+        countSpacesAsChars:true,
+        countHTML:false,
+        maxWordCount: -1,
+        maxCharCount: -1
+      }
+
+    });
+
+    CKEDITOR.replace('descricao_video',{
 
       width: "700px",
       height: "200px",

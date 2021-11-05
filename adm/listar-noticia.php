@@ -23,8 +23,8 @@ $noticias = listaNoticia($lelo);
   <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <link href="assets/css/alerta.css" rel="stylesheet" />
   <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
-  <link rel="stylesheet" href="assets/css/jquery.datatables.css">
-  <script type="text/javascript" charset="utf8" src="assets/js/jquery.datatables.js"></script>
+  <link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="assets/js/jquery.dataTables.js"></script>
 </head>
 
 <body>

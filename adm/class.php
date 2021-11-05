@@ -17,6 +17,7 @@ class Noticia{
 	public $titulo;
 	public $linha_fina;
 	public $descricao_longa;
+	public $descricao_video;
 	public $tempo;
 	public $link;
 	public $arquivo;

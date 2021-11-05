@@ -75,7 +75,7 @@ $perfis = listaPerfilId($lelo, $id);
                                       <td><?php if ($perfil->arquivo == Null) {  ?>
                                       <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
                                       <?php } else { ?>
-                                      <img src="arquivos/<?=$perfil->arquivo;?>" alt="" width="120" height="120"/> 
+                                      <img src="../assets/images/<?=$perfil->arquivo;?>" width="120" height="120"/> 
                                       <?php } ?>
                                       <br>
                                       <label for="arquivo1">Selecione a nova imagem</label>
