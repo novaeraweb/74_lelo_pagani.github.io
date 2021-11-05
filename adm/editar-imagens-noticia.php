@@ -78,9 +78,8 @@ $noticias = listaNoticiaId($lelo, $id);
                                       <td><?php if ($noticia->arquivo_capa == Null) {  ?>
                                       <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
                                       <?php } else { ?>
-                                      <img src="arquivos/<?=$noticia->arquivo_capa;?>" alt="" width="120" height="120"/>
-                                      <br><br>
-                                      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                      <img src="arquivos/<?=$noticia->arquivo_capa;?>" alt="" width="50%"/>
+                                      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 60px; margin-bottom: 60px;">
                                       <label for="descricao_capa">Legenda de Capa</label>
                                       <textarea type="text" class="form-control col-md-6" name="descricao_capa" id="descricao_capa"><?=$noticia->descricao_capa?></textarea>
                                       </div>
@@ -89,7 +88,7 @@ $noticias = listaNoticiaId($lelo, $id);
                                       <br>
                                       <label for="arquivo_capa">Selecione a nova imagem</label>
                                       <br>
-                                      <button type="button" class="btn btn-warning"><input type="file" name="arquivo_capa" id="arquivo_capa" required/>Foto</button>
+                                      <button type="button" class="btn btn-warning"><input type="file" name="arquivo_capa" id="arquivo_capa" required/>Clique aqui</button>
                                       </td>
                                   </tr>
                               </tbody>
