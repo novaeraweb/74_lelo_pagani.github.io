@@ -86,12 +86,14 @@ mysqli_select_db($lelo, "lelopagani");
                       <div id="dvFile">
                         <label for="arquivo" style="width: 100%; margin-top: 15px;">Imagem de capa</label>
                         <input type="file" name="arquivo_capa" id="arquivo_capa" required style="margin-bottom:30px">
-                      </div>
-                      
-                      <div class="form-group">
+                        <br>
                         <label for="descricao_capa">Descrição da Imagem de capa:</label><br>
                         <input type="text" name="descricao_capa" id="descricao_capa" style="" class="form-control" required>
                       </div><br>
+                      <button type="button" class="btn btn-fab btn-round btn-info" onclick="add_more()" style="margin-top: 30px;" >+</button><span>Adicionar mais imagens</span><br>
+
+                      <br>
+
                       <div class="form-group">
                         <label for="video">Vídeo (opcional):</label>
                         <input type="text" class="form-control" name="video" id="video" data-toggle="tooltip" data-placement="top" title="Links para vídeos do YouTube/Vimeo/etc">
@@ -181,5 +183,20 @@ mysqli_select_db($lelo, "lelopagani");
 
 
   </script>   
+
+  <script type="text/javascript">
+    var i = 1;
+    function add_more() {
+          if (i <= 10){
+          var txt = '<label for="arquivo" style="width: 100%; margin-top: 30px;">Imagem adicional '+i+'</label><input type="file" name="arquivo'+ i + '" id="arquivo'+ i +'"><br>';
+          document.querySelector("#dvFile").innerHTML += txt;
+          var dsc = '<label for="descricao" style="width: 100%; margin-top: 30px;">Descrição da imagem '+i+'</label><input type="text" class="form-control" name="descricao'+ i + '" id="descricao'+ i +'">';
+          document.querySelector("#dvFile").innerHTML += dsc;
+          i++;
+          } else {
+            alert("Limite máximo de arquivos atingido!");
+          }
+      } 
+    </script>
 </body>
 </html>

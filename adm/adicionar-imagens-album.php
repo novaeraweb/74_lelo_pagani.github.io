@@ -2,6 +2,7 @@
 
 
  for ($i = 1; $i <= $j; $i++){
+  $arq_img = "arquivo".$i;
   if($arq_img != null)
   {
         switch($_FILES[$arq_img]['type']):
@@ -87,6 +88,7 @@
             break;
         endswitch;
         
+      
         
         // Descobre a extensao:
         $ext = pathinfo($$arq_img, PATHINFO_EXTENSION);
@@ -96,7 +98,24 @@
         $img_var = $dir.$$arq_img;
         $img_var_novo = $dir.$novo_img;
 
-        ${'img'.$i.'_novo'} = $novo_img;
+        // ${'img'.$i.'_novo'} = $novo_img;
         rename($img_var, $img_var_novo);
-  }
+  
+  
+      }
+
+      // $descricao = array();
+      $des = $_POST["descricao$i"];
+      if ($des == NULL){
+          $des = null;
+      } else {
+          $des = $des;
+          $des = trim($des); 
+      }
+  
+
+       
+        $insertImg = "INSERT INTO imagem (descricao, arquivo, idnoticia) VALUES ('$des', '$novo_img', '$id_noticia')"; 
+        $result = mysqli_query($lelo, $insertImg) or die(mysqli_error($lelo));
+     
  }

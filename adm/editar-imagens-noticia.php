@@ -8,11 +8,12 @@ require_once "function.php";
 mysqli_select_db($lelo,$database_lelo);
 $id = $_GET['id'];
 $noticias = listaNoticiaId($lelo, $id);
+$imagens = listaImagensIdNoticia($lelo, $id);
 ?>
 
 <head>
   <title>Administração Lelo Pagani</title>
-  <!-- Required meta tags -->
+  <!-- meta tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -22,13 +23,6 @@ $noticias = listaNoticiaId($lelo, $id);
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
-  <script>
-    $(document).ready(function() {
-      $('form').submit(function(){
-        $('#aguarde, #blanket').css('display','block');
-      });
-    });
-</script>
 </head>
 
 <body>
@@ -70,7 +64,7 @@ $noticias = listaNoticiaId($lelo, $id);
                           <table class="table">
                               <thead>
                                   <tr class="text-center">
-                                      <th>Foto <?=$i;?></th>
+                                      <th>Imagem de capa</th>
                                   </tr>
                               </thead>
                               <tbody>
@@ -88,12 +82,47 @@ $noticias = listaNoticiaId($lelo, $id);
                                       <br>
                                       <label for="arquivo_capa">Selecione a nova imagem</label>
                                       <br>
-                                      <button type="button" class="btn btn-warning"><input type="file" name="arquivo_capa" id="arquivo_capa" required/>Clique aqui</button>
+                                      <button type="button" class="btn btn-warning"><input type="file" name="arquivo_capa" id="arquivo_capa"/>Clique aqui</button>
                                       </td>
                                   </tr>
                               </tbody>
                           </table>
                         <?php }?>
+
+                        <div class="tabela">
+                          <div style="width: 45%!important;">
+                            <table class="table">
+                            <?php foreach ($imagens as $imagem){?>
+                                      <thead>
+                                        <tr class="text-center">
+                                          <th>Imagem adicional <?=$i;?></th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr class="text-center">
+                                        <td><?php if ($imagem->arquivo == Null) {  ?>
+                                        <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
+                                        <?php } else { ?>
+                                        <img src="arquivos/<?=$imagem->arquivo;?>" alt="" width="50%"/>
+                                        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 60px; margin-bottom: 60px;">
+                                        <label for="descricao">Legenda</label>
+                                        <textarea type="text" class="form-control col-md-6" name="descricao<?=$i;?>" id="descricao<?=$i;?>"><?=$imagem->descricao?></textarea>
+                                        </div>
+                                        
+                                        <?php } ?>
+                                        <br>
+                                        <label for="arquivo_capa">Selecione a nova imagem</label>
+                                        <br>
+                                        <button type="button" class="btn btn-warning"><input type="file" name="arquivo<?=$i;?>" id="arquivo<?=$i;?>"/>Clique aqui</button>
+                                        <input type="hidden" name="idimagem<?=$i;?>" id="idimagem<?=$i;?>" value="<?=$imagem->idimagem;?>">
+                                        </td>
+                                        </tr>
+                                      </tbody>
+                                      <?$i++;?>
+                                      <?php } ?>
+                                    </table>
+                                    </div>
+                          </div>
                         </div>
                         <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y'); ?>">
                         <input type="hidden" name="enviado" id="enviado" value=<?php echo $_SESSION["usuario_logado"];?>>
@@ -117,16 +146,6 @@ $noticias = listaNoticiaId($lelo, $id);
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <script src="assets/js/material-dashboard.js" type="text/javascript"></script>
 
-    <!-- <script>
-    $(document).ready(function() {
-        $("#submit").click(function() {
-          $(this).prop("disabled", true);
-          $(this).html(
-            `<span class="spinner-border spinner-border-sm text-warning" role="status" aria-hidden="true"></span>Enviando...`
-          );
-        });
-    });
-    </script> -->
   <!-- Chartist JS -->
   <script src="assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
@@ -152,10 +171,32 @@ $noticias = listaNoticiaId($lelo, $id);
       }
     });  
 
-
-
   </script>   
 
+  <script>
+    let doc = [];
+    let des = [];
+    
+     for (i = 1; i <= 10; i++){
+      doc[i] = document.getElementById('descricao'+i);
+      des = 'descricao'+i;
+      if (doc[i]){
+        CKEDITOR.replace(des,{
+          width: "400px",
+          height: "200px",
+          wordcount: {
+            showParagraphs: true,
+            showWordCount: true,
+            showCharCount: true,
+            countSpacesAsChars:true,
+            countHTML:false,
+            maxWordCount: -1,
+            maxCharCount: 230
+          }
+        });  
+      }
+    }
+  </script>
 
 </body>
 

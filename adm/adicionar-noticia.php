@@ -58,35 +58,24 @@ $insertSQL = "INSERT INTO noticia (titulo, linha_fina, descricao_longa, descrica
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 $id_noticia = $lelo->insert_id;
 
-// $descricao = array();
-// for($n = 1; $n <= $j; $n++){
-//     $des = $_POST['descricao'.$n];
-//     if ($des != NULL){
-//         $descricao[$n] = null;
-//     } else {
-//         $descricao[$n] = $des;
-//         $descricao[$n] = trim($descricao[$n]);
+for ($i = 1; $i <= 10; $i++){
+  
+    $arq_img = 'arquivo'.$i;
+  
+    if (isset($_FILES[$arq_img]) && $_FILES[$arq_img]["error"] == 0) {
+        $arquivo_teste = $_FILES[$arq_img]; 
+        $arquivo_teste = $arquivo_teste['name'];
+        
+        $$arq_img = $arquivo_teste;
+        $j = $i;
+    }
 
-      
-//     }
+   
 
-// }
-
-
-// require "adicionar-imagens-album.php";
-
+  }
 
 
-
-// if ($img1_novo){
-// 	for ($k = 1; $k <= $j; $k++){
-// 	$dsc = $descricao[$k];
-// 	$img = ${'img'.$i.'_novo'};
-// 	$insertImg = "INSERT INTO imagem (descricao, arquivo, idnoticia) VALUES ('$dsc', '$img', '$id_noticia')"; 
-// 	$result = mysqli_query($lelo, $insertImg) or die(mysqli_error($lelo));
-// 	}   
-// }
-
+require "adicionar-imagens-album.php";
 
 
 header("Location: home.php?inserido=true");
