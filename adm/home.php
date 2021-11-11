@@ -17,14 +17,8 @@ $query_total = "SELECT a.* FROM noticia a WHERE ativo = 'Sim'";
 $resultado_total = mysqli_query($lelo, $query_total);
 $noticia_total = mysqli_num_rows($resultado_total);
 
-$query_total = "SELECT a.* FROM opiniao a WHERE ativo = 'Sim'";
-$resultado_total = mysqli_query($lelo, $query_total);
-$editorial_total = mysqli_num_rows($resultado_total);
-
-
-$projetos = listaHomeProjeto($lelo);
-$noticias = listaNoticiaIndex($lelo);
-
+$projetos = listaProjetoHome($lelo);
+$noticias = listaNoticiaHome($lelo);
 
 $total = array_merge($projetos, $noticias);
 $contar = count($total);
@@ -92,20 +86,54 @@ $contar = count($total);
             <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
                     <ul class="nav nav-tabs bg-dark" style="text-align: center;" data-tabs="tabs">
-                        <li class="nav-item col-md-4">
-                            <a class="nav-link active" href="#projetos" data-toggle="tab">Projetos </a>
+                        <li class="nav-item col-md-6" style="padding:0">
+                            <a class="nav-link active" href="#noticias" data-toggle="tab">Notícias Recentes</a>
                         </li>
-                        <li class="nav-item col-md-4">
-                            <a class="nav-link" href="#noticias" data-toggle="tab">Notícias </a>
+                        <li class="nav-item col-md-6" style="padding:0">
+                            <a class="nav-link" href="#projetos" data-toggle="tab">Projetos Recentes</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="card-body bg-dark">
               <div class="tab-content text-center">
-                <div class="tab-pane active" id="projetos">
+                <div class="tab-pane active" id="noticias">
+                  <table class="table" cellspacing="0" id="tabela_noticias"><br>
+                      <thead>
+                          <tr class="text-center">
+                              <th style="display:none;"></th>
+                              <th>Data</th>
+                              <th>Capa</th>
+                              <th data-order>Título</th>
+                              <th>Ativo</th>
+                              <th>Ações</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <?php foreach ($noticias as $noticia) { ?>
+                            <tr class="text-center">
+                                <td style="display:none;"><?=$noticia->idnoticia;?></td>    
+                                <td><?=$noticia->data;?></td>    
+                                <td><img src="arquivos/<?=$noticia->arquivo;?>" style="width: 80px;"></td>
+                                <td><?=$noticia->titulo;?></td>
+                                <td><?=$noticia->ativo;?></td>
+                                <td class="td-actions text-center">
+                                <!-- <a href="editar-conteudo.php?id=" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <i class="material-icons">edit</i>
+                                    </button></a> -->
+                                    
+                                    <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$total[$i]->usuario;?>, em <?=$total[$i]->data?>">
+                                        <i class="material-icons">help</i>
+                                    </button></a>
+                                </td>
+                            </tr>
+                          <?php  }  ?>
+                      </tbody>
+                  </table> 
+                </div>
+                <div class="tab-pane" id="projetos">
                   <table class="table" cellspacing="0" id="tabela"><br>
-                    <div class="category text-left" style="padding-left: 15px; font-size: 1.125em;"><strong>Projetos cadastrados recentemente:</strong></div><br>
+
                     <thead>
                         <tr class="text-center">
                           <th>Data</th>
@@ -132,39 +160,6 @@ $contar = count($total);
                           </tr>
                         <?php  }  ?>
                     </tbody>
-                  </table> 
-                </div>
-                <div class="tab-pane" id="noticias">
-                  <table class="table" cellspacing="0" id="tabela_noticias"><br>
-                      <div class="category text-left" style="padding-left: 15px; font-size: 1.125em;"><strong>Notícias cadastradas recentemente:</strong></div><br>
-                      <thead>
-                          <tr class="text-center">
-                              <th>Data</th>
-                              <th>Capa</th>
-                              <th>Título</th>
-                              <th>Ativo</th>
-                              <th>Ações</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                        <?php foreach ($noticias as $noticia) { ?>
-                            <tr class="text-center">
-                                <td><?=$noticia->data;?></td>    
-                                <td><img src="arquivos/<?=$noticia->arquivo;?>" style="width: 80px;"></td>
-                                <td><?=$noticia->titulo;?></td>
-                                <td><?=$noticia->ativo;?></td>
-                                <td class="td-actions text-center">
-                                <!-- <a href="editar-conteudo.php?id=" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-success btn-round" data-toggle="tooltip" data-placement="top" title="Editar">
-                                        <i class="material-icons">edit</i>
-                                    </button></a> -->
-                                    
-                                    <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$total[$i]->usuario;?>, em <?=$total[$i]->data?>">
-                                        <i class="material-icons">help</i>
-                                    </button></a>
-                                </td>
-                            </tr>
-                          <?php  }  ?>
-                      </tbody>
                   </table> 
                 </div>
               </div>
