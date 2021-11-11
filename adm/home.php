@@ -122,7 +122,7 @@ $contar = count($total);
                                         <i class="material-icons">edit</i>
                                     </button></a> -->
                                     
-                                    <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$total[$i]->usuario;?>, em <?=$total[$i]->data?>">
+                                    <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$noticia->usuario;?>, em <?=$noticia->data?>">
                                         <i class="material-icons">help</i>
                                     </button></a>
                                 </td>
@@ -153,7 +153,7 @@ $contar = count($total);
                                       <i class="material-icons">edit</i>
                                   </button></a> -->
                                   
-                                  <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$total[$i]->usuario;?>, em <?=$total[$i]->data?>">
+                                  <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$projeto->usuario;?>, em <?=$projeto->data?>">
                                       <i class="material-icons">help</i>
                                   </button></a>
                               </td>

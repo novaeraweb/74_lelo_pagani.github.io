@@ -14,14 +14,16 @@ $descr = array();
 
 // Continua caso existam fotos para o álbum de fotos
   for ($i = 1; $i <= 10; $i++){
+
+    $arq_img = "arquivo$i";
       
-      if(isset($_FILES["arquivo$i"]) && ($_FILES["arquivo$i"]['error'] == 0)){
-          $arq_img = $_FILES["arquivo$i"];
-          $arq_img = $arq_img['name'];
-          $$arq_img = $arq_img;
+      if(isset($_FILES[$arq_img]) && ($_FILES[$arq_img]['error'] == 0)){
+          $img = $_FILES[$arq_img];
+          $img = $img['name'];
+          $$arq_img = $img;
 
           $j = $i;
-          $idimagem[$i] = $_POST["idimagem$i"];
+          $idimagem[$i] = $_POST["idimagem".$i];
       } else {
         $idimagem[$i] = NULL;
       }
@@ -36,31 +38,36 @@ $descr = array();
   }
 
 
-$arrayCampos = array();
+
 
 $diretorio = "arquivos/";
 
 for ($k = 1; $k <= $j; $k++) {
+  $arq_img = "arquivo$k";
       
       if ($idimagem[$k] !== NULL){
         $idimg = $idimagem[$k];     
       }
 
+      var_dump($$arq_img);
+      var_dump($idimg);
+      echo "<br>";
     
       if($$arq_img != Null && $idimg != NULL){
           mysqli_select_db($lelo, $database_lelo);
           $query = "SELECT * FROM imagem WHERE idimagem = $idimg";
           $rs_projeto = mysqli_query($lelo, $query) or die(mysqli_error($lelo));
           $row_rs_projeto = mysqli_fetch_assoc($rs_projeto);
-          $rs_arquivo = $row_rs_projeto["arquivo$k"];
+          $rs_arquivo = $row_rs_projeto[$arq_img];
           if ($rs_arquivo != "sem-imagem.png" AND file_exists($rs_arquivo)) {
               unlink($diretorio.$rs_arquivo);
           }
 
-          $nome_arquivo = $_FILES["arquivo$k"]["name"];
+          $nome_arquivo = $_FILES[$arq_img]["name"];
           $nome_arquivo = $diretorio.$nome_arquivo;
-          $arquivo_temporario = $_FILES["arquivo$k"]["tmp_name"];
+          $arquivo_temporario = $_FILES[$arq_img]["tmp_name"];
           move_uploaded_file($arquivo_temporario, $nome_arquivo);
+          
 
           // Descobre a extensao:
           $ext = pathinfo($$arq_img, PATHINFO_EXTENSION);
@@ -88,6 +95,7 @@ for ($k = 1; $k <= $j; $k++) {
       $idimg = $idimagem[$m];     
       $sql = "UPDATE imagem SET arquivo = '$image', descricao='$desc' WHERE idimagem = $idimg";
       
+      var_dump($sql);
       $Result = mysqli_query($lelo, $sql) or die(mysqli_error($lelo));
     }
   

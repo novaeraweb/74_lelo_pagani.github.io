@@ -23,6 +23,7 @@ $imagens = listaImagensIdNoticia($lelo, $id);
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <link href="assets/css/modal.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -31,12 +32,12 @@ $imagens = listaImagensIdNoticia($lelo, $id);
     </div>
     <div class="main-panel">
       <!-- Navbar -->
-      <?php require_once "dashboard.php"?>
+      <?php require_once "dashboard.php"?><?php require_once "alerta.php"?>
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
           <!-- your content here -->
-            <div class="row"><?php require_once "alerta.php"?>
+            <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header card-header-text card-header-info">
@@ -118,7 +119,7 @@ $imagens = listaImagensIdNoticia($lelo, $id);
                                         </td>
                                         </tr>
                                       </tbody>
-                                      <?$i++;?>
+                                      <input type="hidden" name="" value="<?=$i++;?>">
                                       <?php } ?>
                                     </table>
                                     </div>

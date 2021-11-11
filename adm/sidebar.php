@@ -82,7 +82,7 @@ mysqli_select_db($lelo, "lelopagani");
                 <a class="nav-link active" href="editar-imagens-perfil.php?id=1"><i class="material-icons">refresh</i> Alterar</a>
             </li>
             <li class="nav-item" style="height: 25px;">
-                <a class="nav-link active" href="listar-perfil.php"><i class="material-icons">search</i> Visualizar</a>
+                <a class="nav-link active" href="listar-perfil.php"><i class="material-icons">search</i> Listar</a>
             </li>   
             <br>         
           </ul>

@@ -59,4 +59,4 @@ mysqli_select_db($lelo, $database_lelo);
 
     require "alterar-imagens-album.php";
 
-header("Location: editar-imagens-noticia.php?id=$id");
+header("Location: editar-imagens-noticia.php?id=$id&editado=true");
