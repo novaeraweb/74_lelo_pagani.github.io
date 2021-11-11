@@ -40,7 +40,7 @@ mysqli_select_db($lelo, "lelopagani");
                 <a class="nav-link active" href="inserir-noticia.php"><i class="material-icons">add</i> Inserir</a>
             </li>
             <li class="nav-item" style="height: 25px;">
-                <a class="nav-link active" href="listar-noticia.php"><i class="material-icons">search</i> Visualizar</a>
+                <a class="nav-link active" href="listar-noticia.php"><i class="material-icons">search</i> Listar</a>
             </li>   
             <br>         
           </ul>
@@ -61,7 +61,7 @@ mysqli_select_db($lelo, "lelopagani");
                 <a class="nav-link active" href="inserir-projeto.php"><i class="material-icons">add</i> Inserir</a>
             </li>
             <li class="nav-item" style="height: 25px;">
-                <a class="nav-link active" href="listar-projeto.php"><i class="material-icons">search</i> Visualizar</a>
+                <a class="nav-link active" href="listar-projeto.php"><i class="material-icons">search</i> Listar</a>
             </li>   
             <br>         
           </ul>

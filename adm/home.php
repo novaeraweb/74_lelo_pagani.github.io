@@ -114,7 +114,7 @@ $contar = count($total);
                             <tr class="text-center">
                                 <td style="display:none;"><?=$noticia->idnoticia;?></td>    
                                 <td><?=$noticia->data;?></td>    
-                                <td><img src="arquivos/<?=$noticia->arquivo;?>" style="width: 80px;"></td>
+                                <td><img src="arquivos/<?=$noticia->arquivo_capa;?>" style="width: 80px;"></td>
                                 <td><?=$noticia->titulo;?></td>
                                 <td><?=$noticia->ativo;?></td>
                                 <td class="td-actions text-center">
