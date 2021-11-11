@@ -6042,7 +6042,7 @@
 	
 						test = x<y ? -1 : x>y ? 1 : 0;
 						if ( test !== 0 ) {
-							return sort.dir === 'asc' ? test : -test;
+							return sort.dir === 'desc' ? test : -test;
 						}
 					}
 	

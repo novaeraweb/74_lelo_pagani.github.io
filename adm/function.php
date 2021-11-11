@@ -102,12 +102,12 @@ function listaNoticia ($lelo) {
  	return $noticias;
 }
 
-function listaNoticiaIndex ($lelo) {
+function listaNoticiaHome ($lelo) {
  	$query = "SELECT n.*
 						FROM noticia n
 						WHERE n.ativo = 'Sim'
-						ORDER BY n.data_noticia DESC
-						LIMIT 6";
+						ORDER BY n.idnoticia DESC
+						LIMIT 10";
  	$resultado = mysqli_query($lelo, $query);
  	$noticias = array();
  	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -266,10 +266,11 @@ function listaPerfilId ($lelo, $id) {
 	return $perfis;
 }
 
-function listaHomeProjeto ($lelo) {
+function listaProjetoHome ($lelo) {
 	$query = "SELECT p.*
 			  FROM projeto p
-				ORDER BY p.data";
+			  ORDER BY p.data DESC
+			  LIMIT 10";
    $resultado = mysqli_query($lelo, $query);
    $projetos = array();
    while ($array = mysqli_fetch_assoc($resultado)) {

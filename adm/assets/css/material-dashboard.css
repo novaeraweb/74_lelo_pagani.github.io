@@ -14461,11 +14461,16 @@ h2.title {
 .text-gray {
   color: #999999 !important;
 }
-
+.nav-tabs-navigation {
+  border-top: 1px solid #153A75;
+  border-right: 1px solid #153A75;
+  border-left:  1px solid #153A75;
+    border-radius: 3px;
+}
 .nav-tabs {
-  border: 0;
+
   border-radius: 3px;
-  padding: 0 15px;
+  padding: 0 0;
 }
 
 .nav-tabs .nav-item .nav-link {
@@ -14478,7 +14483,7 @@ h2.title {
   text-transform: uppercase;
   font-size: 12px;
   padding: 10px 15px;
-  background-color: transparent;
+  background-color:#f9f9f9;
   transition: 0.3s background-color 0s;
 }
 
