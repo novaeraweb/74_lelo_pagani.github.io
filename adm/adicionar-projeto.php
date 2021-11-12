@@ -33,6 +33,9 @@ mysqli_select_db($lelo, 'lelopagani');
     $dir = "arquivos/";
     $dir = strtolower($dir);
 
+    $categoria = $_POST["categoria"];
+    $categoria = trim($categoria);
+
 
     $nomevar = 'arquivo';
 
@@ -47,7 +50,7 @@ mysqli_select_db($lelo, 'lelopagani');
 
 
 //Insert inglês
-$insertSQL = "INSERT INTO projeto (titulo, nro_projeto, data_projeto, link, usuario, data, arquivo, ativo) VALUES ('$titulo', '$nro_projeto', '$data_projeto', '$link', '$usuario', '$data' , '$novo', '$ativo' )";      
+$insertSQL = "INSERT INTO projeto (titulo, nro_projeto, data_projeto, link, usuario, data, arquivo, ativo, categoria) VALUES ('$titulo', '$nro_projeto', '$data_projeto', '$link', '$usuario', '$data' , '$novo', '$ativo', '$idcategoria' )";      
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 
 

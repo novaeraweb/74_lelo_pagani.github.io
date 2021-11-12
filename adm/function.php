@@ -179,10 +179,11 @@ function listaImagensIdNoticia ($lelo, $id) {
 }
 
 function listaProjeto ($lelo) {
-	$query = "SELECT p.*
-			  FROM projeto p
-			 WHERE p.ativo = 'Sim'
-			 ORDER BY p.titulo ASC";
+	$query = "SELECT p.*, c.*
+						FROM projeto p
+						INNER JOIN categoria c ON (p.categoria = c.idcategoria)
+						WHERE p.ativo = 'Sim'
+						ORDER BY p.titulo ASC";
 	$resultado = mysqli_query($lelo, $query);
 	$projetos = array();
 	while ($array = mysqli_fetch_assoc($resultado)) {
@@ -197,6 +198,8 @@ function listaProjeto ($lelo) {
 	   $projeto->usuario = $array['usuario'];
 	   $projeto->data = $array['data'];
 	   $projeto->ativo = $array['ativo'];
+	   $projeto->categoria = $array['categoria'];
+		 $projeto->nome_categoria = $array['nome'];
 
 		array_push($projetos, $projeto);
 	}
@@ -204,9 +207,10 @@ function listaProjeto ($lelo) {
 }
 
 function listaProjetoId ($lelo, $id) {
-	$query = "SELECT p.*
+	$query = "SELECT p.*, c.*
 			  FROM projeto p
-			 WHERE p.ativo = 'Sim'AND p.idprojeto=$id";
+				INNER JOIN categoria c ON (p.categoria = c.idcategoria)
+			 	WHERE p.ativo = 'Sim'AND p.idprojeto=$id";
    $resultado = mysqli_query($lelo, $query);
    $projetos = array();
    while ($array = mysqli_fetch_assoc($resultado)) {
@@ -221,6 +225,8 @@ function listaProjetoId ($lelo, $id) {
 	   $projeto->usuario = $array['usuario'];
 	   $projeto->data = $array['data'];
 	   $projeto->ativo = $array['ativo'];
+	   $projeto->categoria = $array['categoria'];
+		 $projeto->nome_categoria = $array['nome'];
 
 	   array_push($projetos, $projeto);
    }
@@ -267,8 +273,9 @@ function listaPerfilId ($lelo, $id) {
 }
 
 function listaProjetoHome ($lelo) {
-	$query = "SELECT p.*
+	$query = "SELECT p.*, c.*
 			  FROM projeto p
+				INNER JOIN categoria c ON (p.categoria = c.idcategoria)
 			  ORDER BY p.data DESC
 			  LIMIT 10";
    $resultado = mysqli_query($lelo, $query);
@@ -285,8 +292,42 @@ function listaProjetoHome ($lelo) {
 	   $projeto->usuario = $array['usuario'];
 	   $projeto->data = $array['data'];
 	   $projeto->ativo = $array['ativo'];
+	   $projeto->categoria = $array['categoria'];
+		 $projeto->nome_categoria = $array['nome'];
 
 	   array_push($projetos, $projeto);
    }
 	return $projetos;
+}
+
+function listaCategoria ($lelo) {
+	$query = "SELECT c.* FROM categoria c";
+	$resultado = mysqli_query($lelo, $query);
+	$categorias = array();
+	while ($array = mysqli_fetch_assoc($resultado)) {
+		$categoria = new Categoria();
+		$categoria->idcategoria = $array['idcategoria'];
+		$categoria->nome = $array['nome'];
+		$categoria->usuario = $array['usuario'];
+		$categoria->data = $array['data'];
+
+		array_push($categorias, $categoria);
+	}
+	return $categorias;
+}
+
+function listaCategoriaId ($lelo, $id) {
+	$query = "SELECT c.* FROM categoria c WHERE c.idcategoria = $id";
+	$resultado = mysqli_query($lelo, $query);
+	$categorias = array();
+	while ($array = mysqli_fetch_assoc($resultado)) {
+		$categoria = new Categoria();
+		$categoria->idcategoria = $array['idcategoria'];
+		$categoria->nome = $array['nome'];
+		$categoria->usuario = $array['usuario'];
+		$categoria->data = $array['data'];
+
+		array_push($categorias, $categoria);
+	}
+	return $categorias;
 }

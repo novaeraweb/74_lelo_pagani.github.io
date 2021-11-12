@@ -34,4 +34,4 @@ $updateSQL = "UPDATE noticia SET titulo = '$titulo', linha_fina = '$linha_fina',
 
 $Result = mysqli_query($lelo, $updateSQL) or die(mysqli_error($lelo));  
 
-header("Location: home.php?editado=true");
+header("Location: listar-noticia.php?editado=true");

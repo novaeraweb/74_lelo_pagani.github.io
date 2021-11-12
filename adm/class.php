@@ -58,3 +58,9 @@ class Perfil{
 	public $ativo;
 	public $usuario;
 }
+
+class Categoria{
+	public $idcategoria;
+	public $data;
+	public $usuario;
+}

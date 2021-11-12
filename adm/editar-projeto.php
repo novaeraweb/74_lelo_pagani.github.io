@@ -8,6 +8,7 @@ require_once "function.php";
 mysqli_select_db($lelo,$database_lelo);
 $id = $_GET['id'];
 $projetos = listaProjetoId($lelo, $id);
+$categorias = listaCategoria($lelo);
 
 ?>
 <head>
@@ -85,6 +86,16 @@ $projetos = listaProjetoId($lelo, $id);
                           <option value="Não">Não</option>
                           <?php } else {?>
                           <option value="Sim">Sim</option>
+                          <?php }?>
+                          </select>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="ativo"><strong>Categoria:</strong></label>
+                          <select class="form-control selectpicker" data-style="btn btn-link" name="categoria" id="categoria">
+                          <option value="<?=$projeto->categoria;?>"><?=$projeto->nome_categoria;?></option>
+                          <?php foreach ($categorias as $categoria){?>
+                            <option value="<?=$categoria->idcategoria;?>"><?=$categoria->nome;?></option>
                           <?php }?>
                           </select>
                         </div>

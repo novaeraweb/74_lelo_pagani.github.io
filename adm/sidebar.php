@@ -88,6 +88,29 @@ mysqli_select_db($lelo, "lelopagani");
           </ul>
           </div>
         </ul>
+
+        <ul class="nav">
+          <li class="nav-item active"  data-toggle="tooltip" data-placement="top" title="Seção destinada ao cadastro de novas categorias">
+            <a class="nav-link" data-toggle="collapse" href="#menu-categoria" aria-expanded="false" aria-controls="menu-categoria">
+              <i class="material-icons">view_list</i>
+              <p><strong>Categorias</strong><i class="material-icons" style="float: right;">keyboard_arrow_down </i></p>
+            </a>
+          </li>
+          <!-- your sidebar here -->
+          <div class="collapse" id="menu-categoria">
+          <ul class="nav flex-column">
+            <li class="nav-item" style="height:25px;">  
+                <a class="nav-link active" href="inserir-categoria.php"><i class="material-icons">add</i> Inserir</a>
+            </li>
+            <li class="nav-item" style="height: 25px;">
+                <a class="nav-link active" href="listar-categoria.php"><i class="material-icons">search</i> Listar</a>
+            </li>   
+            <br>         
+          </ul>
+          </div>
+        </ul>
+        
+      
         
         
       </div>

@@ -20,9 +20,12 @@ mysqli_select_db($lelo, 'lelopagani');
     $ativo = $_POST["ativo"];
     $ativo = trim($ativo);
 
+    $categoria = $_POST["categoria"];
+    $categoria = trim($categoria);
+
 // Insert EN
-$updateSQL = "UPDATE projeto SET titulo = '$titulo', nro_projeto = '$nro_projeto', data_projeto = '$data_projeto', link = '$link' , ativo = '$ativo' WHERE idprojeto ='$id'"; 
+$updateSQL = "UPDATE projeto SET titulo = '$titulo', nro_projeto = '$nro_projeto', data_projeto = '$data_projeto', link = '$link' , ativo = '$ativo', categoria = '$categoria' WHERE idprojeto ='$id'"; 
 
 $Result = mysqli_query($lelo, $updateSQL) or die(mysqli_error($lelo));  
 
-header("Location: home.php?editado=true");
+header("Location: listar-projeto.php?editado=true");

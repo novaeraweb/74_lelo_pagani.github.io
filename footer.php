@@ -17,10 +17,12 @@
 <?php require_once "whatsapp.php"?>
 
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
+<!-- <script src="assets/js/jquery.min.js"></script> -->
+<script src="assets/js/jquery-3.6.0.js"></script>
 <script src="assets/js/jquery.poptrox.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/lightbox.min.js" type="text/javascript"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script type="text/javascript">

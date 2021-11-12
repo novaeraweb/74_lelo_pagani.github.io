@@ -48,10 +48,6 @@ for ($k = 1; $k <= $j; $k++) {
       if ($idimagem[$k] !== NULL){
         $idimg = $idimagem[$k];     
       }
-
-      var_dump($$arq_img);
-      var_dump($idimg);
-      echo "<br>";
     
       if($$arq_img != Null && $idimg != NULL){
           mysqli_select_db($lelo, $database_lelo);
@@ -95,7 +91,6 @@ for ($k = 1; $k <= $j; $k++) {
       $idimg = $idimagem[$m];     
       $sql = "UPDATE imagem SET arquivo = '$image', descricao='$desc' WHERE idimagem = $idimg";
       
-      var_dump($sql);
       $Result = mysqli_query($lelo, $sql) or die(mysqli_error($lelo));
     }
   

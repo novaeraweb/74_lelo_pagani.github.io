@@ -7,6 +7,9 @@ $noticias = listaNoticiaId($lelo, $id);
 $query_rs_noticia = "SELECT * FROM noticia WHERE idnoticia='$id' ";
 $rs_noticia = mysqli_query($lelo, $query_rs_noticia) or die(mysqli_error());
 $row_rs_noticia = mysqli_fetch_assoc($rs_noticia);
+
+$imagens = listaImagensIdNoticia($lelo, $id);
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -30,7 +33,7 @@ $row_rs_noticia = mysqli_fetch_assoc($rs_noticia);
     <meta name="  DC.Identifier" content="https://www.lelopagani.com.br">
     <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
     <link rel="author" href="https://www.novaeraweb.com.br"/>
-    <link rel="canonical" href="https://www.lelopagani.com.br/noticias-vereador-lelo-pagani-post.php?id=<?=$noticias['idnoticia']?>" />
+    <link rel="canonical" href="https://www.lelopagani.com.br/noticias-vereador-lelo-pagani-post.php?id=<?=$row_rs_noticia['idnoticia']?>" />
 
     <!-- Meta FB -->
     <meta property="og:locale" content="pt_BR">
@@ -54,13 +57,15 @@ $row_rs_noticia = mysqli_fetch_assoc($rs_noticia);
     <meta name="twitter:site" content="@lelopagani" />
     <meta
       name="twitter:image"
-      content="https://www.lelopagani.com.br/adm/arquivos/<?=$row_rs_noticia['arquivo']?>"
+      content="https://www.lelopagani.com.br/adm/arquivos/<?=$row_rs_noticia['arquivo_capa']?>"
     />
     <meta name="twitter:creator" content="@lelopagani" />
     <!-- Fim Meta Twitter -->
 
     <link rel="stylesheet" href="assets/css/main.css" />      
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=61487b13b1633800191bae1f&product=inline-share-buttons" async="async"></script>
+
+    <link href="assets/css/lightbox.min.css" rel="stylesheet" />
 	</head>
 <?php require_once "header.php"?>
 <body class="is-preload">
@@ -93,6 +98,13 @@ $row_rs_noticia = mysqli_fetch_assoc($rs_noticia);
           <p><a href="<?=$noticia->link;?>" target="_blank" > <?=$noticia->link;?></a></p>
 
 
+          <hr>
+            <?php foreach ($imagens as $imagem){?>
+              <?php if ($imagem->arquivo){?>
+                <a href="adm/arquivos/<?=$imagem->arquivo;?>" data-lightbox="album" data-title="<?=$imagem->descricao;?>"><img src="adm/arquivos/<?=$imagem->arquivo;?>" alt=""></a>
+            <?php } ?>
+          <?php } ?>
+            
         </section>
         
         <?php }?>
@@ -105,18 +117,12 @@ $row_rs_noticia = mysqli_fetch_assoc($rs_noticia);
 </body>
 <?php require_once "footer.php"?>
 
-<script type="text/javascript" src="assets\js\jquery.cntl.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(e){
-    $('.cntl').cntl({
-    revealbefore: 300,
-    anim_class: 'cntl-animate',
-    onreveal: function(e){
-        console.log(e);
-    }
-    });
-});
+<script>
+    lightbox.option({
+      'albumLabel': "Imagem %1 de %2"
+    })
 </script>
-<link rel="stylesheet" type="text/css" href="assets\css\cntl.min.css">
+
+
 
 </html>
