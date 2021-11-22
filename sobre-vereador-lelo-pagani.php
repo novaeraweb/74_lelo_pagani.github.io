@@ -2,8 +2,7 @@
 require_once "adm/conecta.php";
 require_once "adm/class.php";
 require_once "adm/function.php";
-$noticias = listaNoticiaIndex($lelo);
-$blogs = listaBlogIndex($lelo);
+$noticias = listaNoticiaHome($lelo);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
