@@ -122,7 +122,7 @@ $contar = count($total);
                                         <i class="material-icons">edit</i>
                                     </button></a> -->
                                     
-                                    <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$noticia->usuario;?>, em <?=$noticia->data?>">
+                                    <a href="#" class="info" style="margin-top:10px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$noticia->usuario;?>, em <?=$noticia->data?>">
                                         <i class="material-icons">help</i>
                                     </button></a>
                                 </td>
@@ -136,7 +136,8 @@ $contar = count($total);
 
                     <thead>
                         <tr class="text-center">
-                          <th>Data</th>
+                          <th>Data do projeto</th>
+                            <th>Categoria</th>
                             <th>Título</th>
                             <th>Ativo</th>
                             <th>Ações</th>
@@ -145,7 +146,8 @@ $contar = count($total);
                     <tbody>
                       <?php foreach ($projetos as $projeto) { ?>
                           <tr class="text-center">
-                            <td><?=$projeto->data;?></td>
+                            <td><?=$projeto->data_projeto;?></td>
+                            <td><span style="font-size: 0.8em;background-color:#3c6c83;border-radius:10px;padding:4%;color: #f9f9f9;margin-bottom: 20px;width:100%;"><?=$projeto->nome_categoria;?></span></td>
                               <td><?=$projeto->titulo;?></td>
                               <td><?=$projeto->ativo;?></td>
                               <td class="td-actions text-center">
@@ -153,7 +155,7 @@ $contar = count($total);
                                       <i class="material-icons">edit</i>
                                   </button></a> -->
                                   
-                                  <a href="#" class="info"  style="margin-top: 25px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$projeto->usuario;?>, em <?=$projeto->data?>">
+                                  <a href="#" class="info"  style="margin-top:10px;"><button type="button" rel="tooltip" class="btn btn-info btn-round" data-toggle="tooltip" data-placement="top" title="Postado por: <?=$projeto->usuario;?>, em <?=$projeto->data?>">
                                       <i class="material-icons">help</i>
                                   </button></a>
                               </td>

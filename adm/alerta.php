@@ -14,14 +14,14 @@
 <?php } ?>
 
 <?php if (array_key_exists('editado', $_GET) && $_GET['editado']=='true') { ?>
-    <div class="modal-dialog" id="autofade">
+    <div class="modal-dialog" id="autofade" style="text-align: center;
+    background-color: white;
+    padding: 5%;
+    border: 1px solid gray;">
         <div class="modal-card">
             <div class="modal-card-img"> <img src="assets/img/icon-check.svg" alt=""></div>
-            <div class="modal-card-title">
-                <p>Sucesso!</p>
-            </div>
-            <div class="modal-card-text">
-                <p>Conteúdo editado.</p>
+            <div class="modal-card-title"><br>
+               <p><strong>Conteúdo editado com sucesso!</strong></p>
             </div>
         </div>
     </div>

@@ -7,7 +7,6 @@ require_once "class.php";
 require_once "function.php"; 
 mysqli_select_db($lelo,$database_lelo);
 $projetos = listaProjeto($lelo);
-
 ?>
 <head>
   <title>Administração Lelo Pagani</title>
@@ -61,8 +60,8 @@ $projetos = listaProjeto($lelo);
                           <table class="table" id="tabela">
                             <thead style="margin-top: 50px;">
                                 <tr class="text-center">
-                                    <th>Nro do Projeto</th>
-                                    <th>Data do Projeto</th>
+                                    <th>Nro do projeto</th>
+                                    <th>Data do projeto</th>
                                     <th>Título</th>
                                     <th>Categoria</th>
                                     <th>Ativo</th>
@@ -75,7 +74,7 @@ $projetos = listaProjeto($lelo);
                                     <td style="width:16%;"><?=$projeto->nro_projeto;?></td>
                                     <td style="width:16%;"><?=$projeto->data_projeto;?></td>
                                     <td style="width:25%;"><?=$projeto->titulo;?></td>
-                                    <td style="width:25%;"><?=$projeto->nome_categoria;?></td>
+                                    <td style="width:25%;"><span style="font-size: 0.8em;background-color:#3c6c83;border-radius:10px;padding:4%;color: #f9f9f9;"><?=$projeto->nome_categoria;?></span></td>
                                     <td><?=$projeto->ativo;?></td>
                                     <td class="td-actions text-right">
 

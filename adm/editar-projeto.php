@@ -59,7 +59,7 @@ $categorias = listaCategoria($lelo);
                         <input type="hidden" name="id" id="id" value="<?=$projeto->idprojeto;?>">
                         <div class="form-group">
                           <label for="titulo"><strong>Título:</strong></label><br>
-                          <input type="text" name="titulo" id="titulo" class="form-control" value="<?=$projeto->titulo;?>">
+                          <textarea type="text" name="titulo" id="titulo" class="form-control" value=""><?=$projeto->titulo;?></textarea>
                         </div>
                         <br>
                         <div class="form-group">

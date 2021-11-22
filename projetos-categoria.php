@@ -1,8 +1,9 @@
 <?php
 require_once "adm/conecta.php";
 require_once "adm/class.php";
-require_once "adm/function.php"; 
-$projetos = listaProjeto($lelo);
+require_once "adm/function.php";
+$id=$_GET['id'];
+$projetos = listaProjetoCategoriaId($lelo,$id);
 $categorias = listaCategoria($lelo);
 ?>
 <!DOCTYPE html>
@@ -97,7 +98,7 @@ $categorias = listaCategoria($lelo);
             <h2><strong>Projetos por categoria</strong></h2>
             <div class="row" style="margin-top:40px;">
               <?php foreach ($categorias as $categoria) { ?>
-                <article class="row col-3" style="margin-left:6%;">
+                <article class="row col-3 projeto" style="margin-left:6%;">
                   <span style="font-size: 0.8em;background-color:#3c6c83;border-radius:10px;padding:4%;color: #f9f9f9;margin-bottom: 20px;width:100%;"><a href="projetos-categoria.php?id=<?=$categoria->idcategoria;?>" style="color:#f9f9f9;"> <?=$categoria->nome;?></a></span>
                 </article>
               <?php } ?>

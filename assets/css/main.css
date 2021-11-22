@@ -135,7 +135,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color:#3c6c83 !important;
+			color:#F7EF03 !important;
 			text-decoration: none;
 		}
 
@@ -269,7 +269,12 @@ input, select, textarea {
 	.align-right {
 		text-align: right;
 	}
-
+.album img{
+	width:100%;
+	max-width: 100%;
+	display: inline-block;
+	margin-bottom: 10px;
+}
 /* Container */
 
 	.container {

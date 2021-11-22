@@ -62,5 +62,6 @@ class Perfil{
 class Categoria{
 	public $idcategoria;
 	public $data;
+	public $nome;
 	public $usuario;
 }
