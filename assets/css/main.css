@@ -280,10 +280,13 @@ input, select, textarea {
 	font-size: 0.8em;
 	background-color:#3c6c83;
 	border-radius:10px;
-	padding:4%;
+	padding:0.2em!important;
 	color: #f9f9f9;
 	margin-bottom: 20px;
 	width:100%;
+
+	text-align: center;
+	margin: 10px 10px;
 }
 
 /* Container */
@@ -2323,8 +2326,12 @@ ul.menu{
 
 	.tag-categoria{
 		width: 100%;
+		text-align: center;
 	}
-	.yesphone{display: block;}
+
+	.tabela-titulo{
+		font-size: 0.85em;
+	}
 }
 
 

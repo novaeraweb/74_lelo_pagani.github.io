@@ -96,10 +96,17 @@ $categorias = listaCategoria($lelo);
         </section>
         <section id="two">
             <h2><strong>Projetos por categoria</strong></h2>
-            <div class="row" style="margin-top:40px;">
+            <div class="row nophone" style="margin-top:40px;">
               <?php foreach ($categorias as $categoria) { ?>
-                <article class="row col-3 projeto" style="margin-left:6%;">
-                  <span style="font-size: 0.8em;background-color:#3c6c83;border-radius:10px;padding:4%;color: #f9f9f9;margin-bottom: 20px;width:100%;"><a href="projetos-categoria.php?id=<?=$categoria->idcategoria;?>" style="color:#f9f9f9;"> <?=$categoria->nome;?></a></span>
+                <article class="row col-4" style="margin-left:0;">
+                  <span class="tag-categoria"><a href="projetos-categoria.php?id=<?=$categoria->idcategoria;?>" style="color:#f9f9f9;"> <?=$categoria->nome;?></a></span>
+                </article>
+              <?php } ?>
+            </div>
+            <div class="row yesphone" style="margin-top:40px;">
+              <?php foreach ($categorias as $categoria) { ?>
+                <article class="row col-11" style="margin-left:4%;">
+                  <span class="tag-categoria"><a href="projetos-categoria.php?id=<?=$categoria->idcategoria;?>" style="color:#f9f9f9;"> <?=$categoria->nome;?></a></span>
                 </article>
               <?php } ?>
             </div>
