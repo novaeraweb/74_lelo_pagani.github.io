@@ -20,9 +20,15 @@ mysqli_select_db($lelo, "lelopagani");
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <link href="assets/css/loading.css" rel="stylesheet" />
 </head>
 
 <body>
+<div id="loading">
+  <img src="assets/img/loading.svg" alt=""> <br>
+  <p>Seus arquivos estão sendo enviados!</p> <br>
+  <p>Ao final do processo, você será redirecionado(a) automaticamente</p>
+</div>
   <div class="wrapper ">
     <?php require_once "sidebar.php" ?>
     </div>
@@ -49,7 +55,7 @@ mysqli_select_db($lelo, "lelopagani");
             </div>
             <div class="row">
                 <div class="card col-md-12" style="padding-top: 20px;">
-                    <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="adicionar-noticia.php">
+                    <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="adicionar-noticia.php" onsubmit="loading()">
                       <div class="form-group">
                         <label for="titulo">Título:</label>
                         <input type="text" name="titulo" id="titulo" class="form-control" required>
@@ -198,5 +204,12 @@ mysqli_select_db($lelo, "lelopagani");
           }
       } 
     </script>
+    <script>
+    function loading(){
+     document.getElementById("loading").style.display = "block";
+     document.body.style.opacity = "0.5";
+     document.getElementById("loading").style.opacity = "1";
+    }
+  </script>
 </body>
 </html>

@@ -72,8 +72,8 @@ $categorias = listaCategoria($lelo);
           <table class="table" id="tabela" style="width:110%;">
             <thead>
                 <tr>
-                  <th>Número</th>
-                  <th>Data</th>
+                  <th class="nophone">Número</th>
+                  <th class="nophone">Data</th>
                   <th>Categoria</th>
                   <th>Título</th>
                   <th>Link</th>
@@ -82,10 +82,11 @@ $categorias = listaCategoria($lelo);
           <tbody>
               <?php foreach ($projetos as $projeto){?>
                 <tr class="text-center">
-                  <td style="max-width:10px;"><?=$projeto->nro_projeto;?></td>
-                    <td style="max-width:40px;"><?=$projeto->data_projeto;?></td>
+                  <td  class="nophone" style="max-width:10px;"><?=$projeto->nro_projeto;?></td>
+                    <td  class="nophone" style="max-width:40px;"><?=$projeto->data_projeto;?></td>
                     <td><span style="font-size: 0.8em;background-color:#3c6c83;border-radius:10px;padding:4%;color: #f9f9f9;"><a href="projetos-categoria.php?id=<?=$projeto->idcategoria;?>" style="color:#f9f9f9;"><?=$projeto->nome_categoria;?></a></span></td>
-                  <td style="max-width:290px;"><?=$projeto->titulo;?></td>
+                  <td style="max-width:290px;" class="nophone"><?=$projeto->titulo;?></td>
+                  <td style="max-width:290px; font-size: 0.9em;" class="yesphone"><?=$projeto->titulo;?></td>
                     <td><a href="<?=$projeto->link;?>" rel="noopener" rel="noreferrer" target="_blank">Veja</a></td>
                 </tr>
                 <?php }?>
@@ -95,10 +96,17 @@ $categorias = listaCategoria($lelo);
         </section>
         <section id="two">
             <h2><strong>Projetos por categoria</strong></h2>
-            <div class="row" style="margin-top:40px;">
+            <div class="row nophone" style="margin-top:40px;">
               <?php foreach ($categorias as $categoria) { ?>
                 <article class="row col-3" style="margin-left:6%;">
-                  <span style="font-size: 0.8em;background-color:#3c6c83;border-radius:10px;padding:4%;color: #f9f9f9;margin-bottom: 20px;width:100%;"><a href="projetos-categoria.php?id=<?=$categoria->idcategoria;?>" style="color:#f9f9f9;"> <?=$categoria->nome;?></a></span>
+                  <span class="tag-categoria"><a href="projetos-categoria.php?id=<?=$categoria->idcategoria;?>" style="color:#f9f9f9;"> <?=$categoria->nome;?></a></span>
+                </article>
+              <?php } ?>
+            </div>
+            <div class="row yesphone" style="margin-top:40px;">
+              <?php foreach ($categorias as $categoria) { ?>
+                <article class="row col-8" style="margin-left:6%;">
+                  <span class="tag-categoria"><a href="projetos-categoria.php?id=<?=$categoria->idcategoria;?>" style="color:#f9f9f9;"> <?=$categoria->nome;?></a></span>
                 </article>
               <?php } ?>
             </div>

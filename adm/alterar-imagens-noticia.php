@@ -50,10 +50,16 @@ mysqli_select_db($lelo, $database_lelo);
         $descricao = trim($descricao);
 
 
-        $sql = "UPDATE noticia SET arquivo_capa = '$novo', descricao_video = '$descricao', data = '$data' WHERE idnoticia=$id";
+        $sql = "UPDATE noticia SET arquivo_capa = '$novo', descricao_capa = '$descricao', data = '$data' WHERE idnoticia=$id";
         $Result = mysqli_query($lelo, $sql) or die(mysqli_error($lelo));
 
     
+    } else if (isset($_POST['descricao_capa'])){
+
+        $descricao = $_POST['descricao_capa'];
+        $descricao = trim($descricao);
+        $sql = "UPDATE noticia SET descricao_capa = '$descricao' WHERE idnoticia=$id";
+        $Result = mysqli_query($lelo, $sql) or die(mysqli_error($lelo));
     }
     
 

@@ -275,6 +275,17 @@ input, select, textarea {
 	display: inline-block;
 	margin-bottom: 10px;
 }
+
+.tag-categoria{
+	font-size: 0.8em;
+	background-color:#3c6c83;
+	border-radius:10px;
+	padding:4%;
+	color: #f9f9f9;
+	margin-bottom: 20px;
+	width:100%;
+}
+
 /* Container */
 
 	.container {
@@ -1860,9 +1871,10 @@ input, select, textarea {
 	.linha-fina{
 		font-size: 13px;
 		display: block;
-		text-align: center;
+		text-align: left;
 	}
 
+	.yesphone{display: none;}
 
 	input[type="text"],
 	input[type="password"],
@@ -2189,7 +2201,7 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2em 0;
+			margin: 0 0 0.5em 0;
 			max-width: 100%;
 		}
 
@@ -2281,8 +2293,8 @@ ul.menu{
 	.menu ul.submenu-1 a{width:100%; border-left:1px solid #000; border-radius:0;}
 
 	/*--Botão do Menu--*/
-	.topo i{cursor:pointer; display:block; width:20px; height:48px; padding:0 0px;margin-top: -40px;position: fixed ;z-index: 999; margin-left: 0px; }
-	.topo i b{margin-top: 80px; margin-left: 0; }
+	.topo i{cursor:pointer; display:block; width:20px; height:48px; padding:0 0px;margin-top: -40px;position: fixed ;z-index: 999; margin-left: 0px; margin-top: 40px }
+	.topo i b{margin-left: 0; }
 	.topo i b, .topo i b:before, .topo i b:after{cursor:pointer; height:4px; width:20px; position: absolute; display: block; content: '';  -webkit-transition: all 500ms cubic-bezier(0.615, 0.25, 0.505, 1.47); transition: all 500ms cubic-bezier(0.615, 0.25, 0.505, 1.47);}
 	.topo i b:before{ top: -6px;}
 	.topo i b:after{bottom: -6px;}
@@ -2309,7 +2321,12 @@ ul.menu{
 	.topo i b, .topo i b:before, .topo i b:after{ background:#3c6c83;}
 
 
+	.tag-categoria{
+		width: 100%;
+	}
+	.yesphone{display: block;}
 }
+
 
 .top a{
 	color: rgb(34, 34, 34);

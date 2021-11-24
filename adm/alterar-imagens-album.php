@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
@@ -24,22 +24,25 @@ $descr = array();
 
           $j = $i;
           $idimagem[$i] = $_POST["idimagem".$i];
-      } else {
-        $idimagem[$i] = NULL;
-      }
-
+      } 
     
       if (isset($_POST["descricao$i"])){
         $descr[$i] = $_POST["descricao$i"];
         $descr[$i] = trim($descr[$i]); 
-    } else {
-          $descr[$i] = null;
-      }             
-  }
+        
+        $idimagem[$i] = $_POST["idimagem".$i];
+        $idimg = $idimagem[$i];
+        $des = $descr[$i];
 
+        $updateDesc = "UPDATE imagem SET descricao='$des' WHERE idimagem = '$idimg'";
+        $Result = mysqli_query($lelo, $updateDesc) or die(mysqli_error($lelo));
 
-
-
+      } else {
+        $descr[$i] = null;
+      }
+      
+    }
+    
 $diretorio = "arquivos/";
 
 for ($k = 1; $k <= $j; $k++) {
@@ -76,26 +79,13 @@ for ($k = 1; $k <= $j; $k++) {
           
           ${'img'.$k.'_novo'} = $novo_img;
           rename($var_img, $var_novo_img);
-        }
+          $image = ${'img'.$k.'_novo'};
 
-      
-  }
-
-  for ($m = 1; $m <= $j; $m++){
-    
-    $desc = $descr[$m];
-    $image =  ${'img'.$m.'_novo'};
-
-
-    if ($idimagem[$m] != NULL){
-      $idimg = $idimagem[$m];     
-      $sql = "UPDATE imagem SET arquivo = '$image', descricao='$desc' WHERE idimagem = $idimg";
-      
-      $Result = mysqli_query($lelo, $sql) or die(mysqli_error($lelo));
-    }
+          $sql = "UPDATE imagem SET arquivo = '$image' WHERE idimagem = $idimg";
+          $Result = mysqli_query($lelo, $sql) or die(mysqli_error($lelo));
   
-}
-
+        } 
+  }
 
 
 

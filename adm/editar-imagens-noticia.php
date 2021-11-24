@@ -24,9 +24,17 @@ $imagens = listaImagensIdNoticia($lelo, $id);
   <!-- Material Kit CSS -->
   <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <link href="assets/css/modal.css" rel="stylesheet" />
+  <link href="assets/css/loading.css" rel="stylesheet" />
 </head>
 
 <body>
+
+<div id="loading">
+  <img src="assets/img/loading.svg" alt=""> <br>
+  <p>Seus arquivos estão sendo enviados!</p> <br>
+  <p>Ao final do processo, você será redirecionado(a) automaticamente</p>
+</div>
+
   <div class="wrapper ">
     <?php require_once "sidebar.php"?>
     </div>
@@ -57,81 +65,71 @@ $imagens = listaImagensIdNoticia($lelo, $id);
             </div>
             <div class="row">
                 <div class="card col-md-12" style="padding-top: 20px;">
-                    <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="alterar-imagens-noticia.php" style="padding-bottom: 15px;">
+                  <form  class="col-md-12" method="POST" enctype="multipart/form-data" action="alterar-imagens-noticia.php" style="padding-bottom: 15px;" onsubmit="loading()">
                     <div class="form-group">
                       <?php $i = 1; foreach($noticias as $noticia) {  ?>
                       <input type="hidden" name="id" id="id" value="<?=$noticia->idnoticia;?>">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <p><strong>Imagem de Capa</strong></p>
-                      <?php if ($noticia->arquivo_capa == Null) {  ?>
-                        <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
-                      <?php } else { ?>
-                        <img src="arquivos/<?=$noticia->arquivo_capa;?>" alt="" width="88%" style="margin-bottom:20px;"/>
-                        <button type="button" class="btn btn-warning">
-                          <label for="arquivo_capa">Selecione a nova imagem</label>
-                        </button>
-                        <input type="file" name="arquivo_capa" id="arquivo_capa"/>
-                    </div>
-                    <div class="row col-md-3">
-                      <p>Legenda de Capa</p>
-                      <textarea type="text" class="form-control col-md-6" name="descricao_capa" id="descricao_capa">
-                        <?=$noticia->descricao_capa?>
-                      </textarea>
-                    </div>                           
-                    <?php } ?>
-                  </div>
-                </div>
-                <?php }?><hr>
-
-                  <?php foreach ($imagens as $imagem){?>
-
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p><strong>Imagem de Capa</strong></p>
+                          <?php if ($noticia->arquivo_capa == Null) {  ?>
+                            <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />   
+                            <button type="button" class="btn btn-warning">
+                              <label for="arquivo_capa">Selecione a nova imagem</label>
+                              <input type="file" name="arquivo_capa" id="arquivo_capa"/>
+                            </button>          
+                          <?php } else { ?>
+                            <img src="arquivos/<?=$noticia->arquivo_capa;?>" alt="" width="88%" style="margin-bottom:20px;"/>
+                            <button type="button" class="btn btn-warning">
+                              <label for="arquivo_capa">Selecione a nova imagem</label>
+                              <input type="file" name="arquivo_capa" id="arquivo_capa"/>
+                            </button>
+                        </div>
+                        <div class="col-md-5">
+                          <p>Legenda de Capa</p>
+                          <textarea type="text" class="form-control col-md-6" name="descricao_capa" id="descricao_capa"> <?=$noticia->descricao_capa?></textarea>                           
+                        </div>
+                        <?php } ?>
+                      </div>
+                    <?php }?>
+                    <hr>
+                    <br>
+                    
+                    <?php foreach ($imagens as $imagem){?>
                    <div class="row">
                     <div class="col-md-6">
-                    <?php if ($imagem->arquivo == Null) {  ?>
-                      <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />             
-                          <?php } else { ?>
-                          <img src="arquivos/<?=$imagem->arquivo;?>" alt="" width="88%"/>
-    
-                          <input type="file" name="arquivo<?=$i;?>" id="arquivo<?=$i;?>"/>
-
-
+                      <p>Foto <?=$i;?> do álbum</p>
+                      <?php if ($imagem->arquivo == Null) {  ?>
+                        <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" /> 
+                        <button type="button" class="btn btn-warning">
+                          <label for="arquivo<?=$i;?>">Selecione a nova imagem</label>
+                          <input type="file" class="form-control" name="arquivo<?=$i;?>" id="arquivo<?=$i;?>"/>
+                        </button>            
+                      <?php } else { ?>
+                        <img src="arquivos/<?=$imagem->arquivo;?>" alt="" width="88%"/>
+                        <button type="button" class="btn btn-warning">
+                          <label for="arquivo<?=$i;?>">Selecione a nova imagem</label>
+                          <input type="file" class="form-control" name="arquivo<?=$i;?>" id="arquivo<?=$i;?>"/>
+                        </button>
+                      <?php } ?>
+                      </div> 
+                    <div class="col-md-5">   
+                      <p>Legenda da foto <?=$i;?> do álbum</p>
+                      <textarea type="text" class="form-control" name="descricao<?=$i;?>" id="descricao<?=$i;?>"><?=$imagem->descricao?></textarea>
                     </div>
-                    <div class="col-md-6">   
-                      <p>Legenda</p>
-                          <textarea type="text" class="form-control col-md-6" name="descricao<?=$i;?>" id="descricao<?=$i;?>"><?=$imagem->descricao?></textarea>
-
-
-                                        <?php } ?>
-                                   
-                                        <label for="arquivo_capa">Selecione a nova imagem</label>
-                               
-                                        Clique aqui
-                                        <input type="hidden" name="idimagem<?=$i;?>" id="idimagem<?=$i;?>" value="<?=$imagem->idimagem;?>">
-
-                                      <input type="hidden" name="" value="<?=$i++;?>">
-                                      <?php } ?>
+                  </div>
+                  <hr>
+                  <br>
+                  
+                  <input type="hidden" name="idimagem<?=$i;?>" id="idimagem<?=$i;?>" value="<?=$imagem->idimagem;?>">
+                  <input type="hidden" name="" value="<?=$i++;?>">
+                  <?php } ?>
   
-                                    </div>
-                          </div>
-                        </div>
-
-
-
-
-
-
-
-
-                        <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y'); ?>">
-                        <input type="hidden" name="enviado" id="enviado" value=<?php echo $_SESSION["usuario_logado"];?>>
-                        <button id="submit" type="submit" class="btn btn-info float-right">SALVAR</button>
-
-
-
-
-
-                    </form>
+                        
+                    <input type="hidden" name="data" id="data" value="<?php echo date('d/m/Y'); ?>">
+                    <input type="hidden" name="enviado" id="enviado" value=<?php echo $_SESSION["usuario_logado"];?>>
+                    <button id="submit" type="submit" class="btn btn-info float-right">SALVAR</button>
+                  </form>
 
                     
                 </div>
@@ -162,7 +160,7 @@ $imagens = listaImagensIdNoticia($lelo, $id);
 
     // Initialize CKEditor
     CKEDITOR.replace('descricao_capa',{
-      width: "700px",
+      width: "500px",
       height: "200px",
       wordcount: {
         showParagraphs: true,
@@ -186,7 +184,7 @@ $imagens = listaImagensIdNoticia($lelo, $id);
       des = 'descricao'+i;
       if (doc[i]){
         CKEDITOR.replace(des,{
-          width: "400px",
+          width: "500px",
           height: "200px",
           wordcount: {
             showParagraphs: true,
@@ -199,6 +197,14 @@ $imagens = listaImagensIdNoticia($lelo, $id);
           }
         });  
       }
+    }
+  </script>
+  <script>
+    function loading(){
+     document.getElementById("loading").style.display = "block";
+     document.body.style.opacity = "0.5";
+     document.getElementById("loading").style.opacity = "1";
+     
     }
   </script>
 
