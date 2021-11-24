@@ -96,9 +96,9 @@ $categorias = listaCategoria($lelo);
         </section>
         <section id="two">
             <h2><strong>Projetos por categoria</strong></h2>
-            <div class="row nophone" style="margin-top:40px;">
+            <div class="row nophone" style="margin-top:40px; margin-left: 2%;">
               <?php foreach ($categorias as $categoria) { ?>
-                <article class="row col-4" style="margin-left:0;">
+                <article class="row col-4" >
                   <span class="tag-categoria"><a href="projetos-categoria.php?id=<?=$categoria->idcategoria;?>" style="color:#f9f9f9;"> <?=$categoria->nome;?></a></span>
                 </article>
               <?php } ?>

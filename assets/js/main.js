@@ -132,7 +132,7 @@ $().ready(function() {
 //Fecha menu ao clicar em um link de dentro ou em outro lugar da página caso o menu esteja aberto
 $().ready(function(){
 	$(document).on('click', function(e){
-	  if (!$(e.target).is('.topo i b') && $('#container').hasClass('menu-on')){
+	  if (!$(e.target).is('.topo i') && $('#container').hasClass('menu-on')){
 		$('#container').removeClass('menu-on');
 	  } 
 	 });
