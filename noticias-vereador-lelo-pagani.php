@@ -94,9 +94,8 @@ $noticias = listaNoticia($lelo);
             </div>
         </div>
         </section>
-                <?php require_once "contato-vereador-lelo-pagani.php"?>
+        <?php require_once "contato-vereador-lelo-pagani.php"?>
     </main>
-    
 </body>
 <?php require_once "footer.php"?>
 <script type="text/javascript" src="assets\js\jquery.cntl.min.js"></script>
@@ -112,5 +111,4 @@ $(document).ready(function(e){
 });
 </script>
 <link rel="stylesheet" type="text/css" href="assets\css\cntl.min.css">
-
 </html>

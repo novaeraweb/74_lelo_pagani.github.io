@@ -91,23 +91,16 @@ $imagens = listaImagensIdNoticia($lelo, $id);
             <br>
             <span class="linha-fina"><?=$noticia->descricao_video;?></span>
           <?php } else {?>
-
-
-
-
           <img src="adm/arquivos/<?=$noticia->arquivo_capa;?>" alt="Notícia Vereador Lelo Pagani" class="image fit" style="margin-top: 50px;">
           <span class="linha-fina"><?=$noticia->descricao_capa;?></span>
-
-
-
-
           <?php }?>
           <p style="margin-top:80px;"><?=$noticia->descricao_longa;?></p>
-          <p><a href="<?=$noticia->link;?>" target="_blank" > <?=$noticia->link;?></a></p>
-          <hr>
+          <p><a href="<?=$noticia->link;?>" target="_blank" ><?=$noticia->link;?></a></p>
+     
           <div class="row">
             <?php foreach ($imagens as $imagem){?>
               <?php if ($imagem->arquivo){?>
+                <div style="width: 100%;"><hr></div>
                 <article class="col-3 album">
                   <a href="adm/arquivos/<?=$imagem->arquivo;?>" data-lightbox="album" data-title="<?=$imagem->descricao;?>"><img src="adm/arquivos/<?=$imagem->arquivo;?>" alt=""></a>
                 </article>
@@ -115,7 +108,6 @@ $imagens = listaImagensIdNoticia($lelo, $id);
           <?php } ?>
           </div>  
         </section>
-        
         <?php }?>
         <section id="one" style="text-align: center;">
           <h3 style="padding-bottom:30px;">Gostou do Conteúdo? Compartilhe!</h3>
@@ -125,13 +117,9 @@ $imagens = listaImagensIdNoticia($lelo, $id);
     </main>
 </body>
 <?php require_once "footer.php"?>
-
 <script>
     lightbox.option({
       'albumLabel': "Imagem %1 de %2"
     })
 </script>
-
-
-
 </html>
