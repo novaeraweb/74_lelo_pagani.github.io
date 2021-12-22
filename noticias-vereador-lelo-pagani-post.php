@@ -100,7 +100,6 @@ $imagens = listaImagensIdNoticia($lelo, $id);
           <div class="row">
             <?php foreach ($imagens as $imagem){?>
               <?php if ($imagem->arquivo){?>
-                <div style="width: 100%;"><hr></div>
                 <article class="col-3 album">
                   <a href="adm/arquivos/<?=$imagem->arquivo;?>" data-lightbox="album" data-title="<?=$imagem->descricao;?>"><img src="adm/arquivos/<?=$imagem->arquivo;?>" alt=""></a>
                 </article>

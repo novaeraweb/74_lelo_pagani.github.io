@@ -74,21 +74,55 @@ $imagens = listaImagensIdNoticia($lelo, $id);
                           <p><strong>Imagem de Capa</strong></p>
                           <?php if ($noticia->arquivo_capa == Null) {  ?>
                             <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" />   
-                            <button type="button" class="btn btn-warning">
-                              <label for="arquivo_capa">Selecione a nova imagem</label>
-                              <input type="file" name="arquivo_capa" id="arquivo_capa"/>
-                            </button>          
+                            <div class="row" style="margin-left: 0; justify-content: center">
+                              <button type="button" class="btn btn-warning col-md-6" style="margin-bottom: 0;">
+                                <label for="arquivo_capa">Selecione a nova imagem</label>
+                                <input type="file" name="arquivo_capa" id="arquivo_capa"/>
+                              </button>
+                              
+                              <button type="button" class="btn btn-danger col-md-6" data-toggle="modal" data-target="#modal-delete-foto-capa<?php echo $noticia->idnoticia;?>" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Excluir">
+                              Excluir
+                            </button>
+                            </div>
                           <?php } else { ?>
                             <img src="arquivos/<?=$noticia->arquivo_capa;?>" alt="" width="88%" style="margin-bottom:20px;"/>
-                            <button type="button" class="btn btn-warning">
+                            <div class="row" style="margin-left: 0; justify-content: center">
+                            <button type="button" class="btn btn-warning col-md-6" style="margin-bottom: 0;">
                               <label for="arquivo_capa">Selecione a nova imagem</label>
                               <input type="file" name="arquivo_capa" id="arquivo_capa"/>
                             </button>
+                            <button type="button" class="btn btn-danger col-md-6" data-toggle="modal" data-target="#modal-delete-foto-capa<?php echo $noticia->idnoticia;?>" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Excluir">
+                            Excluir
+                            </button>
+                            </div>
                         </div>
                         <div class="col-md-5">
                           <p>Legenda de Capa</p>
-                          <textarea type="text" class="form-control col-md-6" name="descricao_capa" id="descricao_capa"> <?=$noticia->descricao_capa?></textarea>                           
+                          <textarea type="text" class="form-control col-md-6" name="descricao_capa" id="descricao_capa"> <?=$noticia->descricao_capa?></textarea>
                         </div>
+                         
+
+
+                        <div class="modal fade" id="modal-delete-foto-capa<?php echo $noticia->idnoticia;?>" tabindex="-1" role="dialog" aria-labelledby="modal-delete"  aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Apagar foto de capa</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Você tem certeza que deseja apagar esta foto?<br>
+                                    <b class="text-center">Esta ação é irreversível</b>.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <a href="delete-foto-capa.php?id=<?=$noticia->idnoticia;?>" class="info"><button type="button" class="btn btn-danger">APAGAR</button></a>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
                         <?php } ?>
                       </div>
                     <?php }?>
@@ -96,32 +130,68 @@ $imagens = listaImagensIdNoticia($lelo, $id);
                     <br>
                     
                     <?php foreach ($imagens as $imagem){?>
+                    <input type="hidden" name="idimagem<?=$i;?>" id="idimagem<?=$i;?>" value="<?=$imagem->idimagem;?>">
                    <div class="row">
                     <div class="col-md-6">
                       <p>Foto <?=$i;?> do álbum</p>
                       <?php if ($imagem->arquivo == Null) {  ?>
                         <img src="arquivos/sem-imagem.png" alt="" width="100" height="100" /> 
-                        <button type="button" class="btn btn-warning">
-                          <label for="arquivo<?=$i;?>">Selecione a nova imagem</label>
-                          <input type="file" class="form-control" name="arquivo<?=$i;?>" id="arquivo<?=$i;?>"/>
-                        </button>            
+                        <div class="row" style="margin-left: 0; justify-content: center;">
+                          <button type="button" class="btn btn-warning col-md-6" style="margin-bottom: 0;">
+                            <label for="arquivo<?=$i;?>">Selecione a nova imagem</label>
+                            <input type="file" class="form-control" name="arquivo<?=$i;?>" id="arquivo<?=$i;?>"/>
+                          </button>    
+                          <button type="button" class="btn btn-danger col-md-6" data-toggle="modal" data-target="#modal-delete-foto-album<?php echo $noticia->idnoticia;?>" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Excluir">
+                          Excluir
+                          </button>        
+                        </div>
                       <?php } else { ?>
                         <img src="arquivos/<?=$imagem->arquivo;?>" alt="" width="88%"/>
-                        <button type="button" class="btn btn-warning">
-                          <label for="arquivo<?=$i;?>">Selecione a nova imagem</label>
-                          <input type="file" class="form-control" name="arquivo<?=$i;?>" id="arquivo<?=$i;?>"/>
-                        </button>
+                        <div class="row" style="margin-left: 0; justify-content: center;">
+                          <button type="button" class="btn btn-warning col-md-6" style="margin-bottom: 0;">
+                            <label for="arquivo<?=$i;?>">Selecione a nova imagem</label>
+                            <input type="file" class="form-control" name="arquivo<?=$i;?>" id="arquivo<?=$i;?>"/>
+                          </button>    
+                          <button type="button" class="btn btn-danger col-md-6" data-toggle="modal" data-target="#modal-delete-foto-album<?php echo $noticia->idnoticia;?>" rel="tooltip" data-toggle="tooltip" data-placement="top" title="Excluir">
+                          Excluir
+                          </button>        
+                        </div>
                       <?php } ?>
                       </div> 
                     <div class="col-md-5">   
                       <p>Legenda da foto <?=$i;?> do álbum</p>
                       <textarea type="text" class="form-control" name="descricao<?=$i;?>" id="descricao<?=$i;?>"><?=$imagem->descricao?></textarea>
                     </div>
+                      
                   </div>
+
                   <hr>
                   <br>
                   
-                  <input type="hidden" name="idimagem<?=$i;?>" id="idimagem<?=$i;?>" value="<?=$imagem->idimagem;?>">
+
+                  <div class="modal fade" id="modal-delete-foto-album<?php echo $noticia->idnoticia;?>" tabindex="-1" role="dialog" aria-labelledby="modal-delete"  aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Apagar foto de album</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Você tem certeza que deseja apagar esta foto?<br>
+                                    <b class="text-center">Esta ação é irreversível</b>.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <a href="delete-foto-album.php?id=<?=$noticia->idnoticia;?>&idimg=<?=$imagem->idimagem;?>" class="info"><button type="button" class="btn btn-danger">APAGAR</button></a>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                  
                   <input type="hidden" name="" value="<?=$i++;?>">
                   <?php } ?>
   

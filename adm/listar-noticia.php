@@ -73,6 +73,11 @@ $noticias = listaNoticia($lelo);
                                     <td style="max-width:100px;"><?=$noticia->titulo;?></td>
                                     <td><?=$noticia->ativo;?></td>
                                     <td class="td-actions text-right">
+                                    <a href="inserir-imagens-album.php?id=<?php echo $noticia->idnoticia;?>" style="margin-top: 10px; margin-right: 10px;">
+                                      <button type="button" rel="tooltip" class="btn btn-primary btn-round" data-toggle="tooltip" data-placement="top" title="Adicionar fotos do álbum">
+                                        <i class="material-icons">add_a_photo</i>
+                                      </button>
+                                    </a>
                                     <a href="editar-imagens-noticia.php?id=<?php echo $noticia->idnoticia;?>" style="margin-top: 10px; margin-right: 10px;">
                                       <button type="button" rel="tooltip" class="btn btn-warning btn-round" data-toggle="tooltip" data-placement="top" title="Editar fotos/legenda de capa">
                                         <i class="material-icons">camera_enhance</i>
