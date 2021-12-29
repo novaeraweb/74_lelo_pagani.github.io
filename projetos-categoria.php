@@ -3,7 +3,8 @@ require_once "adm/conecta.php";
 require_once "adm/class.php";
 require_once "adm/function.php";
 $id=$_GET['id'];
-$projetos = listaProjetoCategoriaId($lelo,$id);
+$id = mysqli_real_escape_string($lelo, $id);
+$projetos = listaProjetoCategoriaId($lelo, $id);
 $categorias = listaCategoria($lelo);
 ?>
 <!DOCTYPE html>

@@ -164,7 +164,7 @@ function listaProjetoCategoriaId ($lelo, $id) {
 	$query = "SELECT p.*, c.*
 			  FROM projeto p
 				INNER JOIN categoria c ON (p.categoria = c.idcategoria)
-			 	WHERE p.ativo = 'Sim'AND c.idcategoria=$id";
+			 	WHERE p.ativo = 'Sim' AND c.idcategoria=$id";
    $resultado = mysqli_query($lelo, $query);
    $projetos = array();
    while ($array = mysqli_fetch_assoc($resultado)) {
