@@ -3,9 +3,11 @@ require "adm/conecta.php";
 require "adm/class.php";
 require "adm/function.php";
 $id = $_GET['id'];
+$id = mysqli_real_escape_string($lelo, $id);
 $noticias = listaNoticiaId($lelo, $id);
-$query_rs_noticia = "SELECT * FROM noticia WHERE idnoticia='$id' ";
-$rs_noticia = mysqli_query($lelo, $query_rs_noticia) or die(mysqli_error());
+$query_rs_noticia = "SELECT * FROM noticia WHERE idnoticia=$id ";
+$query_rs_noticia = mysqli_real_escape_string($lelo, $query_rs_noticia);
+$rs_noticia = mysqli_query($lelo, $query_rs_noticia) or die(mysqli_error($lelo));
 $row_rs_noticia = mysqli_fetch_assoc($rs_noticia);
 
 $imagens = listaImagensIdNoticia($lelo, $id);
