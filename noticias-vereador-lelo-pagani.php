@@ -83,7 +83,7 @@ $noticias = listaNoticia($lelo);
                             <img src="assets/images/icon-tempo.svg" width="22" height="" style="padding-right: 5px;"><?=$noticia->tempo;?> min. de leitura
                         </div><hr>
                         <div style="line-height:24px;">
-                            <p><?=substr($noticia->linha_fina, 0, 231)?></p>
+                            <p><?=substr($noticia->linha_fina, 0, 250);?></p>
                         </div>
                         <a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="button" style="width:100%;">Leia a notícia completa</a>
                     </div>
