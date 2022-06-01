@@ -24,7 +24,7 @@ $imagens = listaImagensIdNoticia($lelo, $id);
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
-    <meta name="description" content="<?=$row_rs_noticia['linha_fina']?> | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta name="description" content="<?=strip_tags($row_rs_noticia['linha_fina'])?> | Vereador Lelo Pagani - Botucatu/SP" />
     <meta name="keywords" content="vereador, lelo pagani, noticia" />
     <meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
     <meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
@@ -46,7 +46,7 @@ $imagens = listaImagensIdNoticia($lelo, $id);
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
-    <meta property="og:description" content="<?=$row_rs_noticia['linha_fina']?> | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta property="og:description" content="<?=strip_tags($row_rs_noticia['linha_fina'])?> | Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:site_name" content="Vereador Lelo Pagani"/>
     <meta property="fb:admins" content="544530930"/>
     <!-- Fim Meta FB -->
