@@ -9,7 +9,7 @@
             <li><a href="mailto:contato@lelopagani.com.br" class="icon solid fa-envelope" target="_blank" rel="noopener" rel="noreferrer"><span class="label">Email</span></a></li>
         </ul>
         <ul class="copyright">
-            <li>Desenvolvido por: <a href="https://www.novaeraweb.com.br">Nova Era Web</a></li>
+            <li>Desenvolvido por: <a href="https://www.novaeraweb.com.br" target="_blank" rel="noopener" rel="noreferrer">Nova Era Web</a></li>
         </ul>
     </div>
 </footer>

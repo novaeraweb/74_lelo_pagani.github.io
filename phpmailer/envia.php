@@ -24,9 +24,6 @@ if(isset($recaptcha_response)){
     // Se a ação do usuário foi correta executo o restante do meu formulário
     if($answer->success) {
 
-
-
-        $tipo = $_POST['tipo'];
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $mensagem = $_POST['mensagem'];
