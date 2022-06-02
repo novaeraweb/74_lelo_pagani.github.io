@@ -33,7 +33,7 @@ $row_rs_cat = mysqli_fetch_assoc($rs_cat);
     <meta name="DC.Identifier" content="https://www.lelopagani.com.br">
     <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
     <link rel="author" href="https://www.novaeraweb.com.br"/>
-    <link rel="canonical" href="https://www.lelopagani.com.br/projetos-vereador-lelo-pagani.php" />
+    <link rel="canonical" href="https://www.lelopagani.com.br/projetos-categoria.php" />
 
     <!-- Meta FB -->
     <meta property="og:locale" content="pt_BR">
