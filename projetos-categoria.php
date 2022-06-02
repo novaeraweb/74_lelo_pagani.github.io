@@ -32,13 +32,13 @@ $row_rs_cat = mysqli_fetch_assoc($rs_cat);
     <meta name="DC.Identifier" content="https://www.lelopagani.com.br">
     <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
     <link rel="author" href="https://www.novaeraweb.com.br"/>
-    <link rel="canonical" href="https://www.lelopagani.com.br/projetos-categoria?id=<?=$row_rs_cat['idcategoria']?>.php" />
+    <link rel="canonical" href="https://www.lelopagani.com.br/projetos-categoria.php?id=<?=$row_rs_cat['idcategoria']?>" />
 
     <!-- Meta FB -->
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="Projetos Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.lelopagani.com.br/projetos-categoria?id=<?=$row_rs_cat['idcategoria']?>.php"/>
+    <meta property="og:url" content="https://www.lelopagani.com.br/projetos-categoria.php?id=<?=$row_rs_cat['idcategoria']?>"/>
     <meta property="og:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
