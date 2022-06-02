@@ -39,7 +39,7 @@ $row_rs_cat = mysqli_fetch_assoc($rs_cat);
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="Projetos Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.lelopagani.com.br/projetos-vereador-lelo-pagani.php"/>
+    <meta property="og:url" content="https://www.lelopagani.com.br/projetos-categoria.php"/>
     <meta property="og:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
@@ -52,7 +52,7 @@ $row_rs_cat = mysqli_fetch_assoc($rs_cat);
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:description"
-      content="Sobre | Vereador Lelo Pagani - Botucatu/SP"
+      content="Projetos de Lei | <?=$row_rs_cat['nome']?> | Vereador Lelo Pagani - Botucatu/SP"
     />
     <meta name="twitter:title" content="Projetos de Lei | Vereador Lelo Pagani - Botucatu/SP" />
     <meta name="twitter:site" content="@lelopagani" />
