@@ -6,6 +6,10 @@ $id=$_GET['id'];
 $id = mysqli_real_escape_string($lelo, $id);
 $projetos = listaProjetoCategoriaId($lelo, $id);
 $categorias = listaCategoria($lelo);
+
+$query_cat = "SELECT * FROM categoria WHERE idcategoria=$id ";
+$rs_cat = mysqli_query($lelo, $query_cat) or die(mysqli_error($lelo));
+$row_rs_cat = mysqli_fetch_assoc($rs_cat);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -18,7 +22,7 @@ $categorias = listaCategoria($lelo);
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
-    <meta name="description" content="Projetos de Lei | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta name="description" content="Projetos de Lei | <?=$row_rs_cat['nome']?> | Vereador Lelo Pagani - Botucatu/SP" />
     <meta name="keywords" content="vereador, lelo pagani, historico, projetos, botucatu, politica, lei" />
     <meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
     <meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
@@ -33,14 +37,14 @@ $categorias = listaCategoria($lelo);
 
     <!-- Meta FB -->
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="Vereador Lelo Pagani" />
+    <meta property="og:title" content="Projetos Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://www.lelopagani.com.br/projetos-vereador-lelo-pagani.php"/>
     <meta property="og:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
-    <meta property="og:description" content="Projetos de Lei | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta property="og:description" content="Projetos de Lei | <?=$row_rs_cat['nome']?> | Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:site_name" content="Vereador Lelo Pagani"/>
     <meta property="fb:admins" content=""/>
     <!-- Fim Meta FB -->
