@@ -24,9 +24,6 @@ if(isset($recaptcha_response)){
     // Se a ação do usuário foi correta executo o restante do meu formulário
     if($answer->success) {
 
-
-
-        $tipo = $_POST['tipo'];
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $mensagem = $_POST['mensagem'];
@@ -47,7 +44,7 @@ if(isset($recaptcha_response)){
             $mail->IsSMTP(); // Define que a mensagem será SMTP
             $mail->Host = "smtp.umbler.com"; // Endereço do servidor SMTP (caso queira utilizar a autenticação, utilize o host smtp.seudomínio.com.br)
             $mail->SMTPAuth = true; // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
-            $mail->Username = 'contato@lelopagani.com.br'; // Usuário do servidor SMTP (endereço de email)
+            $mail->Username = 'site@lelopagani.com.br'; // Usuário do servidor SMTP (endereço de email)
             $mail->Password = 'lp*010203'; // Senha do servidor SMTP (senha do email usado)
             $mail->SMTPOptions = array(
                         'ssl' => array(
@@ -58,13 +55,14 @@ if(isset($recaptcha_response)){
                     );
             // Define o remetente
             // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-            $mail->From = 'contato@lelopagani.com.br'; // Seu e-mail
-            $mail->Sender = 'contato@lelopagani.com.br'; // Seu e-mail
+            $mail->From = 'site@lelopagani.com.br'; // Seu e-mail
+            $mail->Sender = 'site@lelopagani.com.br'; // Seu e-mail
             $mail->FromName =  $nome; // Seu nome
              
             // Define os destinatário(s)
             // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
             $mail->AddAddress('contato@lelopagani.com.br');
+            // $mail->AddAddress('contato@novaeraweb.com.br');
             $mail->AddBCC('contato@novaeraweb.com.br');
 
             // Define a mensagem (Texto e Assunto)

@@ -87,9 +87,13 @@ $noticias = listaNoticiaId($lelo, $id);
                         </div>
                         <br>
                         <div class="form-group">
-                          <label for="video"> <i class="material-icons" style="float: left;">play_circle_filled</i> Vídeo </label>
+                          <label for="video"> <i class="material-icons" style="float: left;">play_circle_filled</i> Vídeo </label><br>
                           <input type="text" class="form-control" name="video" id="video" value="<?=$noticia->video;?>"> 
                         </div>                        
+                          <div class="form-group">
+                          <label for="descricao_video"> Descrição do Vídeo </label><br>
+                          <textarea name="descricao_video" id="descricao_video" cols="30" rows="10" class="form-control"><?=$noticia->descricao_video;?></textarea> 
+                        </div>   
                         <div class="form-group">
                           <label for="ativo">A postagem está ativa?</label>
                           <select class="form-control selectpicker" data-style="btn btn-link" name="ativo" id="ativo">
@@ -142,6 +146,13 @@ CKEDITOR.replace('descricao_breve',{
 });  
 
 CKEDITOR.replace('descricao_longa',{
+
+  width: "700px",
+  height: "200px"
+
+}); 
+
+CKEDITOR.replace('descricao_video',{
 
   width: "700px",
   height: "200px"

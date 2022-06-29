@@ -10,10 +10,10 @@ $noticias = listaNoticia($lelo);
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="pt" class="no-js"> <!--<![endif]-->
 <head>
-		<title>Notícias Vereador Lelo Pagani - Botucatu/SP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
+    <title>Notícias Vereador Lelo Pagani - Botucatu/SP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
     <meta name="description" content="Notícias | Vereador Lelo Pagani - Botucatu/SP" />
@@ -21,10 +21,10 @@ $noticias = listaNoticia($lelo);
     <meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
     <meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
     <meta name="robots" content="follow,index">
-    <meta name= "googlebot" content="follow,index">
+    <meta name="googlebot" content="follow,index">
     <meta name="DC.publisher" content="Nova Era Web">
     <meta name="DC.date.created" content="2008-10-01">
-    <meta name="  DC.Identifier" content="https://www.lelopagani.com.br">
+    <meta name="DC.Identifier" content="https://www.lelopagani.com.br">
     <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
     <link rel="author" href="https://www.novaeraweb.com.br"/>
     <link rel="canonical" href="https://www.lelopagani.com.br/noticias-vereador-lelo-pagani.php" />
@@ -40,7 +40,7 @@ $noticias = listaNoticia($lelo);
     <meta property="og:image:height" content="600">
     <meta property="og:description" content="Notícias | Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:site_name" content="Vereador Lelo Pagani"/>
-    <meta property="fb:admins" content=""/>
+    <meta property="fb:admins" content="544530930"/>
     <!-- Fim Meta FB -->
     <!-- Meta Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -83,7 +83,7 @@ $noticias = listaNoticia($lelo);
                             <img src="assets/images/icon-tempo.svg" width="22" height="" style="padding-right: 5px;"><?=$noticia->tempo;?> min. de leitura
                         </div><hr>
                         <div style="line-height:24px;">
-                            <p><?=substr($noticia->linha_fina, 0, 231)?></p>
+                            <p><?=substr($noticia->linha_fina, 0, 250);?></p>
                         </div>
                         <a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="button" style="width:100%;">Leia a notícia completa</a>
                     </div>

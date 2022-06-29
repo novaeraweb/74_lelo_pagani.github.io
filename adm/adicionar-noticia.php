@@ -39,6 +39,9 @@ mysqli_select_db($lelo, 'lelopagani');
     $data_noticia = $_POST['data_noticia'];
     $data_noticia = trim($data_noticia);
 
+    $descricao_video = $_POST['descricao_video'];
+    $descricao_video = trim($descricao_video);
+
     $dir = "arquivos/";
     $dir = strtolower($dir);
     
@@ -54,7 +57,7 @@ mysqli_select_db($lelo, 'lelopagani');
     require "adicionar-imagens.php";
 
 //Insert inglês
-$insertSQL = "INSERT INTO noticia (titulo, linha_fina, descricao_longa, descricao_capa, link, usuario, tempo, data, data_noticia, arquivo_capa, video, ativo) VALUES ('$titulo', '$linha_fina', '$descricao_longa', '$descricao_capa', '$link', '$usuario', '$tempo', '$data', '$data_noticia', '$novo', '$video', '$ativo' )";      
+$insertSQL = "INSERT INTO noticia (titulo, linha_fina, descricao_longa, descricao_capa, link, usuario, tempo, data, data_noticia, arquivo_capa, video, descricao_video, ativo) VALUES ('$titulo', '$linha_fina', '$descricao_longa', '$descricao_capa', '$link', '$usuario', '$tempo', '$data', '$data_noticia', '$novo', '$video', '$descricao_video', '$ativo' )";      
 $Result = mysqli_query($lelo, $insertSQL ) or die(mysqli_error($lelo)); 
 $id_noticia = $lelo->insert_id;
 

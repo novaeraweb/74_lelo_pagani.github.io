@@ -189,21 +189,21 @@ mysqli_select_db($lelo, "lelopagani");
 
 
   </script>   
-
-  <script type="text/javascript">
+    <script type="text/javascript">
     var i = 1;
     function add_more() {
           if (i <= 10){
           var txt = '<label for="arquivo" style="width: 100%; margin-top: 30px;">Imagem adicional '+i+'</label><input type="file" name="arquivo'+ i + '" id="arquivo'+ i +'"><br>';
-          document.querySelector("#dvFile").innerHTML += txt;
+          document.querySelector("#dvFile").insertAdjacentHTML('beforeend', txt);
           var dsc = '<label for="descricao" style="width: 100%; margin-top: 30px;">Descrição da imagem '+i+'</label><input type="text" class="form-control" name="descricao'+ i + '" id="descricao'+ i +'">';
-          document.querySelector("#dvFile").innerHTML += dsc;
+          document.querySelector("#dvFile").insertAdjacentHTML('beforeend', dsc);
           i++;
           } else {
             alert("Limite máximo de arquivos atingido!");
           }
       } 
     </script>
+
     <script>
     function loading(){
      document.getElementById("loading").style.display = "block";

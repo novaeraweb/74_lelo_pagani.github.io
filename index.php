@@ -37,7 +37,7 @@ $noticias = listaNoticiaHome($lelo);
     <meta property="og:image:height" content="600">
     <meta property="og:description" content="Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:site_name" content="Vereador Lelo Pagani"/>
-    <meta property="fb:admins" content=""/>
+    <meta property="fb:admins" content="544530930"/>
     <!-- Fim Meta FB -->
     <!-- Meta Twitter -->
     <meta name="twitter:card" content="summary_large_image" />

@@ -3,9 +3,11 @@ require "adm/conecta.php";
 require "adm/class.php";
 require "adm/function.php";
 $id = $_GET['id'];
+$id = mysqli_real_escape_string($lelo, $id);
 $noticias = listaNoticiaId($lelo, $id);
-$query_rs_noticia = "SELECT * FROM noticia WHERE idnoticia='$id' ";
-$rs_noticia = mysqli_query($lelo, $query_rs_noticia) or die(mysqli_error());
+$query_rs_noticia = "SELECT * FROM noticia WHERE idnoticia=$id ";
+$query_rs_noticia = mysqli_real_escape_string($lelo, $query_rs_noticia);
+$rs_noticia = mysqli_query($lelo, $query_rs_noticia) or die(mysqli_error($lelo));
 $row_rs_noticia = mysqli_fetch_assoc($rs_noticia);
 
 $imagens = listaImagensIdNoticia($lelo, $id);
@@ -17,12 +19,12 @@ $imagens = listaImagensIdNoticia($lelo, $id);
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="pt" class="no-js"> <!--<![endif]-->
 <head>
-		<title>Notícia Vereador Lelo Pagani - Botucatu/SP</title>
+		<title><?=$row_rs_noticia['titulo']?> | Vereador Lelo Pagani - Botucatu/SP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
-    <meta name="description" content="Notícia | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta name="description" content="<?=strip_tags($row_rs_noticia['linha_fina'])?> | Vereador Lelo Pagani - Botucatu/SP" />
     <meta name="keywords" content="vereador, lelo pagani, noticia" />
     <meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
     <meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
@@ -37,16 +39,16 @@ $imagens = listaImagensIdNoticia($lelo, $id);
 
     <!-- Meta FB -->
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="<?=$row_rs_noticia['titulo']?>" />
+    <meta property="og:title" content="<?=$row_rs_noticia['titulo']?> | Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://www.lelopagani.com.br/noticias-vereador-lelo-pagani-post.php?id=<?=$row_rs_noticia['idnoticia']?>"/>
     <meta property="og:image" content="https://www.lelopagani.com.br/adm/arquivos/<?=$row_rs_noticia['arquivo_capa']?>" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
-    <meta property="og:description" content="Notícia | Vereador Lelo Pagani - Botucatu/SP" />
+    <meta property="og:description" content="<?=strip_tags($row_rs_noticia['linha_fina'])?> | Vereador Lelo Pagani - Botucatu/SP" />
     <meta property="og:site_name" content="Vereador Lelo Pagani"/>
-    <meta property="fb:admins" content=""/>
+    <meta property="fb:admins" content="544530930"/>
     <!-- Fim Meta FB -->
     <!-- Meta Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -100,7 +102,6 @@ $imagens = listaImagensIdNoticia($lelo, $id);
           <div class="row">
             <?php foreach ($imagens as $imagem){?>
               <?php if ($imagem->arquivo){?>
-                <div style="width: 100%;"><hr></div>
                 <article class="col-3 album">
                   <a href="adm/arquivos/<?=$imagem->arquivo;?>" data-lightbox="album" data-title="<?=$imagem->descricao;?>"><img src="adm/arquivos/<?=$imagem->arquivo;?>" alt=""></a>
                 </article>
