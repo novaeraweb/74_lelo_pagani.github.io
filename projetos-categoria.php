@@ -16,56 +16,53 @@ $row_rs_cat = mysqli_fetch_assoc($rs_cat);
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="pt" class="no-js"> <!--<![endif]-->
 <head>
-		<title>Projetos Vereador Lelo Pagani - Botucatu/SP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
-    <meta name="description" content="Projetos de Lei | <?=$row_rs_cat['nome']?> | Vereador Lelo Pagani - Botucatu/SP" />
-    <meta name="keywords" content="vereador, lelo pagani, historico, projetos, botucatu, politica, lei" />
-    <meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
-    <meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
-    <meta name="robots" content="follow,index">
-    <meta name= "googlebot" content="follow,index">
-    <meta name="DC.publisher" content="Nova Era Web">
-    <meta name="DC.date.created" content="2008-10-01">
-    <meta name="DC.Identifier" content="https://www.lelopagani.com.br">
-    <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
-    <link rel="author" href="https://www.novaeraweb.com.br"/>
-    <link rel="canonical" href="https://www.lelopagani.com.br/projetos-categoria.php?id=<?=$row_rs_cat['idcategoria']?>" />
+<title>Projetos Vereador Lelo Pagani - Botucatu/SP</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
+<meta name="description" content="Projetos de Lei | <?=$row_rs_cat['nome']?> | Vereador Lelo Pagani - Botucatu/SP" />
+<meta name="keywords" content="vereador, lelo pagani, historico, projetos, botucatu, politica, lei" />
+<meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
+<meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
+<meta name="robots" content="follow,index">
+<meta name= "googlebot" content="follow,index">
+<meta name="DC.publisher" content="Nova Era Web">
+<meta name="DC.date.created" content="2008-10-01">
+<meta name="DC.Identifier" content="https://www.lelopagani.com.br">
+<meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
+<link rel="author" href="https://www.novaeraweb.com.br"/>
+<link rel="canonical" href="https://www.lelopagani.com.br/projetos-categoria.php?id=<?=$row_rs_cat['idcategoria']?>" />
 
-    <!-- Meta FB -->
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="Projetos Vereador Lelo Pagani - Botucatu/SP" />
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.lelopagani.com.br/projetos-categoria.php?id=<?=$row_rs_cat['idcategoria']?>"/>
-    <meta property="og:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg" />
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="600">
-    <meta property="og:description" content="Projetos de Lei | <?=$row_rs_cat['nome']?> | Vereador Lelo Pagani - Botucatu/SP" />
-    <meta property="og:site_name" content="Vereador Lelo Pagani"/>
-    <meta property="fb:admins" content=""/>
-    <!-- Fim Meta FB -->
-    <!-- Meta Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:description"
-      content="Projetos de Lei | <?=$row_rs_cat['nome']?> | Vereador Lelo Pagani - Botucatu/SP"
-    />
-    <meta name="twitter:title" content="Projetos de Lei | Vereador Lelo Pagani - Botucatu/SP" />
-    <meta name="twitter:site" content="@lelopagani" />
-    <meta
-      name="twitter:image"
-      content="https://www.lelopagani.com.br/assets/images/avatar.jpg"
-    />
-    <meta name="twitter:creator" content="@lelopagani" />
-    <!-- Fim Meta Twitter -->
-
-    <link rel="stylesheet" href="assets/css/main.css" />    
-    <link rel="stylesheet" href="assets/css/jquery.dataTables.css">  
-	</head>
-
+<!-- Meta FB -->
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Projetos Vereador Lelo Pagani - Botucatu/SP" />
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.lelopagani.com.br/projetos-categoria.php?id=<?=$row_rs_cat['idcategoria']?>"/>
+<meta property="og:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg" />
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="600">
+<meta property="og:description" content="Projetos de Lei | <?=$row_rs_cat['nome']?> | Vereador Lelo Pagani - Botucatu/SP" />
+<meta property="og:site_name" content="Vereador Lelo Pagani"/>
+<meta property="fb:admins" content=""/>
+<!-- Fim Meta FB -->
+<!-- Meta Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+name="twitter:description"
+content="Projetos de Lei | <?=$row_rs_cat['nome']?> | Vereador Lelo Pagani - Botucatu/SP"
+/>
+<meta name="twitter:title" content="Projetos de Lei | Vereador Lelo Pagani - Botucatu/SP" />
+<meta name="twitter:site" content="@lelopagani" />
+<meta name="twitter:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg"
+/>
+<meta name="twitter:creator" content="@lelopagani" />
+<!-- Fim Meta Twitter -->
+<link rel="stylesheet" href="assets/css/main.css" />    
+<link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+<?php require_once "tags.php" ?> 
+</head>
 <?php require_once "header.php"?>
 <body class="is-preload">
     <main id="main">

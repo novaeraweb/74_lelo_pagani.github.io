@@ -10,56 +10,52 @@ $noticias = listaNoticiaHome($lelo);
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="pt" class="no-js"> <!--<![endif]-->
 <head>
-		<title>Sobre Vereador Lelo Pagani - Botucatu/SP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
-    <meta name="description" content="Sobre | Vereador Lelo Pagani - Botucatu/SP" />
-    <meta name="keywords" content="vereador, lelo pagani, historico, sobre, botucatu, politica" />
-    <meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
-    <meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
-    <meta name="robots" content="follow,index">
-    <meta name= "googlebot" content="follow,index">
-    <meta name="DC.publisher" content="Nova Era Web">
-    <meta name="DC.date.created" content="2008-10-01">
-    <meta name="  DC.Identifier" content="https://www.lelopagani.com.br">
-    <meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
-    <link rel="author" href="https://www.novaeraweb.com.br"/>
-    <link rel="canonical" href="https://www.lelopagani.com.br/sobre-vereador-lelo-pagani.php" />
+<title>Sobre Vereador Lelo Pagani - Botucatu/SP</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
+<meta name="description" content="Sobre | Vereador Lelo Pagani - Botucatu/SP" />
+<meta name="keywords" content="vereador, lelo pagani, historico, sobre, botucatu, politica" />
+<meta name="author" content="Thiago Motta Vannuchi | Agência Nova Era Web - Criação e desenvolvimento de sites | Botucatu/SP"> 
+<meta name="company" content="Vereador Lelo Pagani | Botucatu/SP" />
+<meta name="robots" content="follow,index">
+<meta name= "googlebot" content="follow,index">
+<meta name="DC.publisher" content="Nova Era Web">
+<meta name="DC.date.created" content="2008-10-01">
+<meta name="  DC.Identifier" content="https://www.lelopagani.com.br">
+<meta name="DC.date.modified" content="<?php echo date("o"); ?>-<?php echo date("n"); ?>-<?php echo date("j"); ?>">
+<link rel="author" href="https://www.novaeraweb.com.br"/>
+<link rel="canonical" href="https://www.lelopagani.com.br/sobre-vereador-lelo-pagani.php" />
 
-    <!-- Meta FB -->
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="Vereador Lelo Pagani" />
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.lelopagani.com.br/sobre-vereador-lelo-pagani.php"/>
-    <meta property="og:image" content="https://www.lelopagani.com.br/adm/arquivos/<?=$noticias['arquivo']?>.jpg" />
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="600">
-    <meta property="og:description" content="Sobre | Vereador Lelo Pagani - Botucatu/SP" />
-    <meta property="og:site_name" content="Vereador Lelo Pagani"/>
-    <meta property="fb:admins" content="544530930"/>
-    <!-- Fim Meta FB -->
-    <!-- Meta Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:description"
-      content="Sobre | Vereador Lelo Pagani - Botucatu/SP"
-    />
-    <meta name="twitter:title" content="Vereador Lelo Pagani - Botucatu/SP" />
-    <meta name="twitter:site" content="@lelopagani" />
-    <meta
-      name="twitter:image"
-      content="https://www.lelopagani.com.br/assets/images/avatar.jpg"
-    />
-    <meta name="twitter:creator" content="@lelopagani" />
-    <!-- Fim Meta Twitter -->
-
-    <link rel="stylesheet" href="assets/css/main.css" />      
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=61487b13b1633800191bae1f&product=inline-share-buttons" async="async"></script>
-	</head>
-
+<!-- Meta FB -->
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Vereador Lelo Pagani" />
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.lelopagani.com.br/sobre-vereador-lelo-pagani.php"/>
+<meta property="og:image" content="https://www.lelopagani.com.br/adm/arquivos/<?=$noticias['arquivo']?>.jpg" />
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="600">
+<meta property="og:description" content="Sobre | Vereador Lelo Pagani - Botucatu/SP" />
+<meta property="og:site_name" content="Vereador Lelo Pagani"/>
+<meta property="fb:admins" content="544530930"/>
+<!-- Fim Meta FB -->
+<!-- Meta Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+name="twitter:description"
+content="Sobre | Vereador Lelo Pagani - Botucatu/SP"
+/>
+<meta name="twitter:title" content="Vereador Lelo Pagani - Botucatu/SP" />
+<meta name="twitter:site" content="@lelopagani" />
+<meta name="twitter:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg"
+/>
+<meta name="twitter:creator" content="@lelopagani" />
+<link rel="stylesheet" href="assets/css/main.css" />      
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=61487b13b1633800191bae1f&product=inline-share-buttons" async="async"></script>
+<?php require_once "tags.php" ?>
+</head>
 <?php require_once "header.php"?>
 <body class="is-preload">
     <main id="main">

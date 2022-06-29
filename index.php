@@ -59,9 +59,9 @@ $noticias = listaNoticiaHome($lelo);
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
+<?php require_once "tags.php" ?>
 	</head>
 	<body class="is-preload"><?php require_once "alerta.php" ?>
-
 		<?php require_once "header.php"?>
 		<!-- Main -->
 			<main id="main">

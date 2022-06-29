@@ -50,17 +50,13 @@ $categorias = listaCategoria($lelo);
     />
     <meta name="twitter:title" content="Projetos de Lei | Vereador Lelo Pagani - Botucatu/SP" />
     <meta name="twitter:site" content="@lelopagani" />
-    <meta
-      name="twitter:image"
-      content="https://www.lelopagani.com.br/assets/images/avatar.jpg"
+    <meta name="twitter:image" content="https://www.lelopagani.com.br/assets/images/avatar.jpg"
     />
     <meta name="twitter:creator" content="@lelopagani" />
-    <!-- Fim Meta Twitter -->
-
     <link rel="stylesheet" href="assets/css/main.css" />    
-    <link rel="stylesheet" href="assets/css/jquery.dataTables.css">  
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+    <?php require_once "tags.php" ?> 
 	</head>
-
 <?php require_once "header.php"?>
 <body class="is-preload">
     <main id="main">
