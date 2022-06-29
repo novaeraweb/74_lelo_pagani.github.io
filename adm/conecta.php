@@ -1,13 +1,9 @@
 <?php $URL_ATUAL= "$_SERVER[SERVER_NAME]";
-
 if (strpos($URL_ATUAL, 'lelo') !== false) {
-
-	$lelo = mysqli_connect('mysql955.umbler.com', 'lelopagani_user', 'eqGm7*Ji3fF3', 'lelopagani');
+$lelo = mysqli_connect('mysql955.umbler.com', 'lelopagani_user', 'eqGm7*Ji3fF3', 'lelopagani');
 } else {
-	$lelo = mysqli_connect('localhost', 'root', 'root', 'lelopagani');
-
+$lelo = mysqli_connect('localhost', 'root', 'root', 'lelopagani');
 }
-
 mysqli_query($lelo, "SET NAMES 'utf8'");
 mysqli_query($lelo,'SET character_set_connection=utf8');
 mysqli_query($lelo,'SET character_set_client=utf8');
