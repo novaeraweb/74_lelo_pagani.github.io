@@ -69,9 +69,11 @@ $noticias = listaNoticiaHome($lelo);
 					<section id="one">
 						<header class="major">
 							<h1><span>LELO</span><br>PAGANI<br></h1>
-							<p class="vereador">Vereador</p>
+							<div id="btn-seguir">
+								<p class="vereador">Vereador</p>
+								<span class="nophone seguir-desktop"><a href="https://www.instagram.com/lelopagani/" target="_blank">Seguir</a></span>
+							</div>
 							<span class="yesphone seguir-mobile"><a href="https://www.instagram.com/lelopagani/" target="_blank">Seguir</a></span>
-							<span class="nophone seguir-desktop"><a href="https://www.instagram.com/lelopagani/" target="_blank">Seguir</a></span>
 						</header>
 						<p>Sou vereador do município de Botucatu. Estou no meu 4º mandato na Câmara Municipal de Botucatu. Nesses últimos 4 anos me reciclei e me aprimorei. Busco uma articulação junto à população para construirmos uma cidade melhor.</p>
 						<p>Minha luta é pela transformação social, da cidade e da região, com transparência, ética e persistência.</p>
@@ -96,6 +98,10 @@ $noticias = listaNoticiaHome($lelo);
 							<ul class="actions">
 								<li><a href="noticias-vereador-lelo-pagani.php" class="button">Ver todas as notícias</a></li>
 							</ul>
+					</section>
+
+					<section id="three">
+						<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5747af99462650a9ab7c124ec40bd033.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 					</section>
 					<?php require_once "contato-vereador-lelo-pagani.php"?>
 			</main>

@@ -298,6 +298,7 @@ input, select, textarea {
 	padding: 1% 6%;
 	border-radius: 5px;
 }
+
 .seguir-desktop {
 	margin-top:-70px;
 	margin-bottom:80px;
@@ -306,6 +307,15 @@ input, select, textarea {
 	background-color: #DBE7F2;
 	padding: 1% 6%;
 	border-radius: 5px;
+}
+
+#btn-seguir{
+	display: flex;
+	flex-direction: row;
+}
+
+#btn-seguir p{
+	margin-right: 80px;
 }
 /* Container */
 
