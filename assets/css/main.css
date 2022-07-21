@@ -129,13 +129,13 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		color: #49bf9d;
+		color:#1771E6;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color:#F7EF03 !important;
+			color:#3C6C83 !important;
 			text-decoration: none;
 		}
 
@@ -289,7 +289,24 @@ input, select, textarea {
 	text-align: center;
 	margin: 10px 10px;
 }
-
+.seguir-mobile {
+	margin-top:-50px;
+	margin-bottom: 50px;
+	color: #1771E6;
+	font-weight:600;
+	background-color: #DBE7F2;
+	padding: 1% 6%;
+	border-radius: 5px;
+}
+.seguir-desktop {
+	margin-top:-70px;
+	margin-bottom:80px;
+	color: #1771E6;
+	font-weight:600;
+	background-color: #DBE7F2;
+	padding: 1% 6%;
+	border-radius: 5px;
+}
 /* Container */
 
 	.container {
@@ -1879,6 +1896,8 @@ input, select, textarea {
 	}
 
 	.yesphone{display: none;}
+
+
 
 	input[type="text"],
 	input[type="password"],

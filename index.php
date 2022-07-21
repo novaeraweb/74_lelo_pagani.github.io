@@ -69,7 +69,9 @@ $noticias = listaNoticiaHome($lelo);
 					<section id="one">
 						<header class="major">
 							<h1><span>LELO</span><br>PAGANI<br></h1>
-							<p class="vereador">Vereador</p>	
+							<p class="vereador">Vereador</p>
+							<span class="yesphone seguir-mobile"><a href="https://www.instagram.com/lelopagani/" target="_blank">Seguir</a></span>
+							<span class="nophone seguir-desktop"><a href="https://www.instagram.com/lelopagani/" target="_blank">Seguir</a></span>
 						</header>
 						<p>Sou vereador do município de Botucatu. Estou no meu 4º mandato na Câmara Municipal de Botucatu. Nesses últimos 4 anos me reciclei e me aprimorei. Busco uma articulação junto à população para construirmos uma cidade melhor.</p>
 						<p>Minha luta é pela transformação social, da cidade e da região, com transparência, ética e persistência.</p>
@@ -86,7 +88,7 @@ $noticias = listaNoticiaHome($lelo);
 								<article class="col-6 col-12-xsmall work-item">
 									<a href="noticias-vereador-lelo-pagani-post.php?id=<?=$noticia->idnoticia;?>" class="noticias fit"><img src="adm/arquivos/<?=$noticia->arquivo_capa;?>" alt="Notícias Vereador Lelo Pagani" />
 									<p style="color:red;"><strong><input type="date" disabled value="<?=$noticia->data_noticia;?>"></strong></p>
-									<h3><?=$noticia->titulo;?></h3></a>
+									<h3><?=$noticia->titulo;?>.</h3></a>
 									<br>
 								</article>
 								<?php } ?>
